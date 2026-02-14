@@ -3,8 +3,8 @@ const qs = (sel) => document.querySelector(sel);
 const qsa = (sel) => document.querySelectorAll(sel);
 
 // Set these to enable direct call/WhatsApp buttons.
-const CONTACT_PHONE_E164 = '';
-const WHATSAPP_PHONE_E164 = '';
+const CONTACT_PHONE_E164 = '+18329389570';
+const WHATSAPP_PHONE_E164 = '18329389570';
 
 // ===== Navbar =====
 const navbar = qs('#navbar');
