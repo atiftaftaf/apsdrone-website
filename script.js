@@ -105,7 +105,7 @@ function buildPortfolioModal() {
   modal.innerHTML = `
     <div class="modal-backdrop" data-close="true"></div>
     <div class="modal-dialog" role="dialog" aria-modal="true" aria-label="Project preview">
-      <button class="modal-close" type="button" aria-label="Close" data-close="true">✕</button>
+      <button class="modal-close" type="button" aria-label="Close" data-close="true">x</button>
       <img class="modal-img" id="modal-img" alt="" loading="lazy" />
       <div class="modal-meta">
         <div class="modal-tag" id="modal-tag"></div>
@@ -213,7 +213,7 @@ if (contactForm) {
       if (!res.ok) throw new Error('Failed');
 
       contactForm.reset();
-      if (submitBtn) submitBtn.textContent = 'Sent ✅';
+      if (submitBtn) submitBtn.textContent = 'Sent';
       setTimeout(() => {
         if (submitBtn) {
           submitBtn.textContent = originalText;
@@ -231,3 +231,85 @@ if (contactForm) {
     }
   });
 }
+
+// ===== Media showcase =====
+const mediaGrid = qs('#media-grid');
+
+const mediaItems = [
+  {
+    type: 'image',
+    title: 'DFW Real Estate Exterior',
+    subtitle: 'Expected file: assets/media/dfw-real-estate-01.jpg',
+    src: 'assets/media/dfw-real-estate-01.jpg',
+    alt: 'Drone photo of a DFW real estate listing exterior'
+  },
+  {
+    type: 'image',
+    title: 'Commercial Property Aerial',
+    subtitle: 'Expected file: assets/media/dfw-commercial-01.jpg',
+    src: 'assets/media/dfw-commercial-01.jpg',
+    alt: 'Drone photo of a commercial property in Dallas-Fort Worth'
+  },
+  {
+    type: 'video',
+    title: 'Roof Inspection Flight',
+    subtitle: 'Expected file: assets/media/dfw-roof-inspection-01.mp4',
+    src: 'assets/media/dfw-roof-inspection-01.mp4',
+    poster: 'assets/placeholders/video-poster.svg'
+  },
+  {
+    type: 'video',
+    title: 'Construction Progress Update',
+    subtitle: 'Expected file: assets/media/dfw-construction-01.mp4',
+    src: 'assets/media/dfw-construction-01.mp4',
+    poster: 'assets/placeholders/video-poster.svg'
+  }
+];
+
+async function fileExists(url) {
+  try {
+    const response = await fetch(url, { method: 'HEAD', cache: 'no-store' });
+    return response.ok;
+  } catch (error) {
+    return false;
+  }
+}
+
+function renderMediaPlaceholder(item) {
+  return `
+    <div class="media-placeholder">
+      <i class="fas ${item.type === 'video' ? 'fa-video' : 'fa-image'}"></i>
+      <p>Drop your ${item.type} file into assets/media</p>
+    </div>
+  `;
+}
+
+async function renderMediaGrid() {
+  if (!mediaGrid) return;
+
+  const cards = await Promise.all(
+    mediaItems.map(async (item) => {
+      const exists = await fileExists(item.src);
+
+      const mediaHtml = exists
+        ? item.type === 'video'
+          ? `<video controls preload="metadata" poster="${item.poster}"><source src="${item.src}" type="video/mp4">Your browser does not support HTML5 video.</video>`
+          : `<img src="${item.src}" alt="${item.alt}" loading="lazy">`
+        : renderMediaPlaceholder(item);
+
+      return `
+        <article class="media-card">
+          <div class="media-frame">${mediaHtml}</div>
+          <div class="media-meta">
+            <h3>${item.title}</h3>
+            <p>${item.subtitle}</p>
+          </div>
+        </article>
+      `;
+    })
+  );
+
+  mediaGrid.innerHTML = cards.join('');
+}
+
+renderMediaGrid();
