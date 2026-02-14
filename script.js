@@ -2,6 +2,10 @@
 const qs = (sel) => document.querySelector(sel);
 const qsa = (sel) => document.querySelectorAll(sel);
 
+// Set these to enable direct call/WhatsApp buttons.
+const CONTACT_PHONE_E164 = '';
+const WHATSAPP_PHONE_E164 = '';
+
 // ===== Navbar =====
 const navbar = qs('#navbar');
 const navToggle = qs('#nav-toggle');
@@ -313,3 +317,37 @@ async function renderMediaGrid() {
 }
 
 renderMediaGrid();
+
+// ===== Quick contact + tracking =====
+function pushTrackingEvent(eventName, payload = {}) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, payload);
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: eventName, ...payload });
+}
+
+function setupQuickContactButtons() {
+  const callBtn = qs('#quick-call');
+  const whatsappBtn = qs('#quick-whatsapp');
+
+  if (callBtn && CONTACT_PHONE_E164) {
+    callBtn.href = `tel:${CONTACT_PHONE_E164}`;
+  }
+
+  if (whatsappBtn && WHATSAPP_PHONE_E164) {
+    whatsappBtn.href = `https://wa.me/${WHATSAPP_PHONE_E164}`;
+    whatsappBtn.target = '_blank';
+    whatsappBtn.rel = 'noopener noreferrer';
+  }
+}
+
+qsa('[data-track]').forEach((el) => {
+  el.addEventListener('click', () => {
+    const source = el.getAttribute('data-track') || 'unknown';
+    pushTrackingEvent('lead_click', { source });
+  });
+});
+
+setupQuickContactButtons();
