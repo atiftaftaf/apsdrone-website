@@ -266,22 +266,11 @@ if (contactForm) {
     const message = (formData.get('message') || '').toString();
     const action = (contactForm.action || '').trim();
 
-    const fallbackMailto = () => {
-      const to = 'setenaytaftaf@gmail.com';
-      const subject = 'APS Drone quote request';
-      const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\n${message}`;
-      window.location.href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      if (submitBtn) {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }
-    };
-
     try {
       const isFormspree = action.includes('formspree.io') && !action.includes('placeholder');
 
       if (!isFormspree) {
-        fallbackMailto();
+        throw new Error('Form endpoint missing');
         return;
       }
 
@@ -319,13 +308,6 @@ const mediaGrid = qs('#media-grid');
 const mediaItems = [
   {
     type: 'image',
-    title: 'Aerial View of Neighborhood Pool',
-    subtitle: 'Stunning drone capture of a residential area at sunset',
-    src: 'assets/media/real-estate-houston-01.jpg',
-    alt: 'Aerial shot of a neighborhood with a pool'
-  },
-  {
-    type: 'image',
     title: 'Aerial View of New Homes',
     subtitle: 'Capturing the development of a residential area',
     src: 'assets/media/real-estate-houston-02.jpg',
@@ -340,10 +322,10 @@ const mediaItems = [
   },
   {
     type: 'image',
-    title: 'Outdoor Event Gathering',
-    subtitle: 'Aerial view of a lively outdoor celebration',
-    src: 'assets/media/salsa-vitruvian-addison.jpg',
-    alt: 'Crowd gathering at a park for an event'
+    title: 'Thermal Roof Inspection',
+    subtitle: 'Assessing roof conditions with thermal imaging technology',
+    src: 'assets/media/thermal-site-02.jpg',
+    alt: 'Thermal image of a roof for inspection purposes'
   },
   {
     type: 'image',
@@ -354,38 +336,45 @@ const mediaItems = [
   },
   {
     type: 'image',
-    title: 'Thermal Drone Inspection',
-    subtitle: 'Identifying heat loss and insulation issues',
-    src: 'assets/media/thermal-site-01.jpg',
-    alt: 'Thermal image showing roofs and vehicles from above'
+    title: 'Commercial Aerial Overview',
+    subtitle: 'Wide framing for commercial property context',
+    src: 'assets/media/DJI_0046.JPG',
+    alt: 'Aerial shot of a commercial area'
   },
   {
     type: 'image',
-    title: 'Thermal Roof Inspection',
-    subtitle: 'Assessing roof conditions with thermal imaging technology',
-    src: 'assets/media/thermal-site-02.jpg',
-    alt: 'Thermal image of a roof for inspection purposes'
+    title: 'Development Site Capture',
+    subtitle: 'Progress-focused aerial documentation',
+    src: 'assets/media/DJI_0203.JPG',
+    alt: 'Aerial view of a development site'
+  },
+  {
+    type: 'image',
+    title: 'Urban Property Perspective',
+    subtitle: 'Top-down framing for marketing and planning use',
+    src: 'assets/media/DJI_0359.JPG',
+    alt: 'Aerial perspective of urban properties'
   },
   {
     type: 'video',
     title: 'FPV Indoor Tour (DJI Avata)',
     subtitle: 'Indoor cinematic FPV fly-through for business marketing.',
     src: 'assets/media/fpv-club-pilates-crossroads.mp4',
-    poster: 'assets/media/thermal-inspection-urban.jpg'
+    poster: 'assets/media/DJI_0967.JPG'
   },
   {
     type: 'image',
-    title: 'Aerial View of Urban Park',
-    subtitle: 'Showcasing green spaces and recreational facilities',
-    src: 'assets/media/DJI_0537.JPG',
-    alt: 'Drone image of a park with playgrounds and greenery'
+    title: 'Large Property Context',
+    subtitle: 'High-altitude capture for site visibility',
+    src: 'assets/media/DJI_0491.JPG',
+    alt: 'Drone image of a large property area'
   },
   {
     type: 'image',
-    title: 'Aerial View of Modern Building',
-    subtitle: 'Showcasing Solar Panels and Parking Areas',
-    src: 'assets/media/DJI_0608.JPG',
-    alt: 'Drone shot of a building with solar panels'
+    title: 'Commercial Roof and Lot View',
+    subtitle: 'Aerial detail for inspection and marketing purposes',
+    src: 'assets/media/DJI_0500.JPG',
+    alt: 'Drone shot of commercial roofs and parking'
   }
 ];
 

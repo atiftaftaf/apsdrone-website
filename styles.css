@@ -727,44 +727,44 @@ img { max-width: 100%; display: block; }
     padding: 100px 0;
 }
 
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.trust-card {
-    background: var(--bg-card);
+.trust-ticker {
     border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 24px 22px;
-    transition: var(--transition);
+    border-radius: 999px;
+    background: var(--bg-card);
+    overflow: hidden;
+    padding: 12px 0;
 }
 
-.trust-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(59, 130, 246, 0.35);
-    box-shadow: var(--shadow-lg);
+.trust-track {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    width: max-content;
+    padding-left: 100%;
+    animation: trustScroll 55s linear infinite;
 }
 
-.trust-card h3 {
-    margin-bottom: 10px;
-    font-size: 1.05rem;
-}
-
-.trust-card p {
-    color: var(--text-secondary);
+.trust-track span {
+    white-space: nowrap;
     font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-.trust-card a {
-    color: var(--primary-light);
+    color: var(--text-secondary);
     font-weight: 600;
 }
 
-.trust-card a:hover {
+.trust-track span:nth-child(odd) {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.trust-track span::after {
+    content: "•";
+    margin-left: 22px;
     color: var(--primary);
+}
+
+@keyframes trustScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
 /* ===== SERVICE AREAS ===== */
@@ -1234,7 +1234,6 @@ img { max-width: 100%; display: block; }
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
     .media-grid { grid-template-columns: 1fr; }
-    .trust-grid { grid-template-columns: repeat(2, 1fr); }
     .city-grid { grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1280,7 +1279,6 @@ img { max-width: 100%; display: block; }
 
     .services-grid { grid-template-columns: 1fr; }
     .portfolio-grid { grid-template-columns: 1fr; }
-    .trust-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
