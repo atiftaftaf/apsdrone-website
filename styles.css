@@ -134,6 +134,16 @@ img { max-width: 100%; display: block; }
 .logo-text { color: var(--text-primary); }
 .logo-accent { color: var(--primary); }
 
+.brand-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.footer .brand-logo {
+    height: 44px;
+}
+
 .nav-menu {
     display: flex;
     align-items: center;
@@ -1276,6 +1286,7 @@ img { max-width: 100%; display: block; }
     .hero-title { font-size: 2.2rem; }
     .hero-stats { gap: 20px; }
     .stat-number { font-size: 1.5rem; }
+    .brand-logo { height: 34px; }
 
     .services-grid { grid-template-columns: 1fr; }
     .portfolio-grid { grid-template-columns: 1fr; }
