@@ -306,45 +306,115 @@ const mediaGrid = qs('#media-grid');
 const mediaItems = [
   {
     type: 'image',
-    title: 'Delta Hotels by Marriott - Phoenix Mesa, AZ',
-    subtitle: 'Modern hotel complex and surrounding area captured from above.',
-    src: 'assets/media/DJI_0041.JPG',
-    alt: 'Drone photo of Delta Hotels by Marriott in Phoenix Mesa, Arizona'
+    title: 'Lakeside Homes - Houston, TX',
+    subtitle: 'Serene neighborhood homes by a calm lakeside setting.',
+    src: 'assets/media/DJI_0780.JPG',
+    alt: 'Drone photo of lakeside homes in Houston, Texas'
+  },
+  {
+    type: 'image',
+    title: 'Musical Instrument Museum - Phoenix, AZ',
+    subtitle: 'Architectural aerial perspective against the desert backdrop.',
+    src: 'assets/media/DJI_0608.JPG',
+    alt: 'Aerial view of Musical Instrument Museum in Phoenix, Arizona'
+  },
+  {
+    type: 'image',
+    title: 'St. Martha Catholic Church - Porter, TX',
+    subtitle: 'Aerial view highlighting church architecture and surroundings.',
+    src: 'assets/media/DJI_0779.JPG',
+    alt: 'Drone photo of St. Martha Catholic Church in Porter, Texas'
+  },
+  {
+    type: 'image',
+    title: 'Brady Townscape - Brady, TX',
+    subtitle: 'Small-town layout and landmarks from above.',
+    src: 'assets/media/DJI_0512.JPG',
+    alt: 'Drone photo of Brady, Texas'
   },
   {
     type: 'image',
     title: 'Delta Hotels by Marriott - Phoenix Mesa, AZ',
-    subtitle: 'Aerial perspective highlighting architecture and site layout.',
+    subtitle: 'Hotel property and surrounding urban context.',
     src: 'assets/media/DJI_0042.JPG',
     alt: 'Aerial view of Delta Hotels by Marriott in Phoenix Mesa, Arizona'
   },
   {
     type: 'image',
-    title: 'Commercial Area - Phoenix, AZ',
-    subtitle: 'High-angle commercial district view with clear property context.',
-    src: 'assets/media/DJI_0046.JPG',
-    alt: 'Drone view of a commercial area in Phoenix, Arizona'
+    title: 'Eiffel Tower Replica - Paris, TX',
+    subtitle: 'Sweeping view including nearby memorial museum area.',
+    src: 'assets/media/DJI_0203.JPG',
+    alt: 'Drone photo of Eiffel Tower replica in Paris, Texas'
+  },
+  {
+    type: 'image',
+    title: 'Galveston Beach - Galveston, TX',
+    subtitle: 'Expansive coastline and sea textures.',
+    src: 'assets/media/DJI_0592.JPG',
+    alt: 'Aerial photo of Galveston beach and sea'
+  },
+  {
+    type: 'image',
+    title: "L'Auberge Resort Lazy Pool - Lake Charles, LA",
+    subtitle: 'Resort pool geometry and landscaping from above.',
+    src: 'assets/media/DJI_0359.JPG',
+    alt: "Aerial view of L'Auberge resort lazy pool in Lake Charles, Louisiana"
+  },
+  {
+    type: 'image',
+    title: 'Desert Botanical Garden - Phoenix, AZ',
+    subtitle: 'Distinct desert landscaping and pathways captured aerially.',
+    src: 'assets/media/DJI_0491.JPG',
+    alt: 'Aerial photo of Desert Botanical Garden in Phoenix, Arizona'
   },
   {
     type: 'image',
     title: 'Discovery Green - Houston, TX',
-    subtitle: 'Vibrant downtown park atmosphere and surrounding skyline.',
+    subtitle: 'Downtown park atmosphere with surrounding city context.',
     src: 'assets/media/DJI_0537.JPG',
-    alt: 'Aerial photo of Discovery Green in downtown Houston, Texas'
+    alt: 'Aerial photo of Discovery Green in Houston, Texas'
   },
   {
     type: 'image',
-    title: 'Galveston Coastline - Galveston, TX',
-    subtitle: 'Wide coastal view with ocean texture and beach detail.',
-    src: 'assets/media/DJI_0592.JPG',
-    alt: 'Aerial photo of Galveston beach and coastline'
+    title: 'Phoenix Road Network - Phoenix, AZ',
+    subtitle: 'Dynamic aerial composition of roads and neighborhoods.',
+    src: 'assets/media/DJI_0965.JPG',
+    alt: 'Drone photo of road network and neighborhoods in Phoenix, Arizona'
   },
   {
     type: 'image',
-    title: 'Galveston Coastline - Galveston, TX',
-    subtitle: 'Expansive shoreline composition captured in natural light.',
-    src: 'assets/media/DJI_0593.JPG',
-    alt: 'Aerial view of ocean and beach near Galveston, Texas'
+    title: 'Phoenix Commercial View - Phoenix, AZ',
+    subtitle: 'Commercial activity area with clear site layout.',
+    src: 'assets/media/DJI_0046.JPG',
+    alt: 'Aerial commercial view in Phoenix, Arizona'
+  },
+  {
+    type: 'image',
+    title: 'Desert Road Scene - Phoenix, AZ',
+    subtitle: 'Winding roadway through rugged desert terrain.',
+    src: 'assets/media/DJI_0500.JPG',
+    alt: 'Aerial desert road photo in Phoenix, Arizona'
+  },
+  {
+    type: 'image',
+    title: 'Mountain Landscape - Phoenix, AZ',
+    subtitle: 'Natural mountain backdrop near urban development.',
+    src: 'assets/media/DJI_0967.JPG',
+    alt: 'Aerial mountain landscape in Phoenix, Arizona'
+  },
+  {
+    type: 'image',
+    title: 'Cloudscape - Sugar Land, TX',
+    subtitle: 'Expansive cloud formations and atmospheric depth.',
+    src: 'assets/media/DJI_0631.JPG',
+    alt: 'Aerial cloudscape in Sugar Land, Texas'
+  },
+  {
+    type: 'image',
+    title: 'Billboard Campaign - Houston Area, TX',
+    subtitle: 'Large-format billboard installation in active urban setting.',
+    src: 'assets/media/DJI_0568.JPG',
+    alt: 'Aerial billboard campaign photo in Houston area, Texas'
   }
 ];
 
