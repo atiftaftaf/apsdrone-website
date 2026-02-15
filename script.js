@@ -128,6 +128,19 @@ counters.forEach((el) => counterObserver.observe(el));
 const filterButtons = qsa('.filter-btn');
 const portfolioItems = qsa('.portfolio-item');
 
+function renderPortfolioThumbnails() {
+  portfolioItems.forEach((item) => {
+    const src = item.dataset.image || '';
+    if (!src) return;
+    const frame = item.querySelector('.portfolio-image');
+    if (!frame) return;
+    const title = item.querySelector('h4')?.textContent?.trim() || 'Project image';
+    frame.innerHTML = `<img src="${src}" alt="${title}" loading="lazy">`;
+  });
+}
+
+renderPortfolioThumbnails();
+
 function applyFilter(category) {
   portfolioItems.forEach((item) => {
     const cat = item.dataset.category;
@@ -306,13 +319,6 @@ const mediaGrid = qs('#media-grid');
 const mediaItems = [
   {
     type: 'image',
-    title: 'Lakeside Homes - Houston, TX',
-    subtitle: 'Serene neighborhood homes by a calm lakeside setting.',
-    src: 'assets/media/DJI_0780.JPG',
-    alt: 'Drone photo of lakeside homes in Houston, Texas'
-  },
-  {
-    type: 'image',
     title: 'Musical Instrument Museum - Phoenix, AZ',
     subtitle: 'Architectural aerial perspective against the desert backdrop.',
     src: 'assets/media/DJI_0608.JPG',
@@ -408,13 +414,6 @@ const mediaItems = [
     subtitle: 'Expansive cloud formations and atmospheric depth.',
     src: 'assets/media/DJI_0631.JPG',
     alt: 'Aerial cloudscape in Sugar Land, Texas'
-  },
-  {
-    type: 'image',
-    title: 'Billboard Campaign - Houston Area, TX',
-    subtitle: 'Large-format billboard installation in active urban setting.',
-    src: 'assets/media/DJI_0568.JPG',
-    alt: 'Aerial billboard campaign photo in Houston area, Texas'
   }
 ];
 
