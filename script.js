@@ -12,16 +12,11 @@ const WHATSAPP_PHONE_E164 = '18329389570';
 const navbar = qs('#navbar');
 const navToggle = qs('#nav-toggle');
 const navMenu = qs('#nav-menu');
-const heroVideo = qs('.hero-video');
 
 window.addEventListener('scroll', () => {
   if (!navbar) return;
   if (window.scrollY > 50) navbar.classList.add('scrolled');
   else navbar.classList.remove('scrolled');
-  if (heroVideo) {
-    const fade = Math.max(0.12, 0.48 - (window.scrollY / 900));
-    heroVideo.style.opacity = fade.toString();
-  }
 });
 
 if (navToggle && navMenu) {
