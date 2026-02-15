@@ -1,4 +1,4 @@
-// ===== Utilities =====
+﻿// ===== Utilities =====
 const qs = (sel) => document.querySelector(sel);
 const qsa = (sel) => document.querySelectorAll(sel);
 const yearEl = qs('#year');
@@ -254,7 +254,7 @@ if (contactForm) {
     const action = (contactForm.action || '').trim();
 
     const fallbackMailto = () => {
-      const to = 'info@apsdrone.com';
+      const to = 'setenaytaftaf@gmail.com';
       const subject = 'APS Drone quote request';
       const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\n${message}`;
       window.location.href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -306,43 +306,43 @@ const mediaGrid = qs('#media-grid');
 const mediaItems = [
   {
     type: 'image',
-    title: 'Delta Hotels by Marriott - Plano, TX',
-    subtitle: 'DJI_0041.JPG',
+    title: 'Delta Hotels by Marriott - Phoenix Mesa, AZ',
+    subtitle: 'Modern hotel complex and surrounding area captured from above.',
     src: 'assets/media/DJI_0041.JPG',
-    alt: 'Drone photo of Delta Hotels by Marriott area in Plano, Texas'
+    alt: 'Drone photo of Delta Hotels by Marriott in Phoenix Mesa, Arizona'
   },
   {
     type: 'image',
-    title: 'Delta Hotels by Marriott - Plano, TX',
-    subtitle: 'DJI_0042.JPG',
+    title: 'Delta Hotels by Marriott - Phoenix Mesa, AZ',
+    subtitle: 'Aerial perspective highlighting architecture and site layout.',
     src: 'assets/media/DJI_0042.JPG',
-    alt: 'Aerial view of Delta Hotels by Marriott in Plano, Texas'
+    alt: 'Aerial view of Delta Hotels by Marriott in Phoenix Mesa, Arizona'
   },
   {
     type: 'image',
-    title: 'ASU Phoenix Campus View - Mesa/Phoenix, AZ',
-    subtitle: 'DJI_0046.JPG',
+    title: 'Commercial Area - Phoenix, AZ',
+    subtitle: 'High-angle commercial district view with clear property context.',
     src: 'assets/media/DJI_0046.JPG',
-    alt: 'Drone view of ASU area in Mesa and Phoenix, Arizona'
+    alt: 'Drone view of a commercial area in Phoenix, Arizona'
   },
   {
     type: 'image',
     title: 'Discovery Green - Houston, TX',
-    subtitle: 'DJI_0537.JPG',
+    subtitle: 'Vibrant downtown park atmosphere and surrounding skyline.',
     src: 'assets/media/DJI_0537.JPG',
     alt: 'Aerial photo of Discovery Green in downtown Houston, Texas'
   },
   {
     type: 'image',
     title: 'Galveston Coastline - Galveston, TX',
-    subtitle: 'DJI_0592.JPG',
+    subtitle: 'Wide coastal view with ocean texture and beach detail.',
     src: 'assets/media/DJI_0592.JPG',
     alt: 'Aerial photo of Galveston beach and coastline'
   },
   {
     type: 'image',
     title: 'Galveston Coastline - Galveston, TX',
-    subtitle: 'DJI_0593.JPG',
+    subtitle: 'Expansive shoreline composition captured in natural light.',
     src: 'assets/media/DJI_0593.JPG',
     alt: 'Aerial view of ocean and beach near Galveston, Texas'
   }
@@ -358,7 +358,7 @@ function renderMediaGrid() {
       </div>
       <div class="media-meta">
         <h3>${item.title}</h3>
-        <p>${item.subtitle}</p>
+        ${item.subtitle ? `<p>${item.subtitle}</p>` : ''}
       </div>
     </article>
   `).join('');
@@ -399,3 +399,4 @@ qsa('[data-track]').forEach((el) => {
 });
 
 setupQuickContactButtons();
+
