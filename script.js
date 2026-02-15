@@ -350,7 +350,7 @@ const mediaItems = [
     title: 'Drone View of City Skyline',
     subtitle: 'Capturing stunning views of urban landscapes from above',
     src: 'assets/media/thermal-inspection-urban.jpg',
-    alt: 'Aerial view of tall buildings in a city's skyline and buildings'
+    alt: 'Aerial view of tall buildings in an urban skyline'
   },
   {
     type: 'image',
