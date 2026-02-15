@@ -19,7 +19,7 @@ window.addEventListener('scroll', () => {
   if (window.scrollY > 50) navbar.classList.add('scrolled');
   else navbar.classList.remove('scrolled');
   if (heroVideo) {
-    const fade = Math.max(0, 1 - (window.scrollY / 360));
+    const fade = Math.max(0.12, 0.48 - (window.scrollY / 900));
     heroVideo.style.opacity = fade.toString();
   }
 });
@@ -272,7 +272,7 @@ if (contactForm) {
     const action = (contactForm.action || '').trim();
 
     const fallbackMailto = () => {
-      const to = 'setenaytaftaf@gmail.com';
+      const to = 'apsdronehouston@gmail.com';
       const subject = 'APS Drone quote request';
       const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\n${message}`;
       window.location.href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -359,24 +359,24 @@ const mediaItems = [
   },
   {
     type: 'image',
-    title: 'Thermal Inspection - Site Frame A',
-    subtitle: 'Detailed thermal image for hotspot analysis.',
+    title: 'Roof Thermal Inspection Example',
+    subtitle: 'Detailed thermal view for hotspot analysis.',
     src: 'assets/media/thermal-site-01.jpg',
     alt: 'Thermal drone image for site inspection'
   },
   {
     type: 'image',
-    title: 'Thermal Inspection - Site Frame B',
-    subtitle: 'Secondary thermal capture from same project area.',
+    title: 'Building Thermal Inspection Example',
+    subtitle: 'Additional thermal angle for issue verification.',
     src: 'assets/media/thermal-site-02.jpg',
     alt: 'Second thermal drone inspection frame'
   },
   {
     type: 'video',
-    title: 'FPV Tour - Club Pilates, Cross Roads TX',
-    subtitle: 'Indoor FPV fly-through recorded with DJI Avata.',
+    title: 'FPV Indoor Tour (DJI Avata)',
+    subtitle: 'Indoor cinematic FPV fly-through for business marketing.',
     src: 'assets/media/fpv-club-pilates-crossroads.mp4',
-    poster: 'assets/media/thermal-site-01.jpg'
+    poster: 'assets/media/thermal-inspection-urban.jpg'
   },
   {
     type: 'image',
