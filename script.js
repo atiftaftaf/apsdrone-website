@@ -324,52 +324,52 @@ const mediaGrid = qs('#media-grid');
 const mediaItems = [
   {
     type: 'image',
-    title: 'Houston Real Estate Exterior',
-    subtitle: 'Residential property context and lot visibility.',
+    title: 'Aerial View of Neighborhood Pool',
+    subtitle: 'Stunning drone capture of a residential area at sunset',
     src: 'assets/media/real-estate-houston-01.jpg',
-    alt: 'Real estate drone photo in Houston, Texas'
+    alt: 'Aerial shot of a neighborhood with a pool'
   },
   {
     type: 'image',
-    title: 'Houston Property Context View',
-    subtitle: 'Wider neighborhood perspective for listing appeal.',
+    title: 'Aerial View of New Homes',
+    subtitle: 'Capturing the development of a residential area',
     src: 'assets/media/real-estate-houston-02.jpg',
-    alt: 'Aerial neighborhood context for a Houston property'
+    alt: 'Drone view showing new houses and roads'
   },
   {
     type: 'image',
-    title: 'Houston Roofline and Access View',
-    subtitle: 'Angle showing access, roof lines, and boundaries.',
+    title: 'Stunning Residential Property',
+    subtitle: 'High-quality aerial view of a new home',
     src: 'assets/media/real-estate-houston-03.jpg',
-    alt: 'Aerial property roofline and access view in Houston'
+    alt: 'Aerial image of a modern house with greenery'
   },
   {
     type: 'image',
-    title: 'Vitruvian Salsa Festival - Addison, TX',
-    subtitle: 'Crowd and venue energy from above.',
+    title: 'Outdoor Event Gathering',
+    subtitle: 'Aerial view of a lively outdoor celebration',
     src: 'assets/media/salsa-vitruvian-addison.jpg',
-    alt: 'Aerial coverage of salsa festival at Vitruvian Park in Addison'
+    alt: 'Crowd gathering at a park for an event'
   },
   {
     type: 'image',
-    title: 'Thermal Inspection - Urban Site',
-    subtitle: 'Thermal capture used for inspection review.',
+    title: 'Drone View of City Skyline',
+    subtitle: 'Capturing stunning views of urban landscapes from above',
     src: 'assets/media/thermal-inspection-urban.jpg',
-    alt: 'Thermal drone inspection image from urban site'
+    alt: 'Aerial view of tall buildings in a city's skyline and buildings'
   },
   {
     type: 'image',
-    title: 'Roof Thermal Inspection Example',
-    subtitle: 'Detailed thermal view for hotspot analysis.',
+    title: 'Thermal Drone Inspection',
+    subtitle: 'Identifying heat loss and insulation issues',
     src: 'assets/media/thermal-site-01.jpg',
-    alt: 'Thermal drone image for site inspection'
+    alt: 'Thermal image showing roofs and vehicles from above'
   },
   {
     type: 'image',
-    title: 'Building Thermal Inspection Example',
-    subtitle: 'Additional thermal angle for issue verification.',
+    title: 'Thermal Roof Inspection',
+    subtitle: 'Assessing roof conditions with thermal imaging technology',
     src: 'assets/media/thermal-site-02.jpg',
-    alt: 'Second thermal drone inspection frame'
+    alt: 'Thermal image of a roof for inspection purposes'
   },
   {
     type: 'video',
@@ -380,17 +380,17 @@ const mediaItems = [
   },
   {
     type: 'image',
-    title: 'Discovery Green - Houston, TX',
-    subtitle: 'Downtown park atmosphere with surrounding city context.',
+    title: 'Aerial View of Urban Park',
+    subtitle: 'Showcasing green spaces and recreational facilities',
     src: 'assets/media/DJI_0537.JPG',
-    alt: 'Aerial photo of Discovery Green in Houston, Texas'
+    alt: 'Drone image of a park with playgrounds and greenery'
   },
   {
     type: 'image',
-    title: 'Hero Reel Preview',
-    subtitle: 'High-altitude cinematic pass used in hero section.',
+    title: 'Aerial View of Modern Building',
+    subtitle: 'Showcasing Solar Panels and Parking Areas',
     src: 'assets/media/DJI_0608.JPG',
-    alt: 'Cinematic drone still from hero reel'
+    alt: 'Drone shot of a building with solar panels'
   }
 ];
 
