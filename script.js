@@ -1,6 +1,8 @@
 // ===== Utilities =====
 const qs = (sel) => document.querySelector(sel);
 const qsa = (sel) => document.querySelectorAll(sel);
+const yearEl = qs('#year');
+if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
 
 // Set these to enable direct call/WhatsApp buttons.
 const CONTACT_PHONE_E164 = '+18329389570';
@@ -18,9 +20,28 @@ window.addEventListener('scroll', () => {
 });
 
 if (navToggle && navMenu) {
+  const closeMenu = () => {
+    navMenu.classList.remove('active');
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+  };
+
   navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active');
+    const isOpen = navMenu.classList.toggle('active');
+    navToggle.classList.toggle('active', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  document.addEventListener('click', (e) => {
+    const t = e.target;
+    if (!t) return;
+    if (!navMenu.classList.contains('active')) return;
+    if (navMenu.contains(t) || navToggle.contains(t)) return;
+    closeMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) closeMenu();
   });
 }
 
@@ -28,11 +49,33 @@ const navLinks = qsa('.nav-link');
 navLinks.forEach((link) => {
   link.addEventListener('click', () => {
     if (navMenu) navMenu.classList.remove('active');
-    if (navToggle) navToggle.classList.remove('active');
+    if (navToggle) {
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
   });
 });
 
 // ===== Active nav link on scroll =====
+const aosEls = qsa('[data-aos]');
+if (aosEls.length) {
+  const aosObserver = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const delay = Number(el.getAttribute('data-aos-delay') || 0);
+        window.setTimeout(() => {
+          el.classList.add('aos-animate');
+        }, Math.max(0, delay));
+        obs.unobserve(el);
+      });
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -10% 0px' }
+  );
+  aosEls.forEach((el) => aosObserver.observe(el));
+}
+
 const sections = qsa('section[id]');
 const activeObserver = new IntersectionObserver(
   (entries) => {
@@ -127,11 +170,15 @@ const modalImg = qs('#modal-img');
 const modalTag = qs('#modal-tag');
 const modalTitle = qs('#modal-title');
 const modalDesc = qs('#modal-desc');
+const modalCloseBtn = modal?.querySelector('.modal-close');
+let lastFocusedEl = null;
 
 function openModal(data) {
   if (!modal) return;
+  lastFocusedEl = document.activeElement;
   modalImg.src = data.image || '';
   modalImg.alt = data.title || 'Project image';
+  modalImg.style.display = data.image ? 'block' : 'none';
   modalTag.textContent = data.tag || '';
   modalTag.style.display = data.tag ? 'inline-block' : 'none';
   modalTitle.textContent = data.title || '';
@@ -140,6 +187,7 @@ function openModal(data) {
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+  if (modalCloseBtn) modalCloseBtn.focus();
 }
 
 function closeModal() {
@@ -147,6 +195,7 @@ function closeModal() {
   modal.classList.remove('open');
   modal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+  if (lastFocusedEl && typeof lastFocusedEl.focus === 'function') lastFocusedEl.focus();
 }
 
 modal.addEventListener('click', (e) => {
@@ -159,12 +208,24 @@ window.addEventListener('keydown', (e) => {
 });
 
 portfolioItems.forEach((item) => {
+  item.setAttribute('tabindex', '0');
+  item.setAttribute('role', 'button');
   item.addEventListener('click', () => {
     const title = item.querySelector('h4')?.textContent?.trim() || 'Project';
     const desc = item.querySelector('p')?.textContent?.trim() || '';
     const tag = item.querySelector('.portfolio-tag')?.textContent?.trim() || item.dataset.category || '';
     const image = item.dataset.image || '';
     openModal({ title, desc, tag, image });
+  });
+  item.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const title = item.querySelector('h4')?.textContent?.trim() || 'Project';
+      const desc = item.querySelector('p')?.textContent?.trim() || '';
+      const tag = item.querySelector('.portfolio-tag')?.textContent?.trim() || item.dataset.category || '';
+      const image = item.dataset.image || '';
+      openModal({ title, desc, tag, image });
+    }
   });
 });
 
@@ -183,8 +244,11 @@ if (contactForm) {
     }
 
     const formData = new FormData(contactForm);
+    const honeypot = (formData.get('company') || '').toString();
+    if (honeypot.trim()) return;
     const name = (formData.get('name') || '').toString();
     const email = (formData.get('email') || '').toString();
+    const phone = (formData.get('phone') || '').toString();
     const service = (formData.get('service') || '').toString();
     const message = (formData.get('message') || '').toString();
     const action = (contactForm.action || '').trim();
@@ -192,7 +256,7 @@ if (contactForm) {
     const fallbackMailto = () => {
       const to = 'info@apsdrone.com';
       const subject = 'APS Drone quote request';
-      const body = `Name: ${name}\nEmail: ${email}\nService: ${service}\n\n${message}`;
+      const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\n${message}`;
       window.location.href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       if (submitBtn) {
         submitBtn.textContent = originalText;
