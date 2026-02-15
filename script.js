@@ -343,10 +343,10 @@ const mediaItems = [
   },
   {
     type: 'image',
-    title: 'Development Site Capture',
-    subtitle: 'Progress-focused aerial documentation',
+    title: 'Paris, TX Eiffel Tower View',
+    subtitle: 'Aerial capture of the Eiffel Tower landmark in Paris, Texas',
     src: 'assets/media/DJI_0203.JPG',
-    alt: 'Aerial view of a development site'
+    alt: 'Aerial view of the Eiffel Tower landmark in Paris, Texas'
   },
   {
     type: 'image',
@@ -364,17 +364,17 @@ const mediaItems = [
   },
   {
     type: 'image',
-    title: 'Large Property Context',
-    subtitle: 'High-altitude capture for site visibility',
+    title: 'Phoenix Botanical Garden View',
+    subtitle: 'Aerial perspective over botanical garden landscapes in Phoenix',
     src: 'assets/media/DJI_0491.JPG',
-    alt: 'Drone image of a large property area'
+    alt: 'Aerial view of botanical garden grounds in Phoenix, Arizona'
   },
   {
     type: 'image',
-    title: 'Commercial Roof and Lot View',
-    subtitle: 'Aerial detail for inspection and marketing purposes',
+    title: 'Desert Roadway Aerial View',
+    subtitle: 'Wide aerial framing of road and desert surroundings',
     src: 'assets/media/DJI_0500.JPG',
-    alt: 'Drone shot of commercial roofs and parking'
+    alt: 'Aerial view of a roadway through desert terrain'
   }
 ];
 
