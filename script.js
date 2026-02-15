@@ -306,78 +306,62 @@ const mediaGrid = qs('#media-grid');
 const mediaItems = [
   {
     type: 'image',
-    title: 'DFW Real Estate Exterior',
-    subtitle: 'Expected file: assets/media/dfw-real-estate-01.jpg',
-    src: 'assets/media/dfw-real-estate-01.jpg',
-    alt: 'Drone photo of a DFW real estate listing exterior'
+    title: 'Delta Hotels by Marriott - Plano, TX',
+    subtitle: 'DJI_0041.JPG',
+    src: 'assets/media/DJI_0041.JPG',
+    alt: 'Drone photo of Delta Hotels by Marriott area in Plano, Texas'
   },
   {
     type: 'image',
-    title: 'Commercial Property Aerial',
-    subtitle: 'Expected file: assets/media/dfw-commercial-01.jpg',
-    src: 'assets/media/dfw-commercial-01.jpg',
-    alt: 'Drone photo of a commercial property in Dallas-Fort Worth'
+    title: 'Delta Hotels by Marriott - Plano, TX',
+    subtitle: 'DJI_0042.JPG',
+    src: 'assets/media/DJI_0042.JPG',
+    alt: 'Aerial view of Delta Hotels by Marriott in Plano, Texas'
   },
   {
-    type: 'video',
-    title: 'Roof Inspection Flight',
-    subtitle: 'Expected file: assets/media/dfw-roof-inspection-01.mp4',
-    src: 'assets/media/dfw-roof-inspection-01.mp4',
-    poster: 'assets/placeholders/video-poster.svg'
+    type: 'image',
+    title: 'ASU Phoenix Campus View - Mesa/Phoenix, AZ',
+    subtitle: 'DJI_0046.JPG',
+    src: 'assets/media/DJI_0046.JPG',
+    alt: 'Drone view of ASU area in Mesa and Phoenix, Arizona'
   },
   {
-    type: 'video',
-    title: 'Construction Progress Update',
-    subtitle: 'Expected file: assets/media/dfw-construction-01.mp4',
-    src: 'assets/media/dfw-construction-01.mp4',
-    poster: 'assets/placeholders/video-poster.svg'
+    type: 'image',
+    title: 'Discovery Green - Houston, TX',
+    subtitle: 'DJI_0537.JPG',
+    src: 'assets/media/DJI_0537.JPG',
+    alt: 'Aerial photo of Discovery Green in downtown Houston, Texas'
+  },
+  {
+    type: 'image',
+    title: 'Galveston Coastline - Galveston, TX',
+    subtitle: 'DJI_0592.JPG',
+    src: 'assets/media/DJI_0592.JPG',
+    alt: 'Aerial photo of Galveston beach and coastline'
+  },
+  {
+    type: 'image',
+    title: 'Galveston Coastline - Galveston, TX',
+    subtitle: 'DJI_0593.JPG',
+    src: 'assets/media/DJI_0593.JPG',
+    alt: 'Aerial view of ocean and beach near Galveston, Texas'
   }
 ];
 
-async function fileExists(url) {
-  try {
-    const response = await fetch(url, { method: 'HEAD', cache: 'no-store' });
-    return response.ok;
-  } catch (error) {
-    return false;
-  }
-}
-
-function renderMediaPlaceholder(item) {
-  return `
-    <div class="media-placeholder">
-      <i class="fas ${item.type === 'video' ? 'fa-video' : 'fa-image'}"></i>
-      <p>Drop your ${item.type} file into assets/media</p>
-    </div>
-  `;
-}
-
-async function renderMediaGrid() {
+function renderMediaGrid() {
   if (!mediaGrid) return;
 
-  const cards = await Promise.all(
-    mediaItems.map(async (item) => {
-      const exists = await fileExists(item.src);
-
-      const mediaHtml = exists
-        ? item.type === 'video'
-          ? `<video controls preload="metadata" poster="${item.poster}"><source src="${item.src}" type="video/mp4">Your browser does not support HTML5 video.</video>`
-          : `<img src="${item.src}" alt="${item.alt}" loading="lazy">`
-        : renderMediaPlaceholder(item);
-
-      return `
-        <article class="media-card">
-          <div class="media-frame">${mediaHtml}</div>
-          <div class="media-meta">
-            <h3>${item.title}</h3>
-            <p>${item.subtitle}</p>
-          </div>
-        </article>
-      `;
-    })
-  );
-
-  mediaGrid.innerHTML = cards.join('');
+  mediaGrid.innerHTML = mediaItems.map((item) => `
+    <article class="media-card">
+      <div class="media-frame">
+        <img src="${item.src}" alt="${item.alt}" loading="lazy">
+      </div>
+      <div class="media-meta">
+        <h3>${item.title}</h3>
+        <p>${item.subtitle}</p>
+      </div>
+    </article>
+  `).join('');
 }
 
 renderMediaGrid();

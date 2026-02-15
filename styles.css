@@ -10,18 +10,18 @@
     --primary-dark: #2563eb;
     --primary-light: #60a5fa;
     --accent: #f59e0b;
-    --bg-dark: #0a0a0f;
-    --bg-card: #12121a;
-    --bg-card-hover: #1a1a28;
-    --bg-section: #0e0e16;
-    --text-primary: #ffffff;
-    --text-secondary: #94a3b8;
+    --bg-dark: #f6f8fc;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f7fbff;
+    --bg-section: #eef3f9;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
     --text-muted: #64748b;
-    --border: #1e293b;
-    --gradient-1: linear-gradient(135deg, #3b82f6, #8b5cf6);
-    --gradient-2: linear-gradient(135deg, #f59e0b, #ef4444);
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    --border: #d6e2f0;
+    --gradient-1: linear-gradient(135deg, #2563eb, #0ea5e9);
+    --gradient-2: linear-gradient(135deg, #f59e0b, #f97316);
+    --shadow: 0 4px 12px -6px rgba(15, 23, 42, 0.18);
+    --shadow-lg: 0 20px 35px -20px rgba(15, 23, 42, 0.28);
     --radius: 12px;
     --radius-lg: 20px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -108,7 +108,7 @@ img { max-width: 100%; display: block; }
 }
 
 .navbar.scrolled {
-    background: rgba(10, 10, 15, 0.95);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
     padding: 10px 0;
@@ -196,15 +196,15 @@ img { max-width: 100%; display: block; }
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 0%, rgba(59, 130, 246, 0.1) 0%, transparent 40%);
+        radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.14) 0%, transparent 52%),
+        radial-gradient(ellipse at 80% 50%, rgba(14, 165, 233, 0.12) 0%, transparent 48%),
+        radial-gradient(ellipse at 50% 0%, rgba(56, 189, 248, 0.09) 0%, transparent 42%);
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230f172a' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .hero-content {
