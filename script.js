@@ -12,11 +12,16 @@ const WHATSAPP_PHONE_E164 = '18329389570';
 const navbar = qs('#navbar');
 const navToggle = qs('#nav-toggle');
 const navMenu = qs('#nav-menu');
+const heroVideo = qs('.hero-video');
 
 window.addEventListener('scroll', () => {
   if (!navbar) return;
   if (window.scrollY > 50) navbar.classList.add('scrolled');
   else navbar.classList.remove('scrolled');
+  if (heroVideo) {
+    const fade = Math.max(0, 1 - (window.scrollY / 360));
+    heroVideo.style.opacity = fade.toString();
+  }
 });
 
 if (navToggle && navMenu) {
@@ -319,59 +324,59 @@ const mediaGrid = qs('#media-grid');
 const mediaItems = [
   {
     type: 'image',
-    title: 'Musical Instrument Museum - Phoenix, AZ',
-    subtitle: 'Architectural aerial perspective against the desert backdrop.',
-    src: 'assets/media/DJI_0608.JPG',
-    alt: 'Aerial view of Musical Instrument Museum in Phoenix, Arizona'
+    title: 'Houston Real Estate Exterior',
+    subtitle: 'Residential property context and lot visibility.',
+    src: 'assets/media/real-estate-houston-01.jpg',
+    alt: 'Real estate drone photo in Houston, Texas'
   },
   {
     type: 'image',
-    title: 'St. Martha Catholic Church - Porter, TX',
-    subtitle: 'Aerial view highlighting church architecture and surroundings.',
-    src: 'assets/media/DJI_0779.JPG',
-    alt: 'Drone photo of St. Martha Catholic Church in Porter, Texas'
+    title: 'Houston Property Context View',
+    subtitle: 'Wider neighborhood perspective for listing appeal.',
+    src: 'assets/media/real-estate-houston-02.jpg',
+    alt: 'Aerial neighborhood context for a Houston property'
   },
   {
     type: 'image',
-    title: 'Brady Townscape - Brady, TX',
-    subtitle: 'Small-town layout and landmarks from above.',
-    src: 'assets/media/DJI_0512.JPG',
-    alt: 'Drone photo of Brady, Texas'
+    title: 'Houston Roofline and Access View',
+    subtitle: 'Angle showing access, roof lines, and boundaries.',
+    src: 'assets/media/real-estate-houston-03.jpg',
+    alt: 'Aerial property roofline and access view in Houston'
   },
   {
     type: 'image',
-    title: 'Delta Hotels by Marriott - Phoenix Mesa, AZ',
-    subtitle: 'Hotel property and surrounding urban context.',
-    src: 'assets/media/DJI_0042.JPG',
-    alt: 'Aerial view of Delta Hotels by Marriott in Phoenix Mesa, Arizona'
+    title: 'Vitruvian Salsa Festival - Addison, TX',
+    subtitle: 'Crowd and venue energy from above.',
+    src: 'assets/media/salsa-vitruvian-addison.jpg',
+    alt: 'Aerial coverage of salsa festival at Vitruvian Park in Addison'
   },
   {
     type: 'image',
-    title: 'Eiffel Tower Replica - Paris, TX',
-    subtitle: 'Sweeping view including nearby memorial museum area.',
-    src: 'assets/media/DJI_0203.JPG',
-    alt: 'Drone photo of Eiffel Tower replica in Paris, Texas'
+    title: 'Thermal Inspection - Urban Site',
+    subtitle: 'Thermal capture used for inspection review.',
+    src: 'assets/media/thermal-inspection-urban.jpg',
+    alt: 'Thermal drone inspection image from urban site'
   },
   {
     type: 'image',
-    title: 'Galveston Beach - Galveston, TX',
-    subtitle: 'Expansive coastline and sea textures.',
-    src: 'assets/media/DJI_0592.JPG',
-    alt: 'Aerial photo of Galveston beach and sea'
+    title: 'Thermal Inspection - Site Frame A',
+    subtitle: 'Detailed thermal image for hotspot analysis.',
+    src: 'assets/media/thermal-site-01.jpg',
+    alt: 'Thermal drone image for site inspection'
   },
   {
     type: 'image',
-    title: "L'Auberge Resort Lazy Pool - Lake Charles, LA",
-    subtitle: 'Resort pool geometry and landscaping from above.',
-    src: 'assets/media/DJI_0359.JPG',
-    alt: "Aerial view of L'Auberge resort lazy pool in Lake Charles, Louisiana"
+    title: 'Thermal Inspection - Site Frame B',
+    subtitle: 'Secondary thermal capture from same project area.',
+    src: 'assets/media/thermal-site-02.jpg',
+    alt: 'Second thermal drone inspection frame'
   },
   {
-    type: 'image',
-    title: 'Desert Botanical Garden - Phoenix, AZ',
-    subtitle: 'Distinct desert landscaping and pathways captured aerially.',
-    src: 'assets/media/DJI_0491.JPG',
-    alt: 'Aerial photo of Desert Botanical Garden in Phoenix, Arizona'
+    type: 'video',
+    title: 'FPV Tour - Club Pilates, Cross Roads TX',
+    subtitle: 'Indoor FPV fly-through recorded with DJI Avata.',
+    src: 'assets/media/fpv-club-pilates-crossroads.mp4',
+    poster: 'assets/media/thermal-site-01.jpg'
   },
   {
     type: 'image',
@@ -382,38 +387,10 @@ const mediaItems = [
   },
   {
     type: 'image',
-    title: 'Phoenix Road Network - Phoenix, AZ',
-    subtitle: 'Dynamic aerial composition of roads and neighborhoods.',
-    src: 'assets/media/DJI_0965.JPG',
-    alt: 'Drone photo of road network and neighborhoods in Phoenix, Arizona'
-  },
-  {
-    type: 'image',
-    title: 'Phoenix Commercial View - Phoenix, AZ',
-    subtitle: 'Commercial activity area with clear site layout.',
-    src: 'assets/media/DJI_0046.JPG',
-    alt: 'Aerial commercial view in Phoenix, Arizona'
-  },
-  {
-    type: 'image',
-    title: 'Desert Road Scene - Phoenix, AZ',
-    subtitle: 'Winding roadway through rugged desert terrain.',
-    src: 'assets/media/DJI_0500.JPG',
-    alt: 'Aerial desert road photo in Phoenix, Arizona'
-  },
-  {
-    type: 'image',
-    title: 'Mountain Landscape - Phoenix, AZ',
-    subtitle: 'Natural mountain backdrop near urban development.',
-    src: 'assets/media/DJI_0967.JPG',
-    alt: 'Aerial mountain landscape in Phoenix, Arizona'
-  },
-  {
-    type: 'image',
-    title: 'Cloudscape - Sugar Land, TX',
-    subtitle: 'Expansive cloud formations and atmospheric depth.',
-    src: 'assets/media/DJI_0631.JPG',
-    alt: 'Aerial cloudscape in Sugar Land, Texas'
+    title: 'Hero Reel Preview',
+    subtitle: 'High-altitude cinematic pass used in hero section.',
+    src: 'assets/media/DJI_0608.JPG',
+    alt: 'Cinematic drone still from hero reel'
   }
 ];
 
@@ -423,7 +400,10 @@ function renderMediaGrid() {
   mediaGrid.innerHTML = mediaItems.map((item) => `
     <article class="media-card">
       <div class="media-frame">
-        <img src="${item.src}" alt="${item.alt}" loading="lazy">
+        ${item.type === 'video'
+          ? `<video controls preload="metadata" poster="${item.poster || ''}"><source src="${item.src}" type="video/mp4">Your browser does not support HTML5 video.</video>`
+          : `<img src="${item.src}" alt="${item.alt}" loading="lazy">`
+        }
       </div>
       <div class="media-meta">
         <h3>${item.title}</h3>
