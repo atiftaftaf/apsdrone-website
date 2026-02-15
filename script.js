@@ -224,18 +224,18 @@ portfolioItems.forEach((item) => {
   item.setAttribute('tabindex', '0');
   item.setAttribute('role', 'button');
   item.addEventListener('click', () => {
-    const title = item.querySelector('h4')?.textContent?.trim() || 'Project';
-    const desc = item.querySelector('p')?.textContent?.trim() || '';
-    const tag = item.querySelector('.portfolio-tag')?.textContent?.trim() || item.dataset.category || '';
+    const title = item.dataset.title || item.querySelector('h4')?.textContent?.trim() || 'Project';
+    const desc = item.dataset.desc || item.querySelector('p')?.textContent?.trim() || '';
+    const tag = item.dataset.tag || item.querySelector('.portfolio-tag')?.textContent?.trim() || item.dataset.category || '';
     const image = item.dataset.image || '';
     openModal({ title, desc, tag, image });
   });
   item.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      const title = item.querySelector('h4')?.textContent?.trim() || 'Project';
-      const desc = item.querySelector('p')?.textContent?.trim() || '';
-      const tag = item.querySelector('.portfolio-tag')?.textContent?.trim() || item.dataset.category || '';
+      const title = item.dataset.title || item.querySelector('h4')?.textContent?.trim() || 'Project';
+      const desc = item.dataset.desc || item.querySelector('p')?.textContent?.trim() || '';
+      const tag = item.dataset.tag || item.querySelector('.portfolio-tag')?.textContent?.trim() || item.dataset.category || '';
       const image = item.dataset.image || '';
       openModal({ title, desc, tag, image });
     }
@@ -267,7 +267,7 @@ if (contactForm) {
     const action = (contactForm.action || '').trim();
 
     const fallbackMailto = () => {
-      const to = 'apsdronehouston@gmail.com';
+      const to = 'setenaytaftaf@gmail.com';
       const subject = 'APS Drone quote request';
       const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\n${message}`;
       window.location.href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
