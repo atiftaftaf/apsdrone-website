@@ -360,7 +360,7 @@ const mediaItems = [
     title: 'FPV Indoor Tour (DJI Avata)',
     subtitle: 'Indoor cinematic FPV fly-through for business marketing.',
     src: 'assets/media/fpv-club-pilates-crossroads.mp4',
-    poster: 'assets/media/DJI_0967.JPG'
+    poster: 'assets/media/fpv-club-pilates-crossroads-poster.jpg'
   },
   {
     type: 'image',
