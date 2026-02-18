@@ -22,19 +22,39 @@ const heroPlaylist = [
 function setupHeroVideoPlaylist() {
   if (!heroVideo || !heroPlaylist.length) return;
   let idx = 0;
+  let switchTimer = null;
+
+  const clearSwitchTimer = () => {
+    if (switchTimer) {
+      window.clearTimeout(switchTimer);
+      switchTimer = null;
+    }
+  };
 
   const playAt = (i) => {
     idx = (i + heroPlaylist.length) % heroPlaylist.length;
+    clearSwitchTimer();
     heroVideo.src = heroPlaylist[idx];
     heroVideo.load();
+  };
+
+  heroVideo.addEventListener('loadedmetadata', () => {
     const playPromise = heroVideo.play();
     if (playPromise && typeof playPromise.catch === 'function') {
       playPromise.catch(() => {});
     }
-  };
+    const duration = Number.isFinite(heroVideo.duration) ? heroVideo.duration : 8;
+    switchTimer = window.setTimeout(() => playAt(idx + 1), Math.max(1000, Math.floor(duration * 1000) - 120));
+  });
 
   heroVideo.addEventListener('ended', () => playAt(idx + 1));
   heroVideo.addEventListener('error', () => playAt(idx + 1));
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && heroVideo.paused) {
+      const p = heroVideo.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
+    }
+  });
   playAt(0);
 }
 
