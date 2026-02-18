@@ -4,6 +4,42 @@ const qsa = (sel) => document.querySelectorAll(sel);
 const yearEl = qs('#year');
 if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
 
+// ===== Hero video playlist =====
+const heroVideo = qs('.hero-video');
+const heroPlaylist = [
+  'assets/media/hero-loop-01.mp4',
+  'assets/media/hero-loop-02.mp4',
+  'assets/media/hero-loop-03.mp4',
+  'assets/media/hero-loop-04.mp4',
+  'assets/media/hero-loop-05.mp4',
+  'assets/media/hero-loop-06.mp4',
+  'assets/media/hero-loop-07.mp4',
+  'assets/media/hero-loop-08.mp4',
+  'assets/media/hero-loop-09.mp4',
+  'assets/media/hero-loop-10.mp4'
+];
+
+function setupHeroVideoPlaylist() {
+  if (!heroVideo || !heroPlaylist.length) return;
+  let idx = 0;
+
+  const playAt = (i) => {
+    idx = (i + heroPlaylist.length) % heroPlaylist.length;
+    heroVideo.src = heroPlaylist[idx];
+    heroVideo.load();
+    const playPromise = heroVideo.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {});
+    }
+  };
+
+  heroVideo.addEventListener('ended', () => playAt(idx + 1));
+  heroVideo.addEventListener('error', () => playAt(idx + 1));
+  playAt(0);
+}
+
+setupHeroVideoPlaylist();
+
 // Set these to enable direct call/WhatsApp buttons.
 const CONTACT_PHONE_E164 = '+18329389570';
 const WHATSAPP_PHONE_E164 = '18329389570';
