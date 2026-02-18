@@ -4,61 +4,18 @@ const qsa = (sel) => document.querySelectorAll(sel);
 const yearEl = qs('#year');
 if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
 
-// ===== Hero video playlist =====
+// ===== Hero video =====
 const heroVideo = qs('.hero-video');
-const heroPlaylist = [
-  'assets/media/hero-loop-01.mp4',
-  'assets/media/hero-loop-02.mp4',
-  'assets/media/hero-loop-03.mp4',
-  'assets/media/hero-loop-04.mp4',
-  'assets/media/hero-loop-05.mp4',
-  'assets/media/hero-loop-06.mp4',
-  'assets/media/hero-loop-07.mp4',
-  'assets/media/hero-loop-08.mp4',
-  'assets/media/hero-loop-09.mp4',
-  'assets/media/hero-loop-10.mp4'
-];
-
-function setupHeroVideoPlaylist() {
-  if (!heroVideo || !heroPlaylist.length) return;
-  let idx = 0;
-  let switchTimer = null;
-
-  const clearSwitchTimer = () => {
-    if (switchTimer) {
-      window.clearTimeout(switchTimer);
-      switchTimer = null;
-    }
-  };
-
-  const playAt = (i) => {
-    idx = (i + heroPlaylist.length) % heroPlaylist.length;
-    clearSwitchTimer();
-    heroVideo.src = heroPlaylist[idx];
-    heroVideo.load();
-  };
-
-  heroVideo.addEventListener('loadedmetadata', () => {
-    const playPromise = heroVideo.play();
-    if (playPromise && typeof playPromise.catch === 'function') {
-      playPromise.catch(() => {});
-    }
-    const duration = Number.isFinite(heroVideo.duration) ? heroVideo.duration : 8;
-    switchTimer = window.setTimeout(() => playAt(idx + 1), Math.max(1000, Math.floor(duration * 1000) - 120));
-  });
-
-  heroVideo.addEventListener('ended', () => playAt(idx + 1));
-  heroVideo.addEventListener('error', () => playAt(idx + 1));
+if (heroVideo) {
+  const p = heroVideo.play();
+  if (p && typeof p.catch === 'function') p.catch(() => {});
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible' && heroVideo.paused) {
-      const p = heroVideo.play();
-      if (p && typeof p.catch === 'function') p.catch(() => {});
+      const rp = heroVideo.play();
+      if (rp && typeof rp.catch === 'function') rp.catch(() => {});
     }
   });
-  playAt(0);
 }
-
-setupHeroVideoPlaylist();
 
 // Set these to enable direct call/WhatsApp buttons.
 const CONTACT_PHONE_E164 = '+18329389570';
