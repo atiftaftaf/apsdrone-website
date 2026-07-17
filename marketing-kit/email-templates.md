@@ -187,5 +187,4 @@ APS Drone<br>
 Dallas–Fort Worth, Texas<br>
 Phone: +1 (832) 938-9570<br>
 Website: https://apsdrone.com/<br>
-Mailing address: 12005 U.S. 380, #3062, Aubrey, TX 76227<br>
 If you do not want future emails from APS Drone, reply `unsubscribe` and we will stop.

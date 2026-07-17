@@ -23,7 +23,7 @@ Domain: https://apsdrone.com
 3. Category options: `Aerial photographer`, `Photographer`, `Video production service`.
 4. Add service area cities: Dallas, Fort Worth, Arlington, Plano, Frisco, Irving, Denton.
 5. Add phone `+1 (832) 938-9570`, website `https://apsdrone.com`, email `apsdronetx@gmail.com`, and Instagram `https://www.instagram.com/apsdronetx/`.
-6. APS Drone's mailing address is `12005 U.S. 380, #3062, Aubrey, TX 76227`. Do not publish it as a customer-facing storefront in Google Business Profile unless customers are actually received there; otherwise use a service-area profile and hide the street address.
+6. Configure APS Drone as a service-area business serving Dallas-Fort Worth. Do not publish a private street or mailing address on the website, business profiles, marketing copy, or outbound email.
 
 ## Weekly SEO routine
 1. Post 2-4 fresh photos/videos and update captions with city + service keywords.
