@@ -8,7 +8,7 @@ Domain: https://apsdrone.com
 - Added Local Business + FAQ schema in `index.html`.
 - Added DFW service-area content and city-focused sections.
 - Added real media files in `assets/media` for richer page content.
-- Added call and WhatsApp lead buttons with click tracking event `lead_click`.
+- Added call, text and WhatsApp lead buttons with conversion events (`click_call`, `click_text`, `click_whatsapp`, `cta_click`, `form_start`, `form_submit`, and `generate_lead`).
 
 ## Do now (Google Search Console)
 1. Open Google Search Console: https://search.google.com/search-console
@@ -23,7 +23,7 @@ Domain: https://apsdrone.com
 3. Category options: `Aerial photographer`, `Photographer`, `Video production service`.
 4. Add service area cities: Dallas, Fort Worth, Arlington, Plano, Frisco, Irving, Denton.
 5. Add phone `+1 (832) 938-9570`, website `https://apsdrone.com`, email `apsdronetx@gmail.com`, and Instagram `https://www.instagram.com/apsdronetx/`.
-6. Configure APS Drone as a service-area business serving Dallas-Fort Worth. Do not publish a private street or mailing address on the website, business profiles, marketing copy, or outbound email.
+6. Configure APS Drone as a service-area business serving Dallas-Fort Worth. Do not publish a private unit/mailbox number. Keep the website and business profiles service-area based; commercial email must use only the owner-authorized shortened public postal address from the private outreach record.
 
 ## Weekly SEO routine
 1. Post 2-4 fresh photos/videos and update captions with city + service keywords.

@@ -43,6 +43,13 @@
       "telephone": "+1-832-938-9570",
       "email": "apsdronetx@gmail.com",
       "priceRange": "$249 and up",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-832-938-9570",
+        "contactType": "sales",
+        "areaServed": "US-TX",
+        "availableLanguage": "English"
+      },
       "areaServed": [
         { "@type": "City", "name": "Dallas" },
         { "@type": "City", "name": "Fort Worth" },
@@ -82,6 +89,54 @@
       "sameAs": [
         "https://www.instagram.com/apsdronetx/",
         "https://www.tiktok.com/@apsdronetx"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you provide drone services across the full DFW area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. APS Drone serves Dallas, Fort Worth, Arlington, Plano, Frisco, Irving, and nearby DFW cities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you FAA certified for commercial drone work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. APS Drone operates under FAA Part 107 commercial drone rules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are your starting prices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aerial listing photos start at $249, photos plus a vertical reel start at $499, and FPV tours start at $1,199. Construction, mapping support and thermal documentation are custom-scoped."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast is delivery after the shoot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most projects are delivered in 24 to 48 hours, depending on the number of files and edit requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer recurring construction progress flights?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Weekly, biweekly, and monthly progress capture plans are available for builders and project managers."
+          }
+        }
       ]
     }
     </script>
@@ -581,8 +636,8 @@
                         <div class="contact-icon">
                             <i class="fab fa-instagram"></i>
                         </div>
-                        <h3>Instagram</h3>
-                        <p><a href="https://www.instagram.com/apsdronetx/" target="_blank" rel="noopener noreferrer">@apsdronetx</a></p>
+                        <h3>Social</h3>
+                        <p><a href="https://www.instagram.com/apsdronetx/" target="_blank" rel="noopener noreferrer" data-track="instagram-contact">Instagram @apsdronetx</a><br><a href="https://www.tiktok.com/@apsdronetx" target="_blank" rel="noopener noreferrer" data-track="tiktok-contact">TikTok @apsdronetx</a></p>
                     </div>
                 </div>
                 <form class="contact-form" id="contact-form" action="https://formspree.io/f/mwvnoboy" method="POST" data-success-url="thank-you.html">
@@ -607,11 +662,11 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your email" required>
+                            <input type="email" id="email" name="email" placeholder="Your email" autocomplete="email" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -619,8 +674,8 @@
                         <input type="text" id="company" name="company" placeholder="Company or team name" autocomplete="organization">
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone / text number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel" required>
+                        <label for="phone">Phone / text number (optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel" inputmode="tel">
                     </div>
                     <div class="form-group">
                         <label for="project-location">Project address or city</label>
@@ -641,13 +696,13 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="shoot-date">Preferred shoot date</label>
-                            <input type="date" id="shoot-date" name="preferred_shoot_date" required>
+                            <label for="shoot-date">Preferred shoot date (optional)</label>
+                            <input type="date" id="shoot-date" name="preferred_shoot_date">
                         </div>
                         <div class="form-group">
-                            <label for="budget">Estimated budget</label>
-                            <select id="budget" name="budget" required>
-                                <option value="" disabled selected>Select a range</option>
+                            <label for="budget">Estimated budget (optional)</label>
+                            <select id="budget" name="budget">
+                                <option value="" selected>Select a range</option>
                                 <option value="249-499">$249-$499</option>
                                 <option value="500-999">$500-$999</option>
                                 <option value="1000-1999">$1,000-$1,999</option>
@@ -657,9 +712,9 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="referral-source">How did you hear about APS Drone?</label>
-                        <select id="referral-source" name="referral_source" required>
-                            <option value="" disabled selected>Select one</option>
+                        <label for="referral-source">How did you hear about APS Drone? (optional)</label>
+                        <select id="referral-source" name="referral_source">
+                            <option value="" selected>Select one</option>
                             <option value="google">Google Search / Maps</option>
                             <option value="instagram">Instagram</option>
                             <option value="tiktok">TikTok</option>
@@ -723,11 +778,11 @@
                 <div class="footer-contact">
                     <h4>Contact</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Serving Dallas-Fort Worth, Texas</li>
                         <li><i class="fas fa-phone"></i> <a href="tel:+18329389570">(832) 938-9570</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:apsdronetx@gmail.com">apsdronetx@gmail.com</a></li>
                         <li><i class="fas fa-location-dot"></i> Serving Dallas-Fort Worth, Texas</li>
                         <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/apsdronetx/" target="_blank" rel="noopener noreferrer">@apsdronetx</a></li>
+                        <li><i class="fab fa-tiktok"></i> <a href="https://www.tiktok.com/@apsdronetx" target="_blank" rel="noopener noreferrer">@apsdronetx</a></li>
                     </ul>
                 </div>
             </div>
