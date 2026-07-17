@@ -1,6 +1,6 @@
 ﻿# APS Drone SEO and Indexing Checklist
 
-Updated: 2026-02-14
+Updated: 2026-07-16
 Domain: https://apsdrone.com
 
 ## Already completed in this repo
@@ -22,7 +22,8 @@ Domain: https://apsdrone.com
 2. Business name: `APS Drone`.
 3. Category options: `Aerial photographer`, `Photographer`, `Video production service`.
 4. Add service area cities: Dallas, Fort Worth, Arlington, Plano, Frisco, Irving, Denton.
-5. Add phone `+1 (832) 938-9570`, website `https://apsdrone.com`, and Instagram `https://www.instagram.com/apsdronetx/`.
+5. Add phone `+1 (832) 938-9570`, website `https://apsdrone.com`, email `apsdronetx@gmail.com`, and Instagram `https://www.instagram.com/apsdronetx/`.
+6. APS Drone's mailing address is `12005 U.S. 380, #3062, Aubrey, TX 76227`. Do not publish it as a customer-facing storefront in Google Business Profile unless customers are actually received there; otherwise use a service-area profile and hide the street address.
 
 ## Weekly SEO routine
 1. Post 2-4 fresh photos/videos and update captions with city + service keywords.
