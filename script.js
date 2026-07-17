@@ -4,16 +4,42 @@ const qsa = (sel) => document.querySelectorAll(sel);
 const yearEl = qs('#year');
 if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
 
-// ===== Hero video =====
+// ===== Hero video: poster first, then a small DFW loop when appropriate =====
 const heroVideo = qs('.hero-video');
 if (heroVideo) {
-  const p = heroVideo.play();
-  if (p && typeof p.catch === 'function') p.catch(() => {});
+  const source = heroVideo.querySelector('source[data-src]');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const saveData = Boolean(navigator.connection && navigator.connection.saveData);
+  let heroLoaded = false;
+
+  const playHero = () => {
+    const playPromise = heroVideo.play();
+    if (playPromise && typeof playPromise.catch === 'function') playPromise.catch(() => {});
+  };
+
+  const loadHero = () => {
+    if (heroLoaded || !source || prefersReducedMotion || saveData) return;
+    heroLoaded = true;
+    source.src = source.dataset.src || '';
+    heroVideo.load();
+    heroVideo.addEventListener('canplay', playHero, { once: true });
+  };
+
+  const queueHeroLoad = () => {
+    if ('requestIdleCallback' in window) window.requestIdleCallback(loadHero, { timeout: 2000 });
+    else loadHero();
+  };
+
+  ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach((eventName) => {
+    window.addEventListener(eventName, queueHeroLoad, { once: true, passive: true });
+  });
+
+  window.addEventListener('load', () => {
+    window.setTimeout(queueHeroLoad, 15000);
+  }, { once: true });
+
   document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible' && heroVideo.paused) {
-      const rp = heroVideo.play();
-      if (rp && typeof rp.catch === 'function') rp.catch(() => {});
-    }
+    if (document.visibilityState === 'visible' && heroLoaded && heroVideo.paused) playHero();
   });
 }
 
@@ -141,19 +167,6 @@ counters.forEach((el) => counterObserver.observe(el));
 const filterButtons = qsa('.filter-btn');
 const portfolioItems = qsa('.portfolio-item');
 
-function renderPortfolioThumbnails() {
-  portfolioItems.forEach((item) => {
-    const src = item.dataset.image || '';
-    if (!src) return;
-    const frame = item.querySelector('.portfolio-image');
-    if (!frame) return;
-    const title = item.querySelector('h4')?.textContent?.trim() || 'Project image';
-    frame.innerHTML = `<img src="${src}" alt="${title}" loading="lazy">`;
-  });
-}
-
-renderPortfolioThumbnails();
-
 function applyFilter(category) {
   portfolioItems.forEach((item) => {
     const cat = item.dataset.category;
@@ -177,7 +190,7 @@ function buildPortfolioModal() {
   modal.className = 'modal';
   modal.innerHTML = `
     <div class="modal-backdrop" data-close="true"></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-label="Project preview">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
       <button class="modal-close" type="button" aria-label="Close" data-close="true">x</button>
       <img class="modal-img" id="modal-img" alt="" loading="lazy" />
       <div class="modal-meta">
@@ -187,6 +200,7 @@ function buildPortfolioModal() {
       </div>
     </div>
   `;
+  modal.setAttribute('aria-hidden', 'true');
   document.body.appendChild(modal);
   return modal;
 }
@@ -231,13 +245,26 @@ modal.addEventListener('click', (e) => {
 
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  if (e.key !== 'Tab' || !modal.classList.contains('open')) return;
+  const focusable = Array.from(modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+    .filter((el) => !el.disabled && el.getAttribute('aria-hidden') !== 'true');
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
+  }
 });
 
 portfolioItems.forEach((item) => {
   item.setAttribute('tabindex', '0');
   item.setAttribute('role', 'button');
   item.addEventListener('click', () => {
-    const title = item.dataset.title || item.querySelector('h4')?.textContent?.trim() || 'Project';
+    const title = item.dataset.title || item.querySelector('h3')?.textContent?.trim() || 'Project';
     const desc = item.dataset.desc || item.querySelector('p')?.textContent?.trim() || '';
     const tag = item.dataset.tag || item.querySelector('.portfolio-tag')?.textContent?.trim() || item.dataset.category || '';
     const image = item.dataset.image || '';
@@ -246,7 +273,7 @@ portfolioItems.forEach((item) => {
   item.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      const title = item.dataset.title || item.querySelector('h4')?.textContent?.trim() || 'Project';
+      const title = item.dataset.title || item.querySelector('h3')?.textContent?.trim() || 'Project';
       const desc = item.dataset.desc || item.querySelector('p')?.textContent?.trim() || '';
       const tag = item.dataset.tag || item.querySelector('.portfolio-tag')?.textContent?.trim() || item.dataset.category || '';
       const image = item.dataset.image || '';
@@ -255,183 +282,180 @@ portfolioItems.forEach((item) => {
   });
 });
 
-// ===== Contact form =====
-const contactForm = qs('#contact-form');
+// ===== Attribution, contact form and conversion tracking =====
+function pushTrackingEvent(eventName, payload = {}) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: eventName, ...payload });
 
+  // Fallback for a future direct gtag installation. No measurement ID is assumed here.
+  if (typeof window.gtag === 'function' && !window.google_tag_manager) {
+    window.gtag('event', eventName, payload);
+  }
+}
+
+const ATTRIBUTION_KEYS = [
+  'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
+  'gclid', 'gbraid', 'wbraid', 'fbclid', 'ttclid'
+];
+
+function readStoredJson(key) {
+  try {
+    return JSON.parse(window.localStorage.getItem(key) || 'null');
+  } catch (_) {
+    return null;
+  }
+}
+
+function writeStoredJson(key, value) {
+  try {
+    window.localStorage.setItem(key, JSON.stringify(value));
+  } catch (_) {
+    // Attribution should never block a quote request.
+  }
+}
+
+function captureAttribution() {
+  const params = new URLSearchParams(window.location.search);
+  const current = {
+    landing_page: window.location.href,
+    referrer: document.referrer || 'direct'
+  };
+  ATTRIBUTION_KEYS.forEach((key) => {
+    const value = params.get(key);
+    if (value) current[key] = value.slice(0, 300);
+  });
+
+  let firstTouch = readStoredJson('aps_first_touch_v1');
+  if (!firstTouch) {
+    firstTouch = current;
+    writeStoredJson('aps_first_touch_v1', firstTouch);
+  }
+  writeStoredJson('aps_last_touch_v1', current);
+  return firstTouch;
+}
+
+function populateAttributionFields() {
+  const firstTouch = captureAttribution();
+  const values = {
+    'landing-page': firstTouch.landing_page || window.location.href,
+    'lead-referrer': firstTouch.referrer || 'direct',
+    'utm-source': firstTouch.utm_source || '',
+    'utm-medium': firstTouch.utm_medium || '',
+    'utm-campaign': firstTouch.utm_campaign || '',
+    'utm-content': firstTouch.utm_content || '',
+    'utm-term': firstTouch.utm_term || '',
+    gclid: firstTouch.gclid || '',
+    gbraid: firstTouch.gbraid || '',
+    wbraid: firstTouch.wbraid || '',
+    fbclid: firstTouch.fbclid || '',
+    ttclid: firstTouch.ttclid || ''
+  };
+  Object.entries(values).forEach(([id, value]) => {
+    const field = document.getElementById(id);
+    if (field) field.value = value;
+  });
+}
+
+const contactForm = qs('#contact-form');
 if (contactForm) {
+  populateAttributionFields();
+  const shootDate = qs('#shoot-date');
+  if (shootDate) {
+    const today = new Date();
+    const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000);
+    shootDate.min = localDate.toISOString().slice(0, 10);
+  }
+
+  let formStarted = false;
+  contactForm.addEventListener('focusin', () => {
+    if (formStarted) return;
+    formStarted = true;
+    pushTrackingEvent('form_start', { form_name: 'website_quote', page_location: window.location.href });
+  });
+
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-
     const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn?.textContent || '';
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
+    const status = qs('#form-status');
+    const originalHtml = submitBtn?.innerHTML || '';
+    const formData = new FormData(contactForm);
+    const honeypot = (formData.get('website') || '').toString();
+
+    if (honeypot.trim()) {
+      if (status) status.textContent = 'Please call or text us if you need help submitting this request.';
+      return;
     }
 
-    const formData = new FormData(contactForm);
-    const honeypot = (formData.get('company') || '').toString();
-    if (honeypot.trim()) return;
-    const name = (formData.get('name') || '').toString();
-    const email = (formData.get('email') || '').toString();
-    const phone = (formData.get('phone') || '').toString();
-    const service = (formData.get('service') || '').toString();
-    const message = (formData.get('message') || '').toString();
+    const service = (formData.get('service') || 'other').toString();
+    const projectLocation = (formData.get('project_location') || 'DFW').toString().slice(0, 120);
+    const subject = contactForm.querySelector('input[name="_subject"]');
+    if (subject) subject.value = `[APS LEAD] ${service} | ${projectLocation}`;
+    populateAttributionFields();
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending request...';
+    }
+    if (status) status.textContent = 'Sending your request securely...';
+
+    pushTrackingEvent('form_submit', {
+      form_name: 'website_quote',
+      service
+    });
+
     const action = (contactForm.action || '').trim();
-
+    let succeeded = false;
     try {
-      const isFormspree = action.includes('formspree.io') && !action.includes('placeholder');
-
-      if (!isFormspree) {
-        throw new Error('Form endpoint missing');
-        return;
-      }
-
+      if (!action.includes('formspree.io')) throw new Error('Form endpoint unavailable');
       const res = await fetch(action, {
         method: 'POST',
-        body: formData,
+        body: new FormData(contactForm),
         headers: { Accept: 'application/json' }
       });
+      if (!res.ok) throw new Error('Form submission failed');
 
-      if (!res.ok) throw new Error('Failed');
+      succeeded = true;
+      pushTrackingEvent('generate_lead', {
+        form_name: 'website_quote',
+        service
+      });
+      if (status) status.textContent = 'Request received. Opening your confirmation page...';
+      if (submitBtn) submitBtn.innerHTML = '<i class="fas fa-check"></i> Request received';
 
-      contactForm.reset();
-      if (submitBtn) submitBtn.textContent = 'Sent';
-      setTimeout(() => {
-        if (submitBtn) {
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-        }
-      }, 2500);
-    } catch (err) {
-      if (submitBtn) submitBtn.textContent = 'Try again';
-      setTimeout(() => {
-        if (submitBtn) {
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-        }
-      }, 2000);
+      const successUrl = contactForm.dataset.successUrl || 'thank-you.html';
+      window.setTimeout(() => {
+        window.location.assign(new URL(successUrl, document.baseURI).href);
+      }, 500);
+    } catch (_) {
+      if (status) {
+        status.innerHTML = 'We could not send the form. Please <a href="tel:+18329389570">call</a> or <a href="sms:+18329389570">text (832) 938-9570</a>.';
+      }
+      pushTrackingEvent('form_error', { form_name: 'website_quote', service });
+    } finally {
+      if (!succeeded && submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalHtml;
+      }
     }
   });
 }
 
-// ===== Media showcase =====
-const mediaGrid = qs('#media-grid');
-
-const mediaItems = [
-  {
-    type: 'image',
-    title: 'Aerial View of New Homes',
-    subtitle: 'Capturing the development of a residential area',
-    src: 'assets/media/real-estate-houston-02.jpg',
-    alt: 'Drone view showing new houses and roads'
-  },
-  {
-    type: 'image',
-    title: 'Stunning Residential Property',
-    subtitle: 'High-quality aerial view of a new home',
-    src: 'assets/media/real-estate-houston-03.jpg',
-    alt: 'Aerial image of a modern house with greenery'
-  },
-  {
-    type: 'image',
-    title: 'Thermal Roof Inspection',
-    subtitle: 'Assessing roof conditions with thermal imaging technology',
-    src: 'assets/media/thermal-site-02.jpg',
-    alt: 'Thermal image of a roof for inspection purposes'
-  },
-  {
-    type: 'image',
-    title: 'Drone View of City Skyline',
-    subtitle: 'Capturing stunning views of urban landscapes from above',
-    src: 'assets/media/thermal-inspection-urban.jpg',
-    alt: 'Aerial view of tall buildings in an urban skyline'
-  },
-  {
-    type: 'image',
-    title: 'Commercial Aerial Overview',
-    subtitle: 'Wide framing for commercial property context',
-    src: 'assets/media/DJI_0046.JPG',
-    alt: 'Aerial shot of a commercial area'
-  },
-  {
-    type: 'image',
-    title: 'Paris, TX Eiffel Tower View',
-    subtitle: 'Aerial capture of the Eiffel Tower landmark in Paris, Texas',
-    src: 'assets/media/DJI_0203.JPG',
-    alt: 'Aerial view of the Eiffel Tower landmark in Paris, Texas'
-  },
-  {
-    type: 'image',
-    title: 'Urban Property Perspective',
-    subtitle: 'Top-down framing for marketing and planning use',
-    src: 'assets/media/DJI_0359.JPG',
-    alt: 'Aerial perspective of urban properties'
-  },
-  {
-    type: 'video',
-    title: 'FPV Indoor Tour (DJI Avata)',
-    subtitle: 'Indoor cinematic FPV fly-through for business marketing.',
-    src: 'assets/media/fpv-club-pilates-crossroads.mp4',
-    poster: 'assets/media/fpv-club-pilates-crossroads-poster.jpg'
-  },
-  {
-    type: 'image',
-    title: 'Phoenix Botanical Garden View',
-    subtitle: 'Aerial perspective over botanical garden landscapes in Phoenix',
-    src: 'assets/media/DJI_0491.JPG',
-    alt: 'Aerial view of botanical garden grounds in Phoenix, Arizona'
-  },
-  {
-    type: 'image',
-    title: 'Desert Roadway Aerial View',
-    subtitle: 'Wide aerial framing of road and desert surroundings',
-    src: 'assets/media/DJI_0500.JPG',
-    alt: 'Aerial view of a roadway through desert terrain'
-  }
-];
-
-function renderMediaGrid() {
-  if (!mediaGrid) return;
-
-  mediaGrid.innerHTML = mediaItems.map((item) => `
-    <article class="media-card">
-      <div class="media-frame">
-        ${item.type === 'video'
-          ? `<video controls preload="metadata" poster="${item.poster || ''}"><source src="${item.src}" type="video/mp4">Your browser does not support HTML5 video.</video>`
-          : `<img src="${item.src}" alt="${item.alt}" loading="lazy">`
-        }
-      </div>
-      <div class="media-meta">
-        <h3>${item.title}</h3>
-        ${item.subtitle ? `<p>${item.subtitle}</p>` : ''}
-      </div>
-    </article>
-  `).join('');
-}
-
-renderMediaGrid();
-
-// ===== Quick contact + tracking =====
-function pushTrackingEvent(eventName, payload = {}) {
-  if (typeof window.gtag === 'function') {
-    window.gtag('event', eventName, payload);
-  }
-
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ event: eventName, ...payload });
-}
-
 function setupQuickContactButtons() {
   const callBtn = qs('#quick-call');
+  const textBtn = qs('#quick-text');
   const whatsappBtn = qs('#quick-whatsapp');
 
   if (callBtn && CONTACT_PHONE_E164) {
     callBtn.href = `tel:${CONTACT_PHONE_E164}`;
   }
 
+  if (textBtn && CONTACT_PHONE_E164) {
+    textBtn.href = `sms:${CONTACT_PHONE_E164}`;
+  }
+
   if (whatsappBtn && WHATSAPP_PHONE_E164) {
-    whatsappBtn.href = `https://wa.me/${WHATSAPP_PHONE_E164}`;
+    const message = encodeURIComponent('Hi APS Drone, I need a quote for a DFW project.');
+    whatsappBtn.href = `https://wa.me/${WHATSAPP_PHONE_E164}?text=${message}`;
     whatsappBtn.target = '_blank';
     whatsappBtn.rel = 'noopener noreferrer';
   }
@@ -439,8 +463,12 @@ function setupQuickContactButtons() {
 
 qsa('[data-track]').forEach((el) => {
   el.addEventListener('click', () => {
-    const source = el.getAttribute('data-track') || 'unknown';
-    pushTrackingEvent('lead_click', { source });
+    const placement = el.getAttribute('data-track') || 'unknown';
+    let eventName = 'cta_click';
+    if (placement.includes('whatsapp')) eventName = 'click_whatsapp';
+    else if (placement.includes('text')) eventName = 'click_text';
+    else if (placement.includes('call')) eventName = 'click_call';
+    pushTrackingEvent(eventName, { placement, page_location: window.location.href });
   });
 });
 
