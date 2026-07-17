@@ -181,10 +181,12 @@ Understood—thank you for letting me know. I’ll close this out. If a future p
 
 Understood. I will not contact you again. Your address has been added to our do-not-contact list.
 
-## Required compliance footer
+## Privacy-safe draft footer — do not send until a public postal address is added
 
 APS Drone<br>
 Dallas–Fort Worth, Texas<br>
 Phone: +1 (832) 938-9570<br>
 Website: https://apsdrone.com/<br>
 If you do not want future emails from APS Drone, reply `unsubscribe` and we will stop.
+
+Compliance hold: commercial outreach is paused until APS Drone has a separate public P.O. Box or registered commercial mailbox. Do not use the owner's private address.
