@@ -3,26 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dallas Drone Services | APS Drone</title>
-  <meta name="description" content="APS Drone provides FAA-certified drone photography, video, FPV tours, thermal inspections, and progress documentation for properties and businesses in Dallas, Texas.">
-  <meta name="keywords" content="drone services dallas, aerial photography dallas, drone videography dallas">
+  <title>Dallas Drone Services & Aerial Photography | APS Drone</title>
+  <meta name="description" content="FAA Part 107 Dallas drone services for real estate, commercial properties, construction progress, roof documentation, FPV video and thermal imaging. Packages from $249.">
+  <meta name="keywords" content="Dallas drone services, drone photography Dallas, aerial photography Dallas, commercial drone services Dallas, real estate drone photography Dallas, drone roof inspection Dallas">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://apsdrone.com/dallas-drone-services/">
-  <meta property="og:title" content="Dallas Drone Services | APS Drone">
-  <meta property="og:description" content="APS Drone provides FAA-certified drone photography, video, FPV tours, thermal inspections, and progress documentation for properties and businesses in Dallas, Texas.">
+  <meta property="og:title" content="Dallas Drone Services & Aerial Photography | APS Drone">
+  <meta property="og:description" content="Professional drone photography, video, construction progress, roof documentation, FPV and thermal imaging across Dallas. FAA Part 107 certified; packages from $249.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://apsdrone.com/dallas-drone-services/">
   <meta property="og:image" content="https://apsdrone.com/assets/media/og-dfw.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dallas Drone Services | APS Drone">
-  <meta name="twitter:description" content="APS Drone provides FAA-certified drone photography, video, FPV tours, thermal inspections, and progress documentation for properties and businesses in Dallas, Texas.">
+  <meta name="twitter:title" content="Dallas Drone Services & Aerial Photography | APS Drone">
+  <meta name="twitter:description" content="FAA Part 107 drone photography and video for Dallas real estate, commercial properties, construction and exterior documentation. Packages from $249.">
   <meta name="twitter:image" content="https://apsdrone.com/assets/media/og-dfw.webp">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Dallas Drone Services",
-    "serviceType": "Drone Photography and Videography",
+    "serviceType": [
+      "Drone Photography",
+      "Drone Videography",
+      "Real Estate Aerial Media",
+      "Construction Progress Documentation",
+      "Roof and Exterior Documentation",
+      "FPV Tours",
+      "Thermal Drone Imaging"
+    ],
     "provider": {
       "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": "https://apsdrone.com/#business",
@@ -30,11 +38,44 @@
       "url": "https://apsdrone.com",
       "telephone": "+1-832-938-9570"
     },
-    "areaServed": {
-      "@type": "City",
-      "name": "Dallas"
+    "areaServed": [
+      {"@type": "City", "name": "Dallas"},
+      {"@type": "City", "name": "Irving"},
+      {"@type": "City", "name": "Richardson"},
+      {"@type": "City", "name": "Garland"},
+      {"@type": "City", "name": "Mesquite"},
+      {"@type": "AdministrativeArea", "name": "Dallas County"}
+    ],
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "249",
+      "description": "Dallas drone service packages start at $249; final pricing depends on scope, airspace, travel and deliverables.",
+      "url": "https://apsdrone.com/#contact"
     },
     "url": "https://apsdrone.com/dallas-drone-services/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "APS Drone", "item": "https://apsdrone.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Dallas Drone Services", "item": "https://apsdrone.com/dallas-drone-services/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "How much do drone services cost in Dallas?", "acceptedAnswer": {"@type": "Answer", "text": "APS Drone packages start at $249. Final pricing depends on the property, deliverables, airspace, travel and turnaround requirements."}},
+      {"@type": "Question", "name": "Is APS Drone FAA certified?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Commercial flights are performed by an FAA Part 107 certified remote pilot and are planned around airspace, weather and site safety."}},
+      {"@type": "Question", "name": "Do you provide commercial property and construction drone services in Dallas?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. APS Drone provides aerial photography, video, recurring construction progress captures and roof or exterior documentation for Dallas commercial properties and active job sites."}},
+      {"@type": "Question", "name": "How quickly are Dallas drone photos delivered?", "acceptedAnswer": {"@type": "Answer", "text": "Standard photo projects are commonly delivered within 24 to 48 hours after a successful flight. Larger video, FPV, thermal or recurring projects receive a project-specific timeline."}}
+    ]
   }
   </script>
     <style>
@@ -45,21 +86,43 @@
       .top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:22px; }
       .brand img { height:38px; width:auto; display:block; }
       .back { color:var(--primary); text-decoration:none; font-weight:700; }
-      .hero { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:28px; margin-bottom:18px; }
+      .hero { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:32px; margin-bottom:18px; }
       h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); line-height:1.15; margin: 0 0 12px; }
       p { color:var(--muted); line-height:1.7; }
+      a { color:var(--primary); }
+      .eyebrow { margin:0 0 8px; color:var(--primary); font-weight:800; text-transform:uppercase; letter-spacing:.08em; font-size:.78rem; }
+      .lede { font-size:1.08rem; max-width:780px; }
       .chips { display:flex; flex-wrap:wrap; gap:8px; margin: 14px 0 0; }
       .chips span { border:1px solid var(--border); border-radius:999px; padding:6px 12px; font-size:.86rem; color:var(--muted); background:#fff; }
       .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px; }
       .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px; }
       .card h2 { margin:0 0 10px; font-size:1.1rem; }
+      .card h3 { margin:0 0 8px; font-size:1rem; }
+      .card ul { margin:10px 0 0; padding-left:20px; color:var(--muted); line-height:1.7; }
+      .section { margin-top:18px; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:26px; }
+      .section h2 { margin:0 0 10px; font-size:1.5rem; }
+      .service-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:14px; }
+      .service-grid article { border:1px solid var(--border); border-radius:12px; padding:16px; background:#fbfdff; }
+      .service-grid h3 { margin:0 0 7px; font-size:1rem; }
+      .service-grid p { margin:0; font-size:.94rem; }
+      .media-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:14px; }
+      .media-grid figure { margin:0; border:1px solid var(--border); border-radius:12px; overflow:hidden; background:#fff; }
+      .media-grid img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+      .media-grid figcaption { padding:10px 12px; color:var(--muted); font-size:.86rem; line-height:1.45; }
+      .process { counter-reset:steps; display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:14px; }
+      .process div { border-left:3px solid var(--primary); padding:4px 12px; }
+      .process strong { display:block; margin-bottom:5px; }
+      .process p { margin:0; font-size:.9rem; }
+      .area-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+      .area-links a { border:1px solid var(--border); border-radius:999px; padding:7px 11px; text-decoration:none; font-weight:700; font-size:.86rem; background:#fff; }
       .cta { margin-top:18px; display:flex; gap:10px; flex-wrap:wrap; }
       .btn { display:inline-block; background:var(--primary); color:#fff; text-decoration:none; padding:12px 16px; border-radius:999px; font-weight:700; }
       .btn.alt { background:#fff; color:var(--primary); border:1px solid var(--border); }
       .faq details { background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px 14px; margin-top:10px; }
       .faq summary { font-weight:700; cursor:pointer; }
       footer { margin-top:22px; color:#64748b; font-size:.9rem; }
-      @media (max-width: 760px) { .grid { grid-template-columns:1fr; } }
+      @media (max-width: 840px) { .service-grid, .media-grid { grid-template-columns:1fr 1fr; } .process { grid-template-columns:1fr 1fr; } }
+      @media (max-width: 620px) { .grid, .service-grid, .media-grid, .process { grid-template-columns:1fr; } .hero, .section { padding:20px; } }
     </style>
 </head>
 <body>
@@ -70,49 +133,97 @@
     </div>
 
     <section class="hero">
-      <h1>Dallas Drone Services</h1>
-      <p>APS Drone provides FAA-certified drone photography, video, FPV tours, thermal inspections, and progress documentation for properties and businesses in Dallas, Texas.</p>
+      <p class="eyebrow">FAA Part 107 commercial drone operator</p>
+      <h1>Dallas Drone Services &amp; Aerial Photography</h1>
+      <p class="lede">APS Drone creates professional aerial photography, video and repeatable site documentation for Dallas real estate, commercial properties, construction teams and facility managers. Packages start at $249, with clear deliverables and fast local scheduling across Dallas–Fort Worth.</p>
       <div class="chips">
         <span>FAA Part 107 Certified</span>
         <span>Serving Dallas-Fort Worth</span>
-        <span>Fast 24-48h Delivery</span>
+        <span>Typical 24–48h Photo Delivery</span>
+        <span>Packages From $249</span>
       </div>
       <div class="cta">
-        <a href="https://apsdrone.com/#contact" class="btn">Check Dallas Availability</a>
+        <a href="https://apsdrone.com/#contact" class="btn">Request a Dallas Quote</a>
         <a href="https://apsdrone.com/#portfolio" class="btn alt">View Portfolio</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Professional Drone Services for Dallas Projects</h2>
+      <p>Every flight starts with the business purpose: sell a property, document a roof, show construction progress, market a venue or help stakeholders understand a site. We plan the capture list around that purpose instead of delivering a folder of random aerial angles.</p>
+      <div class="service-grid">
+        <article><h3>Real Estate Drone Photography</h3><p>MLS-ready aerial photos and short video for residential, multifamily, land and luxury listings. We show the property, access, neighborhood context and nearby amenities.</p></article>
+        <article><h3>Commercial Property Media</h3><p>Exterior aerial photography and video for offices, retail, industrial, hospitality, campuses and development sites across Dallas.</p></article>
+        <article><h3>Construction Progress</h3><p>Repeatable flight paths and milestone images that make progress easier to share with owners, lenders, contractors and remote stakeholders.</p></article>
+        <article><h3>Roof &amp; Exterior Documentation</h3><p>High-resolution visual coverage of roofs, elevations, drainage, access and surrounding conditions. Deliverables support documentation; they do not replace a licensed inspection.</p></article>
+        <article><h3>FPV &amp; Cinematic Video</h3><p>Dynamic indoor/outdoor walkthroughs and short social-ready sequences for venues, fitness studios, hospitality and branded commercial spaces.</p></article>
+        <article><h3>Thermal Drone Imaging</h3><p>Radiometric and visual captures for qualified building-envelope, roof, solar and facility workflows when conditions and project scope are appropriate.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Dallas Aerial Work</h2>
+      <p>These examples show the kind of commercial context, roof visibility and DFW-scale storytelling APS Drone can bring to a project.</p>
+      <div class="media-grid">
+        <figure><img src="../assets/media/dfw-dallas-commercial.webp" alt="Dallas commercial property captured by APS Drone aerial photography" loading="lazy" width="1200" height="900"><figcaption>Dallas commercial property aerial photography with site and surrounding-area context.</figcaption></figure>
+        <figure><img src="../assets/media/dfw-irving-roof-documentation.webp" alt="DFW commercial roof and exterior drone documentation" loading="lazy" width="1200" height="900"><figcaption>Roof and exterior documentation for property, maintenance and construction teams.</figcaption></figure>
+        <figure><img src="../assets/media/dfw-addison-event.webp" alt="Dallas Fort Worth venue and event aerial photography" loading="lazy" width="1200" height="900"><figcaption>Venue and event coverage designed for websites, social media and promotional campaigns.</figcaption></figure>
       </div>
     </section>
 
     <section class="grid">
       <article class="card">
-        <h2>Drone Services in Dallas</h2>
-        <p>APS Drone supports real estate agents, builders, contractors, developers, and local businesses in Dallas with high-quality aerial media and inspection-ready captures.</p>
-        <p>Common deliverables include listing photos, cinematic video, FPV tours, thermal inspections, and recurring construction progress updates.</p>
+        <h2>What You Receive</h2>
+        <ul>
+          <li>Edited, high-resolution aerial photographs</li>
+          <li>Web and social-ready copies when requested</li>
+          <li>Short-form or cinematic video options</li>
+          <li>Consistent file naming and organized delivery</li>
+          <li>Commercial usage terms matched to the project</li>
+        </ul>
       </article>
       <article class="card">
-        <h2>Areas We Cover</h2>
-        <p>Downtown Dallas, Uptown, Deep Ellum, and surrounding neighborhoods. If your project is in or near Dallas, send your address and timeline and we will confirm airspace feasibility and scheduling.</p>
-        <p>Need recurring coverage? Weekly and monthly plans are available for active sites and ongoing campaigns.</p>
+        <h2>Dallas Coverage Area</h2>
+        <p>We serve Downtown Dallas, Uptown, Deep Ellum, Design District, Oak Lawn, Lake Highlands, North Dallas and projects throughout Dallas County. Airspace, weather and site conditions are checked before every flight.</p>
+        <p>Nearby project? See our <a href="../plano-drone-services/">Plano</a>, <a href="../frisco-drone-services/">Frisco</a>, <a href="../arlington-drone-services/">Arlington</a> and <a href="../fort-worth-drone-services/">Fort Worth</a> service pages.</p>
       </article>
+    </section>
+
+    <section class="section">
+      <h2>How a Dallas Drone Project Works</h2>
+      <div class="process">
+        <div><strong>1. Share the scope</strong><p>Send the location, intended use, deadline and must-have views.</p></div>
+        <div><strong>2. Flight planning</strong><p>We review airspace, weather, access and safety requirements.</p></div>
+        <div><strong>3. Capture</strong><p>An FAA Part 107 pilot completes the agreed photo, video or documentation plan.</p></div>
+        <div><strong>4. Delivery</strong><p>You receive organized edited files, commonly within 24–48 hours for standard photo work.</p></div>
+      </div>
+      <div class="cta">
+        <a href="https://apsdrone.com/#contact" class="btn">Check Project Availability</a>
+        <a href="tel:+18329389570" class="btn alt">Call 832-938-9570</a>
+      </div>
     </section>
 
     <section class="faq">
       <details>
-        <summary>Do you provide same-week scheduling in Dallas?</summary>
-        <p>Yes. We offer same-week scheduling in Dallas when flight conditions and airspace approvals allow.</p>
+        <summary>How much do drone services cost in Dallas?</summary>
+        <p>APS Drone packages start at $249. Final pricing depends on the property, deliverables, airspace, travel and turnaround requirements. Share the location and intended use for an exact quote.</p>
       </details>
       <details>
-        <summary>Can you film commercial properties in Dallas?</summary>
-        <p>Yes. We support commercial marketing, inspection, and progress media for offices, retail, multifamily, and hospitality properties.</p>
+        <summary>Is APS Drone FAA certified?</summary>
+        <p>Yes. Commercial flights are performed by an FAA Part 107 certified remote pilot and are planned around airspace, weather and site safety.</p>
       </details>
       <details>
-        <summary>How do I book drone services in Dallas?</summary>
-        <p>Use the quote form on APSDrone.com with your location, service type, and timeline. We respond quickly with availability and next steps.</p>
+        <summary>Do you provide commercial property and construction drone services in Dallas?</summary>
+        <p>Yes. We provide aerial photography, video, recurring construction progress captures and roof or exterior documentation for commercial properties and active job sites.</p>
+      </details>
+      <details>
+        <summary>How quickly are Dallas drone photos delivered?</summary>
+        <p>Standard photo projects are commonly delivered within 24–48 hours after a successful flight. Larger video, FPV, thermal or recurring projects receive a project-specific timeline.</p>
       </details>
     </section>
 
     <footer>
-      <p>APS Drone | Drone Services in Dallas, Texas | <a href="https://apsdrone.com" style="color:#2563eb;">apsdrone.com</a></p>
+      <p>APS Drone | FAA Part 107 Dallas drone services | <a href="https://apsdrone.com">Home</a> · <a href="https://apsdrone.com/#services">Services</a> · <a href="https://apsdrone.com/#portfolio">Portfolio</a> · <a href="https://apsdrone.com/#contact">Request a Quote</a></p>
     </footer>
   </div>
 </body>
