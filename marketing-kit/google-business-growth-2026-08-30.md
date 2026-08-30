@@ -83,3 +83,4 @@ Do not submit the same URL repeatedly; Search Console states that repeated submi
 - Google Search Console accepted a priority indexing request for the new checklist URL.
 - The updated sitemap was submitted successfully and Search Console immediately reported **13 discovered pages**.
 - A public APS Drone Facebook post linking to the new checklist was published and verified in the page feed.
+- A live Google Business information check showed the expanded 20-area DFW service list, four categories, current description, phone, website, hidden street address, appointment requirement and online appointment option. No rejected profile edit was visible at this checkpoint.
