@@ -75,3 +75,11 @@ Do not submit the same URL repeatedly; Search Console states that repeated submi
 - Bing Places setup was started through the official portal, but Google sign-in did not complete in the current browser session; no duplicate listing was created.
 - Priority citation sources are Bing Places, Apple Business Connect, Yelp for Business, the existing APS Drone LinkedIn profile and genuine DFW partner/association references.
 - Never buy links or use automated directory blasts.
+
+## August 30 deployment verification
+
+- GitHub Pages deployment for commit `eb63607` completed successfully.
+- The new DFW commercial drone project checklist returned a live page with the expected title, headings, internal links and FAA resource link.
+- Google Search Console accepted a priority indexing request for the new checklist URL.
+- The updated sitemap was submitted successfully and Search Console immediately reported **13 discovered pages**.
+- A public APS Drone Facebook post linking to the new checklist was published and verified in the page feed.

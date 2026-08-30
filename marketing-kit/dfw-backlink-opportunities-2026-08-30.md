@@ -36,6 +36,9 @@ Updated: August 30, 2026
 | Apple Business Connect | Not started | Sign in with the business Apple account and create/claim one service-area listing |
 | Yelp for Business | Not started | Search for APS Drone first, then claim or add only if no listing exists |
 | LinkedIn | Existing public APS Drone presence found | Add website/DFW positioning and share the checklist |
+| Facebook APS Drone page | Checklist post published publicly with a link to apsdrone.com | Keep the page information consistent and publish useful project resources, not link spam |
+
+The Facebook post was server-visible on the official APS Drone page after publishing on August 30, 2026. Search Console may take time to discover or report the external reference, and social links may be treated as nofollow; the post is still a legitimate branded discovery path.
 
 ## Safety rule
 
