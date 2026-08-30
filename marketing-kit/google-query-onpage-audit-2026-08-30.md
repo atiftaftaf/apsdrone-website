@@ -24,3 +24,11 @@ The target set comes from actual APS Drone Search Console impressions. Each quer
 ## Measurement
 
 Recheck these exact queries in Search Console after Google recrawls the pages. Evaluate impressions, CTR, average position and qualified GA4 lead events together; do not judge success from rank alone.
+
+## Dallas page internal-link follow-up
+
+- Added contextual links from each Dallas service card to the matching substantive real-estate, commercial, construction-progress, roof, videography and thermal page.
+- Linked the Dallas commercial and Irving roof project images to their exact case-study anchors and linked the vertical-media example to its dedicated crawlable watch page.
+- Added one clear route from the Dallas page to all seven location-verified DFW case studies.
+- Refreshed the Dallas page sitemap modification date to `2026-08-30`.
+- Local validation found three valid JSON-LD blocks, twelve unique relative destinations and zero missing internal targets.

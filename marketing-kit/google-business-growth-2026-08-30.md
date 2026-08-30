@@ -164,3 +164,10 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Updated the Fort Worth page title and H1 to match `fort worth drone photography` and refreshed its sitemap modification date.
 - Titles, descriptions and social metadata remain unique and concise; all structured-data blocks still parse.
 - GitHub Pages deployment for commit `520423b` completed successfully. All three target pages returned HTTP 200 with the expected new live titles, and the Fort Worth sitemap `lastmod` is `2026-08-30`.
+
+## Dallas internal-link strengthening
+
+- Connected all six Dallas service cards to their matching high-quality service pages instead of leaving five of them as unlinked headings.
+- Connected real Dallas commercial and DFW roof examples to their exact case-study sections and added a direct path to the vertical-reel watch page.
+- Added a consolidated link to the complete location-verified DFW case-study collection.
+- Updated the Dallas services sitemap modification date and verified all twelve unique relative destinations exist locally; all three page JSON-LD blocks parse.
