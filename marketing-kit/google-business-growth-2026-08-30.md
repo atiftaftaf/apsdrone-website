@@ -171,3 +171,5 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Connected real Dallas commercial and DFW roof examples to their exact case-study sections and added a direct path to the vertical-reel watch page.
 - Added a consolidated link to the complete location-verified DFW case-study collection.
 - Updated the Dallas services sitemap modification date and verified all twelve unique relative destinations exist locally; all three page JSON-LD blocks parse.
+- Authenticated Search Console page filtering showed 257 impressions, 0 clicks, 0% CTR and average position 50.3 for the Dallas services URL. Its leading query is `dallas drone services` at 46 impressions and position 20.7; the full top-ten page-query breakdown is recorded in `google-query-onpage-audit-2026-08-30.md`.
+- GitHub Pages deployment for commit `8ab735b` completed successfully. Cache-busted live checks confirmed the new commercial-service link, Dallas case-study anchor, vertical-reel watch link and Dallas sitemap modification date.
