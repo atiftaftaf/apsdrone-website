@@ -119,3 +119,4 @@ Do not submit the same URL repeatedly; Search Console states that repeated submi
 - Added a real-estate listing photo and eight-second 9:16 property reel example derived from existing APS Drone footage; no customer name or exact address is exposed.
 - Added direct internal links from the Arlington, commercial, construction-progress and real-estate service pages to the relevant case-study sections.
 - The expanded case-study page now answers objective, deliverables and practical-result questions for all seven examples while avoiding unverifiable performance claims.
+- GitHub Pages deployment for commit `e25c305` completed successfully. The expanded case-study page, two Arlington WebP files, the vertical MP4 and its poster all returned HTTP 200, and a live browser check confirmed the three new case-study headings.
