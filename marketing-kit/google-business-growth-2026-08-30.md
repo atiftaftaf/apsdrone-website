@@ -153,3 +153,4 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Standardized `sameAs` entity links across the homepage and six entity-bearing service pages using the verified Google Business Profile, `@apsdronetx` Instagram and TikTok identities, and the authenticated APS Drone Facebook page.
 - Reparsed all 23 JSON-LD blocks after the update with zero errors.
 - The outdated LinkedIn company page is intentionally excluded from site `sameAs` until its Houston location and insecure website URL are corrected.
+- GitHub Pages deployment for commit `907b65b` completed successfully. Live checks returned HTTP 200 and confirmed the Google Business Profile and Facebook entity links on the real-estate, commercial and Dallas-services pages.
