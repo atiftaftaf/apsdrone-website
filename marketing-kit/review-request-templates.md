@@ -1,15 +1,15 @@
 ﻿# Review Request Templates
 
-## SMS (send same day after delivery)
-Hi {{name}}, thanks again for working with APS Drone. If you were happy with the results, would you mind leaving a quick Google review? It helps a lot.
+## SMS (send after delivery is confirmed)
+Hi {{name}}, thank you for choosing APS Drone. Would you mind sharing an honest Google review about your experience? Your feedback helps DFW customers understand what it is like to work with us.
 {{google_review_link}}
 
-## Email (24h after delivery)
-Subject: Quick favor - your feedback
+## Email (within 24 hours after delivery is confirmed)
+Subject: Thank you from APS Drone
 
 Hi {{name}},
 
-Thank you again for choosing APS Drone. If the service and deliverables met your expectations, a short Google review would mean a lot and helps us grow in DFW.
+Thank you again for choosing APS Drone. Would you mind sharing an honest Google review about your experience? Your feedback helps DFW customers understand what it is like to work with us.
 
 Leave a review here:
 {{google_review_link}}
@@ -17,6 +17,13 @@ Leave a review here:
 Thank you,
 APS Drone
 
-## Reminder (5 days later)
-Hi {{name}}, just a gentle reminder in case you missed this. Your feedback would be greatly appreciated:
-{{google_review_link}}
+## One reminder (5–7 days later, only if there was no response)
+Hi {{name}}, just one quick follow-up in case the review link was buried. If you have a minute, an honest Google review would be appreciated: {{google_review_link}} Thank you again — Atif, APS Drone
+
+## Required safeguards
+
+- Apply the same neutral request process to every genuine completed customer after delivery is confirmed; never select only customers expected to leave a positive review.
+- Never ask for a particular star rating or provide suggested praise.
+- Never offer a discount, gift, payment or other incentive.
+- Resolve any open delivery or service concern before sending the request, but do not suppress an eligible customer because their opinion may be critical.
+- Send no more than one follow-up and stop immediately after an opt-out or response.
