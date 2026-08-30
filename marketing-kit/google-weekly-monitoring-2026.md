@@ -18,7 +18,8 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 | GA4 key events | `generate_lead`, `click_call`, `click_text`, `click_whatsapp`, `click_email`, `click_quote` configured | GA4 Admin / Key events |
 | Bing Places | Google-verified; weekly sync enabled; Pending publish with 7–12 day estimate | Bing Places owner dashboard |
 | Bing Webmaster Tools | `apsdrone.com` imported with Administrator role; 2 sitemaps Processing; 0 errors and 0 warnings | Bing Webmaster Tools |
-| Bing Site Scan | 100-page full-site scan Queued | Bing Webmaster Tools Site Scan |
+| Bing Site Scan | Completed; 20 live pages scanned; 0 errors; 0 warnings | Bing Webmaster Tools Site Scan |
+| IndexNow | Live key HTTP 200; 27 unique URLs accepted with HTTP 202 | GitHub Actions run `33330895103` and live key check |
 
 ## Weekly review sequence
 
@@ -37,8 +38,8 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 - The Google Business Profile product catalog was expanded from one to seven service cards; new cards may remain Pending during Google review.
 - Four October posts were submitted with original project media and tracked Learn more links. Combined with the five existing scheduled posts, the future queue covers nine weekly dates from August 31 through October 26.
 - Bing Places imported and verified the canonical APS Drone Google profile, enabled weekly synchronization and entered Pending publish.
-- Bing Webmaster Tools imported the verified site and both sitemaps from Google Search Console, and a 100-page technical scan was queued.
-- A root ownership key and deployment workflow were added for IndexNow submission of the current main/video sitemap URL set.
+- Bing Webmaster Tools imported the verified site and both sitemaps from Google Search Console. Its first technical scan completed across 20 live pages with 0 errors and 0 warnings.
+- A root ownership key and deployment workflow were added for IndexNow. The live key returned HTTP 200 and the first workflow run submitted 27 unique sitemap URLs, accepted with HTTP 202.
 
 ## Decision thresholds
 
