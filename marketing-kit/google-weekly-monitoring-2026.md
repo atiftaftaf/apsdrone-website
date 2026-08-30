@@ -42,12 +42,15 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 - The Google Business Profile product catalog was expanded from one to seven service cards; new cards may remain Pending during Google review.
 - Four October posts were submitted with original project media and tracked Learn more links. Combined with the five existing scheduled posts, the future queue covers nine weekly dates from August 31 through October 26.
 - The Business Profile now saves the verified Instagram, active Facebook and TikTok identities. Google also completed review of the public business number and shows `sms:+18329389570` as the active Primary texting destination.
+- A dedupe-checked Lewisville commercial-property aerial was uploaded from a resized metadata-stripped derivative. Google returned `Upload complete`; the live media inventory increased to 17 photos and six videos, with the new photo and one earlier video marked Pending.
 - The March–August Google Business baseline is 331 profile views and one website click. There are no reported calls, bookings or chat clicks yet, so future growth should be evaluated from these real zero/one baselines rather than impressions alone.
 - Bing Places imported and verified the canonical APS Drone Google profile, enabled weekly synchronization and entered Pending publish.
 - Bing Webmaster Tools imported the verified site and both sitemaps from Google Search Console. Its first technical scan completed across 20 live pages with 0 errors and 0 warnings.
 - A root ownership key and deployment workflow were added for IndexNow. The live key returned HTTP 200 and the first workflow run submitted 27 unique sitemap URLs, accepted with HTTP 202.
 - A focused `/request-a-quote/` route is live for Google Business traffic. It uses the existing verified lead endpoint and GA4 conversion events; campaign and click-ID attribution now records the newest attributable touch instead of being overwritten by internal navigation.
+- Google Business saved `https://apsdrone.com/request-a-quote/?utm_source=google&utm_medium=organic&utm_campaign=gbp_booking` as the Booking URL. The exact URL was reopened and verified after the owner panel returned `Update saved`.
 - Search Console now reports two total web-search clicks and a homepage recommendation showing 369% more impressions for Aug. 20–26 than Aug. 13–19. The stored homepage crawl is Aug. 25, before the service-area wording fix. An Aug. 30 live test returned available/indexable with video detected, and Google accepted one recrawl request; do not submit it again.
+- Search Console started validation on August 30 for the four URLs in its stale August 20 `Discovered - currently not indexed` group. Monitor the validation state; do not repeatedly restart it.
 - Page distribution for the same July 27–Aug. 28 window: homepage 2 clicks/166 impressions; Dallas services 0/257; Fort Worth services 0/51. The remaining reported impressions belong to homepage fragment URLs and are too small to guide changes.
 
 ## Decision thresholds

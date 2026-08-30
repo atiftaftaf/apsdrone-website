@@ -9,6 +9,7 @@ Verified: August 30, 2026, 12:51–12:53 PM Central
 - The one stored failure remains `Video isn't on a watch page`; it is an older URL record and does not contradict the four successful live watch-page tests below.
 - The four new watch-page URLs were not in Google's stored index at the time of inspection and were reported as unknown/not indexed.
 - The stored record did not yet detect a referring sitemap for the inspected new URLs.
+- A later August 30 recheck confirmed that the Video indexing report itself was still dated August 26 and still contained only the homepage `hero-dfw.mp4` example. It therefore does not yet reflect the four August 30 watch pages or the now-successful video sitemap.
 
 ## Live URL Inspection results
 

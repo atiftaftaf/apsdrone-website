@@ -19,8 +19,8 @@ Updated: August 30, 2026
 - A non-personalized `APS Drone` search showed `https://apsdrone.com/` as the first organic result. The Dallas services page and Instagram profile also appeared on the first results page.
 - The manager surface reported **Profile Strength: Complete** and one customer interaction.
 - The live profile showed the correct primary category (`Aerial photographer`), website, phone `(832) 938-9570`, service-area presentation and DFW-focused description.
-- The media manager contained **16 numbered photos and six numbered videos**, plus cover and logo. One video remained `Pending`; the other visible media was not marked pending.
-- A 3:05 PM Central recheck found the same 16-photo/six-video inventory and the same single pending video, with no new rejection or profile warning.
+- The media manager initially contained **16 numbered photos and six numbered videos**, plus cover and logo. One video remained `Pending`; the other visible media was not marked pending.
+- A later authenticated upload added one dedupe-checked Lewisville commercial-property aerial, bringing the live numbered inventory to **17 photos and six videos**. Google returned `Upload complete`; the gallery reloaded with 23 numbered media items and two `PENDING` labels, covering the new photo and the previously pending video.
 - Several older media items showed public-view counts between fewer than 100 and 223, proving that Google profile media is already receiving some discovery.
 - The public profile still has no Google reviews. The product catalog now contains seven service cards, and nine future weekly posts are submitted or scheduled through October 26, 2026. Genuine customer reviews remain the clearest owner-dependent profile gap.
 - The live review panel generated `https://g.page/r/CbNNLDqa9yVeECE/review`; the existing site/template short link ending in `...VeEBI/review` was also tested. Both redirect to the same APS Drone Place ID (`ChIJoWQtNyLFQIYRs00sOpr3JV4`), so the existing review request path is valid and does not need churn.
@@ -218,7 +218,8 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 ## Live Google profile media and product recheck
 
 - The authenticated APSDroneTX profile shows Profile Strength `Complete` and one customer interaction.
-- The live media manager currently shows 16 numbered photos and six numbered videos in addition to the cover and logo. One of the newest videos remains Pending; older visible media examples show up to 223 views.
+- The live media manager currently shows 17 numbered photos and six numbered videos in addition to the cover and logo. The new Lewisville commercial-property aerial and one video are Pending; older visible media examples show up to 223 views.
+- The new upload used the resized, EXIF/GPS-stripped derivative `C:\Users\atift\codex_tmp\gbp_uploads\gbp-lewisville-commercial-2026-08-30.jpg` (SHA-256 `7F4A82B311ED432F5A58D904767FA36D9232A05CF3FED0E24F7F09BC81764864`) derived from the unchanged archive source `DJI_0663.JPG`. Google returned `Upload complete` and the refreshed gallery count increased from 22 to 23 numbered media items.
 - The live product catalog now contains the original `$249` real-estate product plus six newly submitted, factual, non-overlapping cards for vertical-reel, commercial, construction-progress, roof, FPV and thermal services. Google confirmed each save; several new cards remain Pending review.
 - Every new product uses a product-specific GA4 UTM URL and a real APS Drone project-media source. Original archive files were not modified.
 
@@ -235,7 +236,7 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Live Business Profile performance for March through August 2026 shows 331 profile views and one interaction: a website click in July. Calls, bookings and chat clicks are currently zero. Google reports fewer than 50 profile-producing searches; the only disclosed query is `aps photography` at fewer than 15 searches.
 - Added the verified active APS Drone Facebook page and `@apsdronetx` TikTok profile to the Business Profile alongside the existing Instagram link. Google accepted all three links into the saved Social profiles list.
 - Added the already-public business number `832-938-9570` as the primary Google Business SMS chat destination. Google completed the short review and the owner panel now shows `sms:+18329389570` as the active Primary texting number; no private number was introduced.
-- The existing Booking action still points to `apsdrone.com`. Its editor remained in a platform-side Saving state, so it was left unchanged rather than risking removal or a blank destination.
+- The Google Business Booking action now points to `https://apsdrone.com/request-a-quote/?utm_source=google&utm_medium=organic&utm_campaign=gbp_booking`. Google displayed `Update saved`; reopening the exact link editor returned the same full URL, providing server-visible verification without removing the working destination.
 
 ## Dedicated Google Business quote route
 
@@ -243,7 +244,7 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Reused the verified Formspree endpoint and thank-you page while preserving GA4 `form_start`, `form_submit`, `generate_lead` and error events. The form carries UTM fields plus `gclid`, `gbraid`, `wbraid`, `fbclid` and `ttclid` into real submissions.
 - Corrected attribution handling on both website forms so a new campaign or external referral becomes the latest attributable touch and is not erased by later internal navigation. The original first-touch record is still retained in local storage.
 - GitHub Pages deployed commits `03163a8`, `baa00df` and the attribution correction successfully. Live checks confirmed the HTTPS page, one quote form, the production endpoint, dedicated form script, zero browser console errors and no unintended portfolio modal.
-- The existing Google Business Booking action remains unchanged at `apsdrone.com` until the owner panel accepts the new simple destination `https://apsdrone.com/request-a-quote/`; no working destination was removed during Google's repeated Saving-state failure.
+- The Google Business owner panel accepted the tracked quote destination `https://apsdrone.com/request-a-quote/?utm_source=google&utm_medium=organic&utm_campaign=gbp_booking`; the saved value was reopened and verified after Google returned `Update saved`.
 
 ## Homepage recrawl after service-area correction
 
@@ -273,6 +274,7 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Marked the privacy notice `noindex,follow` and removed it from the sitemap because it is a user/legal utility page rather than a ranking target.
 - The current main sitemap contains 18 indexable URLs; all 18 are reachable from the homepage graph, 14 are linked directly from the homepage, there are zero orphan indexable pages, zero sitemap `noindex` conflicts and all 23 indexable-page JSON-LD blocks parse.
 - Deployed commit `cca86a8` through a successful GitHub Pages build. Cache-busted live checks confirmed the new Arlington title, both project images and the commercial checklist link; confirmed `noindex,follow` on Plano, Frisco and the privacy notice; and confirmed the live sitemap contains 18 URLs and excludes all three non-ranking pages.
+- Search Console's stored August 20 report still lists the four pre-cleanup examples, but the authenticated property accepted `Validate fix` on August 30 and now shows `Validation Started` for all four affected URLs. This is a Google processing state, not a reason to resubmit or reverse the intentional `noindex` cleanup.
 
 ## Real-estate listing resource
 
