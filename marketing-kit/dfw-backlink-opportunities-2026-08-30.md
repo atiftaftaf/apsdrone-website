@@ -16,6 +16,19 @@ Updated: August 30, 2026
 4. **Existing APS Drone LinkedIn company profile** — update its website and DFW service description, then publish the new planning checklist as a useful resource.
 5. **Relevant DFW associations and project partners** — request a link only where APS Drone is genuinely a member, vendor, project contributor or resource. Do not buy links or use reciprocal link networks.
 
+## Verified DFW association opportunities
+
+These are real industry organizations with public directories or affiliate programs. No application, payment or membership claim has been submitted.
+
+| Organization | Verified fit/evidence | Published 2026 terms | Link value and next gate |
+| --- | --- | --- | --- |
+| Dallas Builders Association | Its active member directory includes builders, developers, real estate, roofing and marketing/promotional-service categories and links member websites | Associate membership is listed at $931 plus a $60 processing fee; the $1,298 Sustaining option explicitly includes a website hyperlink | Relevant to builder/developer customers, but paid membership requires owner budget approval and eligibility review: `https://web.dallasbuilders.org/member-directory` |
+| North Texas Commercial Association of Realtors (NTCAR) | Affiliate membership is open to non-licensed service providers serving commercial real estate | The official schedule lists $450 in January, prorated monthly to $187.50 in August and $37.50 in December | Direct commercial-property audience; confirm that the member profile includes a public website link before paying: `https://www.ntcar.org/affiliate-member` |
+| Collin County Area REALTORS | The public affiliate directory includes a Photography category and member website links | Current application/dues were not established in this audit | Contact membership only after confirming APS Drone qualifies and receives a public profile: `https://members.ccar.net/affiliate-directory/FindStartsWith?term=A` |
+| North Texas Roofing Contractors Association (NTRCA) | The directory includes associate members and public company profiles; the join page names associates doing business in North Texas | $500 dues plus a $50 non-refundable application fee, proof of North Texas address, insurance/business documents and recommendations from one contractor and one associate member | Potential roof-documentation referral channel, but eligibility and recommendations are mandatory; no application should be started without them: `https://www.ntrca.com/join-now` |
+
+Membership is not a backlink purchase. Join only if APS Drone will participate, meet the rules and gain genuine customer/referral value. Never claim membership before approval.
+
 ## Consistency rules
 
 - Public name: APS Drone
