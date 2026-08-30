@@ -192,3 +192,10 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Rendered both pages to PNG at 144 DPI and visually verified there are no clipped, overlapping or unreadable elements after correcting the initial two-column width.
 - Linked the PDF from the existing substantive checklist page and declared the downloadable media in the page's Article structured data.
 - The PDF preserves the hidden-address service-area model and contains no customer name, exact project address or unverifiable performance claim.
+
+## Live Google profile media and product recheck
+
+- The authenticated APSDroneTX profile shows Profile Strength `Complete` and one customer interaction.
+- The live media manager currently shows 16 numbered photos and six numbered videos in addition to the cover and logo. One of the newest videos remains Pending; older visible media examples show up to 223 views.
+- The live profile currently exposes one `$249` real-estate product. Prepared six factual, non-overlapping product definitions for vertical-reel, commercial, construction-progress, roof, FPV and thermal services in `google-business-products-2026.md`, each with a product-specific GA4 UTM URL and a real project-media source.
+- No product was publicly saved during this preparation pass.
