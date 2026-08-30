@@ -120,3 +120,22 @@ Do not submit the same URL repeatedly; Search Console states that repeated submi
 - Added direct internal links from the Arlington, commercial, construction-progress and real-estate service pages to the relevant case-study sections.
 - The expanded case-study page now answers objective, deliverables and practical-result questions for all seven examples while avoiding unverifiable performance claims.
 - GitHub Pages deployment for commit `e25c305` completed successfully. The expanded case-study page, two Arlington WebP files, the vertical MP4 and its poster all returned HTTP 200, and a live browser check confirmed the three new case-study headings.
+
+## Lighthouse lab-performance evidence
+
+An isolated Chrome profile was used for Lighthouse 13.4.1 mobile lab tests on August 30, 2026; no personal Chrome profile was accessed.
+
+| Live page | Performance | SEO | Accessibility | Best practices | LCP | CLS | TBT |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Homepage | 97 | 100 | 100 | 100 | 2,248 ms | 0.000 | 62 ms |
+| DFW case studies | 100 | 100 | 100 | 100 | 1,171 ms | 0.000 | 16 ms |
+| Vertical real-estate reel (local pre-deploy test) | 100 | 100 | 100 | 100 | 1,653 ms | 0.000 | 20 ms |
+
+These are controlled lab results, not field Core Web Vitals. Search Console still reports insufficient Chrome UX field data, so real-user performance must continue to be monitored as traffic grows.
+
+## Additional vertical-video indexing target
+
+- Added a dedicated, crawlable watch page at `https://apsdrone.com/dfw-real-estate-vertical-drone-reel/` for the eight-second 9:16 property reel.
+- Added `VideoObject` data with a stable WebP thumbnail, MP4 content URL, duration, upload date, publisher entity and `WatchAction`.
+- Added the watch page to both the main XML sitemap and the video sitemap, and linked it from the real-estate service and case-study pages.
+- Local XML, JSON-LD, internal-reference, browser-render and Lighthouse checks passed before deployment.

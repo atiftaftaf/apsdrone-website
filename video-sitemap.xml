@@ -36,4 +36,16 @@
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
+  <url>
+    <loc>https://apsdrone.com/dfw-real-estate-vertical-drone-reel/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://apsdrone.com/assets/media/dfw-real-estate-vertical-reel-poster.webp</video:thumbnail_loc>
+      <video:title>DFW Real Estate Vertical Drone Reel Example</video:title>
+      <video:description>An eight-second vertical aerial approach formatted at 9:16 for Dallas-Fort Worth real estate listing and property marketing campaigns.</video:description>
+      <video:content_loc>https://apsdrone.com/assets/media/dfw-real-estate-vertical-reel.mp4</video:content_loc>
+      <video:duration>8</video:duration>
+      <video:publication_date>2026-08-30T12:00:00-05:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
 </urlset>
