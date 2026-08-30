@@ -330,25 +330,40 @@ function captureAttribution() {
     firstTouch = current;
     writeStoredJson('aps_first_touch_v1', firstTouch);
   }
-  writeStoredJson('aps_last_touch_v1', current);
-  return firstTouch;
+
+  const previousLastTouch = readStoredJson('aps_last_touch_v1');
+  const hasCampaignSignal = ATTRIBUTION_KEYS.some((key) => Boolean(current[key]));
+  let hasExternalReferrer = false;
+  try {
+    hasExternalReferrer = Boolean(document.referrer) && new URL(document.referrer).origin !== window.location.origin;
+  } catch (_) {
+    hasExternalReferrer = false;
+  }
+
+  // Preserve the latest attributable entry across internal navigation, while
+  // allowing a new campaign or external referral to replace an older touch.
+  const lastTouch = (hasCampaignSignal || hasExternalReferrer || !previousLastTouch)
+    ? current
+    : previousLastTouch;
+  writeStoredJson('aps_last_touch_v1', lastTouch);
+  return lastTouch;
 }
 
 function populateAttributionFields() {
-  const firstTouch = captureAttribution();
+  const lastTouch = captureAttribution();
   const values = {
-    'landing-page': firstTouch.landing_page || window.location.href,
-    'lead-referrer': firstTouch.referrer || 'direct',
-    'utm-source': firstTouch.utm_source || '',
-    'utm-medium': firstTouch.utm_medium || '',
-    'utm-campaign': firstTouch.utm_campaign || '',
-    'utm-content': firstTouch.utm_content || '',
-    'utm-term': firstTouch.utm_term || '',
-    gclid: firstTouch.gclid || '',
-    gbraid: firstTouch.gbraid || '',
-    wbraid: firstTouch.wbraid || '',
-    fbclid: firstTouch.fbclid || '',
-    ttclid: firstTouch.ttclid || ''
+    'landing-page': lastTouch.landing_page || window.location.href,
+    'lead-referrer': lastTouch.referrer || 'direct',
+    'utm-source': lastTouch.utm_source || '',
+    'utm-medium': lastTouch.utm_medium || '',
+    'utm-campaign': lastTouch.utm_campaign || '',
+    'utm-content': lastTouch.utm_content || '',
+    'utm-term': lastTouch.utm_term || '',
+    gclid: lastTouch.gclid || '',
+    gbraid: lastTouch.gbraid || '',
+    wbraid: lastTouch.wbraid || '',
+    fbclid: lastTouch.fbclid || '',
+    ttclid: lastTouch.ttclid || ''
   };
   Object.entries(values).forEach(([id, value]) => {
     const field = document.getElementById(id);

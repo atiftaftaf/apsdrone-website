@@ -46,6 +46,7 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 - Bing Places imported and verified the canonical APS Drone Google profile, enabled weekly synchronization and entered Pending publish.
 - Bing Webmaster Tools imported the verified site and both sitemaps from Google Search Console. Its first technical scan completed across 20 live pages with 0 errors and 0 warnings.
 - A root ownership key and deployment workflow were added for IndexNow. The live key returned HTTP 200 and the first workflow run submitted 27 unique sitemap URLs, accepted with HTTP 202.
+- A focused `/request-a-quote/` route is live for Google Business traffic. It uses the existing verified lead endpoint and GA4 conversion events; campaign and click-ID attribution now records the newest attributable touch instead of being overwritten by internal navigation.
 
 ## Decision thresholds
 

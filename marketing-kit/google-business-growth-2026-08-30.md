@@ -235,6 +235,14 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Added the already-public business number `832-938-9570` as the primary Google Business SMS chat destination. Google completed the short review and the owner panel now shows `sms:+18329389570` as the active Primary texting number; no private number was introduced.
 - The existing Booking action still points to `apsdrone.com`. Its editor remained in a platform-side Saving state, so it was left unchanged rather than risking removal or a blank destination.
 
+## Dedicated Google Business quote route
+
+- Published `https://apsdrone.com/request-a-quote/` as a focused, mobile-responsive quote and availability page for Google Business traffic. It explains the DFW service area, starting price, feasibility review, response expectation and alternate call/text/email paths without collecting payment.
+- Reused the verified Formspree endpoint and thank-you page while preserving GA4 `form_start`, `form_submit`, `generate_lead` and error events. The form carries UTM fields plus `gclid`, `gbraid`, `wbraid`, `fbclid` and `ttclid` into real submissions.
+- Corrected attribution handling on both website forms so a new campaign or external referral becomes the latest attributable touch and is not erased by later internal navigation. The original first-touch record is still retained in local storage.
+- GitHub Pages deployed commits `03163a8`, `baa00df` and the attribution correction successfully. Live checks confirmed the HTTPS page, one quote form, the production endpoint, dedicated form script, zero browser console errors and no unintended portfolio modal.
+- The existing Google Business Booking action remains unchanged at `apsdrone.com` until the owner panel accepts the new simple destination `https://apsdrone.com/request-a-quote/`; no working destination was removed during Google's repeated Saving-state failure.
+
 ## Bing discovery and citation expansion
 
 - Signed into the official Bing Places owner surface with `apsdronetx@gmail.com` and imported the verified APS Drone Google Business Profile.
