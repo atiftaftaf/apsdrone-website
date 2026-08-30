@@ -91,6 +91,8 @@ Do not submit the same URL repeatedly; Search Console states that repeated submi
 - Connected the verified `https://apsdrone.com/` Search Console property to GA4.
 - Connected the APS Drone Google Business Profile listing to GA4.
 - Deployed page-view, quote-form, phone, text, WhatsApp and email conversion events across the website.
+- Verified live Realtime collection and the custom `click_quote` and `form_start` events without submitting a false lead.
+- Configured `generate_lead`, `click_call`, `click_text`, `click_whatsapp`, `click_email` and `click_quote` as server-visible GA4 key events. Ordinary page views and non-conversion form diagnostics remain non-key events.
 - Published dedicated crawlable residential, commercial and FPV video pages with `VideoObject` structured data.
 - Published `https://apsdrone.com/video-sitemap.xml` and declared it in `robots.txt`.
 - Reduced the referenced FPV web video from 53.6 MB to 7.7 MB without modifying or deleting the source file.
@@ -140,3 +142,8 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Added the watch page to both the main XML sitemap and the video sitemap, and linked it from the real-estate service and case-study pages.
 - Local XML, JSON-LD, internal-reference, browser-render and Lighthouse checks passed before deployment.
 - GitHub Pages deployment for commit `6d8b38a` completed successfully. The live watch page, main sitemap and video sitemap returned HTTP 200; the live HTML contains the `VideoObject` and MP4 reference, and the live video sitemap contains the new watch URL.
+
+## Search Console follow-up
+
+- The live Sitemaps report still shows only `/sitemap.xml`, with Success status, 13 discovered pages and zero discovered videos.
+- The `video-sitemap.xml` field is prepared in the authenticated Search Console form but has not been submitted. Final submission remains pending action-time confirmation.

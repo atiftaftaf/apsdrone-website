@@ -21,7 +21,7 @@ Updated: August 30, 2026
 | Search Console | Verified URL-prefix property is connected to GA4; sitemap is successful | Consistent but discovery update pending | Submit the prepared video sitemap and request priority indexing after action-time confirmation |
 | Facebook | Website and structured data point to the existing APS Drone page; a public checklist post was previously verified | Partially verified | Recheck About data for DFW wording and canonical phone during the next authenticated profile audit |
 | Instagram | Website and structured data point to `@apsdronetx`; live account ownership was previously verified | Partially verified | Recheck bio link, DFW wording and contact button during the next authenticated profile audit |
-| LinkedIn company page | Public page currently says `Houston, Texas`, headquarters `Houston, Texas`, and primary location `Houston, Texas 77024, US`; website is still `http://apsdrone.com` | Inconsistent | Update to Dallas-Fort Worth service-area wording, remove the obsolete Houston location, use HTTPS website and current concise description |
+| LinkedIn company page | Public page was rechecked on August 30, 2026 and still says `Houston, Texas`, headquarters `Houston, Texas`, and primary location `Houston, Texas 77024, US`; website is still `http://apsdrone.com` | Inconsistent | Update to Dallas-Fort Worth service-area wording, remove the obsolete Houston location, use HTTPS website and current concise description |
 | Bing Places | Official setup was started, but Google sign-in did not complete and no duplicate was created | Incomplete | Resume only with the correct APS Drone owner account and reconcile against canonical data before publishing |
 | Apple Business Connect | No completed listing evidence | Incomplete | Create or claim a service-area presence using canonical data; never expose a private unit address |
 | Yelp Business | No completed listing evidence | Incomplete | Claim the correct business and use canonical DFW service-area data |
@@ -45,3 +45,8 @@ Suggested replacement fields:
 - Do not publish a unit number or residential street address.
 - Do not create duplicate Bing, Apple or Yelp listings before searching for an existing APS Drone record.
 - Keep name, phone, website and DFW service-area positioning consistent everywhere.
+
+## Public discovery recheck
+
+- A fresh public web search on August 30, 2026 did not surface an identifiable APS Drone Yelp, Bing Maps or Apple Maps record. This is not proof that no listing exists because those directories can restrict crawling; an authenticated directory search is still required before creating anything.
+- The existing LinkedIn page remains publicly discoverable and continues to expose the obsolete Houston entity data, making it the highest-priority citation correction.
