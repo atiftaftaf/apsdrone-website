@@ -58,6 +58,25 @@ The non-sponsored results below were visible for `Dallas drone photography servi
 - APS Drone already has a broader verified media mix than many single-service profiles; continue rotating commercial, real-estate, roof, thermal and FPV examples without uploading duplicates.
 - A dedicated Google Business landing URL with UTM tagging should be used on posts and links so GA4 can separate profile traffic from ordinary organic search.
 
+## Current organic visibility recheck — August 30, 2026
+
+The target set was rechecked again for `Dallas drone services`, `Dallas drone videographer`, `Fort Worth drone photography` and `commercial drone services Dallas`. Search results are personalized and can change; this section records observable public signals rather than asserting a permanent ranking.
+
+| Visibility set | Current public evidence | Gap or opportunity for APS Drone |
+|---|---|---|
+| [SkyLVL Altitude Media](https://skylvl.com/) | Detailed CRE, retail, multifamily, development and construction language; Dallas/Fort Worth/Frisco/Denton/Plano service architecture; published galleries and testimonials; multiple visible citations including Yelp and DroneServices.com | APS Drone should not imitate the large city-page footprint. Its defensible response is privacy-safe local case evidence, consistent entity citations and genuine reviews. |
+| [Drone DMC](https://www.dronedmc.com/) | Clear package ladder, builder/developer positioning, named project examples, strategy-call CTA and Google profile categorized as `Drone service`; the live profile currently invites users to be the first reviewer | APS Drone already has the lower entry price and stronger specialist-page coverage. Keep the written-scope approach and improve verified customer outcomes instead of adding unrelated media services. |
+| [C Ray Pictures](https://www.craypictures.com/dallas-commercial-drone-photography-aerial-video-services) | Industrial/commercial specialization, strong airspace and site-compliance explanation, integrated ground/drone production, named client history and a live Google profile showing 5.0 from 6 reviews; the profile also had an owner post dated July 20, 2026 | The strongest lesson is topical commercial authority plus current trust evidence. APS Drone needs customer-approved commercial outcomes and review recency, not inflated equipment or client claims. |
+
+### Recheck conclusions
+
+1. APS Drone itself is now appearing in the same organic result set for the broad DFW query family, so discovery is working; the next bottleneck is trust and qualified conversion.
+2. Live mobile Lighthouse checks on August 30, 2026 scored the APS Drone homepage 98/100 and the real-estate and commercial landing pages 100/100. Performance is not the present competitive weakness.
+3. C Ray Pictures demonstrates the value of recent, specific B2B reviews. APS Drone should request a fair review only after confirmed delivery and should never invent, buy or gate reviews.
+4. SkyLVL's visible third-party footprint includes relevant directory and local citations. APS Drone should pursue a small set of accurate, legitimate listings rather than mass submissions.
+5. Drone DMC's packages and named examples show clear conversion framing, but APS Drone already covers price, scope and case-study structure. New content should come from real completed assignments or Search Console demand.
+6. The next defensible execution order is: confirmed-customer review request, one customer-authorized commercial case study, accurate drone-industry citation, then ongoing GBP project posts/media.
+
 ## Defensible APS Drone advantages
 
 1. Clear $249 starting price is more accessible than several commercial-first competitors.
