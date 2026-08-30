@@ -139,3 +139,4 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Added `VideoObject` data with a stable WebP thumbnail, MP4 content URL, duration, upload date, publisher entity and `WatchAction`.
 - Added the watch page to both the main XML sitemap and the video sitemap, and linked it from the real-estate service and case-study pages.
 - Local XML, JSON-LD, internal-reference, browser-render and Lighthouse checks passed before deployment.
+- GitHub Pages deployment for commit `6d8b38a` completed successfully. The live watch page, main sitemap and video sitemap returned HTTP 200; the live HTML contains the `VideoObject` and MP4 reference, and the live video sitemap contains the new watch URL.
