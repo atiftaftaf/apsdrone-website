@@ -1,6 +1,6 @@
 ﻿# APS Drone SEO and Indexing Checklist
 
-Updated: 2026-07-16
+Updated: 2026-08-30
 Domain: https://apsdrone.com
 
 ## Already completed in this repo
@@ -9,6 +9,10 @@ Domain: https://apsdrone.com
 - Added DFW service-area content and city-focused sections.
 - Added real media files in `assets/media` for richer page content.
 - Added call, text and WhatsApp lead buttons with conversion events (`click_call`, `click_text`, `click_whatsapp`, `cta_click`, `form_start`, `form_submit`, and `generate_lead`).
+- Explicitly allowed `OAI-SearchBot`, `ChatGPT-User`, `Claude-SearchBot`, and `Claude-User` in `robots.txt`.
+- Added `llms.txt` as a supplemental machine-readable business and service summary.
+- Added answer-focused landing pages for real estate, commercial, construction progress, and Dallas drone pricing searches.
+- Added internal links and sitemap entries for every new landing page.
 
 ## Do now (Google Search Console)
 1. Open Google Search Console: https://search.google.com/search-console
@@ -16,6 +20,7 @@ Domain: https://apsdrone.com
 3. Verify ownership (recommended: DNS TXT in your domain DNS).
 4. Submit sitemap URL: `https://apsdrone.com/sitemap.xml`.
 5. Use URL Inspection on `https://apsdrone.com/` and click `Request Indexing`.
+6. Inspect and request indexing for the four high-intent service pages added on 2026-08-30.
 
 ## Do now (Google Business Profile)
 1. Create or claim business profile: https://www.google.com/business/
@@ -38,6 +43,17 @@ Domain: https://apsdrone.com
 - real estate drone photography dallas
 - drone roof inspection dfw
 - construction drone progress photos texas
+- commercial drone photography dfw
+- real estate drone photography dallas prices
+- construction progress drone photography dfw
+- how much does drone photography cost in dallas
+
+## AI search visibility checks
+1. Keep `OAI-SearchBot` and `Claude-SearchBot` allowed unless the owner intentionally opts out of AI search visibility.
+2. Keep prices, service areas, phone number, credentials, delivery windows, and scope limitations consistent across the website and public business profiles.
+3. Add factual project notes and original media rather than generic location pages.
+4. Review `llms.txt` after pricing, services, contact details, or canonical URLs change.
+5. Track brand and non-brand discovery separately; a branded first-place result does not prove ranking for generic customer-intent queries.
 
 ## Validation tools
 - Rich Results Test: https://search.google.com/test/rich-results

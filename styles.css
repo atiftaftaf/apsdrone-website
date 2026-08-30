@@ -845,6 +845,10 @@ img { max-width: 100%; display: block; }
     background: var(--bg-section);
 }
 
+.answer-guides {
+    padding: 100px 0;
+}
+
 .city-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
