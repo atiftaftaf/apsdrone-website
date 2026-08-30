@@ -37,8 +37,11 @@ The quote form also stores first-touch campaign attribution in hidden Formspree 
 - The GA4 script is deployed on every public HTML page.
 - The live `analytics.js` returned HTTP 200 after deployment.
 - The live page contained both the local Analytics loader and the injected `googletagmanager.com/gtag/js` resource.
-- Google can take time to change the new stream from “No data received” to active. Recheck Realtime and Recent events after normal public traffic appears.
-- Once events appear, mark `generate_lead`, `click_call`, `click_text`, `click_whatsapp` and `click_email` as key events. Do not mark ordinary page views or generic clicks as conversions.
+- GA4 Realtime showed live APS Drone website traffic on August 30, 2026: five active users in the previous 30 minutes and page views on the case-study, commercial-video, vertical-reel and home pages.
+- A controlled live-site QA visit using `utm_source=codex_test`, `utm_medium=qa` and `utm_campaign=ga4_validation` produced the custom Realtime events `click_quote` and `form_start`. The form was not submitted, so no false lead was created.
+- The following lead/contact events are configured and server-visible in the GA4 Key events table: `generate_lead`, `click_call`, `click_text`, `click_whatsapp`, `click_email` and `click_quote`.
+- No arbitrary monetary value was assigned to `click_email` or `click_quote`; they retain any real event value supplied by the website.
+- Ordinary page views, `form_start`, `form_submit` and `form_error` are not marked as key events.
 
 ## Privacy
 
