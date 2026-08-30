@@ -1,6 +1,8 @@
 (function () {
   'use strict';
 
+  window.APS_QUOTE_FORM_BUILD = '20260830-3';
+
   function track(eventName, payload) {
     const details = payload || {};
     window.dataLayer = window.dataLayer || [];
@@ -74,7 +76,10 @@
     };
     Object.keys(values).forEach(function (id) {
       const field = document.getElementById(id);
-      if (field) field.value = values[id];
+      if (field) {
+        field.value = values[id];
+        field.setAttribute('value', values[id]);
+      }
     });
   }
 
