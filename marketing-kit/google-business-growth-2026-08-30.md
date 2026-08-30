@@ -208,3 +208,11 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Marked the privacy notice `noindex,follow` and removed it from the sitemap because it is a user/legal utility page rather than a ranking target.
 - The current main sitemap contains 18 indexable URLs; all 18 are reachable from the homepage graph, 14 are linked directly from the homepage, there are zero orphan indexable pages, zero sitemap `noindex` conflicts and all 23 indexable-page JSON-LD blocks parse.
 - Deployed commit `cca86a8` through a successful GitHub Pages build. Cache-busted live checks confirmed the new Arlington title, both project images and the commercial checklist link; confirmed `noindex,follow` on Plano, Frisco and the privacy notice; and confirmed the live sitemap contains 18 URLs and excludes all three non-ranking pages.
+
+## Real-estate listing resource
+
+- Added a substantive DFW real-estate drone shot-list page for agents and listing teams, covering essential aerial views, honest amenity/location context, exterior preparation, vertical-reel sequencing and delivery requirements.
+- Created a branded two-page printable PDF with one tracked quote link. The final file is 304,004 bytes, contains 3,566 extracted text characters and one link annotation.
+- Rendered both final PDF pages at 144 DPI and visually verified zero clipped, overlapping or unreadable elements.
+- Generated separate 1600×900 JPEG and WebP derivatives from an existing APS Drone community image; the source file remains unchanged. The selected image contains no customer name or exact project address.
+- Added the resource to the homepage, the real-estate service page, `llms.txt` and the main sitemap. Removed direct real-estate-page links to the intentionally `noindex` Plano and Frisco legacy pages, replacing them with availability actions.

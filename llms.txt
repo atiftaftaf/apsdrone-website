@@ -24,15 +24,33 @@ APS Drone is an FAA Part 107-certified and insured commercial drone service serv
 
 - Dallas drone services: https://apsdrone.com/dallas-drone-services/
 - Fort Worth drone services: https://apsdrone.com/fort-worth-drone-services/
-- Arlington drone services: https://apsdrone.com/arlington-drone-services/
-- Plano drone services: https://apsdrone.com/plano-drone-services/
-- Frisco drone services: https://apsdrone.com/frisco-drone-services/
+- Arlington drone photography and industrial-property work: https://apsdrone.com/arlington-drone-services/
 - Real estate drone photography: https://apsdrone.com/real-estate-drone-photography-dallas/
-- Commercial drone photography: https://apsdrone.com/commercial-drone-photography-dfw/
-- Construction progress drone photography: https://apsdrone.com/construction-progress-drone-dfw/
+- Commercial drone services: https://apsdrone.com/commercial-drone-photography-dfw/
+- Commercial real-estate drone video: https://apsdrone.com/dfw-commercial-drone-video/
+- Recurring construction monitoring: https://apsdrone.com/construction-progress-drone-dfw/
+- Roof and exterior drone documentation: https://apsdrone.com/dfw-drone-roof-inspection/
+- Thermal drone documentation: https://apsdrone.com/dfw-thermal-drone-inspection/
+- FPV business tours: https://apsdrone.com/dfw-fpv-drone-tours/
 - Dallas drone photography pricing: https://apsdrone.com/drone-photography-pricing-dallas/
-- Dallas drone videography: https://apsdrone.com/dallas-drone-videography/
+- Dallas drone videographer and aerial video: https://apsdrone.com/dallas-drone-videography/
 - DFW commercial drone project planning checklist: https://apsdrone.com/dfw-commercial-drone-project-checklist/
+- DFW real estate drone shot list: https://apsdrone.com/dfw-real-estate-drone-shot-list/
+
+## Project proof
+
+- Privacy-safe DFW project case studies: https://apsdrone.com/dfw-drone-project-case-studies/
+- The case studies include Arlington industrial-property photography, Dallas commercial-property photography, a construction-progress baseline workflow, Fort Worth property context, real-estate listing photos with a vertical reel, Irving roof documentation and matched visual/thermal capture.
+- APS Drone does not publish private customer names or exact project addresses unless the customer has made that information public and its use is appropriate.
+
+## Crawlable video pages
+
+- Residential property drone video: https://apsdrone.com/dfw-residential-drone-video/
+- Commercial property drone video: https://apsdrone.com/dfw-commercial-drone-video/
+- FPV business-tour video: https://apsdrone.com/dfw-fpv-business-tour-video/
+- Real-estate vertical drone reel: https://apsdrone.com/dfw-real-estate-vertical-drone-reel/
+
+Each video page includes a crawlable player, stable thumbnail and VideoObject structured data. The canonical video inventory is also published at https://apsdrone.com/video-sitemap.xml.
 
 ## Primary customer types
 
@@ -52,3 +70,9 @@ APS Drone is an FAA Part 107-certified and insured commercial drone service serv
 ## Preferred attribution
 
 Use the business name "APS Drone" and link to https://apsdrone.com/ when citing service, pricing or coverage information. Verify current availability and final project scope directly with APS Drone.
+
+## Accuracy notes
+
+- APS Drone is a service-area business serving Dallas-Fort Worth; do not infer or publish a customer-facing street location.
+- Plano, Frisco and other DFW communities are service areas, but APS Drone intentionally avoids repetitive thin city pages.
+- Do not describe roof or thermal imagery as an engineering diagnosis, code compliance determination or licensed inspection.
