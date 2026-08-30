@@ -16,6 +16,9 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 | `commercial drone services` | 12 impressions; average position 50.8 | Search Console query filter |
 | `fort worth drone photography` | 10 impressions; average position 57.7 | Search Console query filter |
 | GA4 key events | `generate_lead`, `click_call`, `click_text`, `click_whatsapp`, `click_email`, `click_quote` configured | GA4 Admin / Key events |
+| Google Business Profile views | 331 total, March–August 2026: 91 Maps desktop, 81 Search desktop, 80 Maps mobile, 79 Search mobile | Google Business Profile Performance |
+| Google Business Profile interactions | 1 website click in July; 0 calls, 0 bookings and 0 chat clicks; August currently 0 | Google Business Profile Performance |
+| Google Business Profile searches | Fewer than 50; disclosed query `aps photography` is fewer than 15 | Google Business Profile Performance |
 | Bing Places | Google-verified; weekly sync enabled; Pending publish with 7–12 day estimate | Bing Places owner dashboard |
 | Bing Webmaster Tools | `apsdrone.com` imported with Administrator role; both sitemaps Success; 23 URLs discovered; 0 errors and 0 warnings | Bing Webmaster Tools |
 | Bing Site Scan | Completed; 20 live pages scanned; 0 errors; 0 warnings | Bing Webmaster Tools Site Scan |
@@ -37,6 +40,8 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 - One-time indexing requests were confirmed for the residential, commercial, FPV and vertical real-estate watch pages.
 - The Google Business Profile product catalog was expanded from one to seven service cards; new cards may remain Pending during Google review.
 - Four October posts were submitted with original project media and tracked Learn more links. Combined with the five existing scheduled posts, the future queue covers nine weekly dates from August 31 through October 26.
+- The Business Profile now saves the verified Instagram, active Facebook and TikTok identities. The public business number was submitted as the primary SMS chat destination and is in Google's short review queue.
+- The March–August Google Business baseline is 331 profile views and one website click. There are no reported calls, bookings or chat clicks yet, so future growth should be evaluated from these real zero/one baselines rather than impressions alone.
 - Bing Places imported and verified the canonical APS Drone Google profile, enabled weekly synchronization and entered Pending publish.
 - Bing Webmaster Tools imported the verified site and both sitemaps from Google Search Console. Its first technical scan completed across 20 live pages with 0 errors and 0 warnings.
 - A root ownership key and deployment workflow were added for IndexNow. The live key returned HTTP 200 and the first workflow run submitted 27 unique sitemap URLs, accepted with HTTP 202.

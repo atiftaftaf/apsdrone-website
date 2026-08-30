@@ -228,6 +228,13 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Submitted four October weekly posts with original project media, Learn more calls to action and GA4 UTM links. Together with the five existing posts, the profile now has a nine-week future content queue from August 31 through October 26.
 - No advertising spend was started, no review was fabricated and no private street/unit address was published.
 
+## Google Business conversion and entity expansion
+
+- Live Business Profile performance for March through August 2026 shows 331 profile views and one interaction: a website click in July. Calls, bookings and chat clicks are currently zero. Google reports fewer than 50 profile-producing searches; the only disclosed query is `aps photography` at fewer than 15 searches.
+- Added the verified active APS Drone Facebook page and `@apsdronetx` TikTok profile to the Business Profile alongside the existing Instagram link. Google accepted all three links into the saved Social profiles list.
+- Added the already-public business number `832-938-9570` as the primary Google Business SMS chat destination. Google accepted the edit and placed it in the short review queue; no private number was introduced.
+- The existing Booking action still points to `apsdrone.com`. Its editor remained in a platform-side Saving state, so it was left unchanged rather than risking removal or a blank destination.
+
 ## Bing discovery and citation expansion
 
 - Signed into the official Bing Places owner surface with `apsdronetx@gmail.com` and imported the verified APS Drone Google Business Profile.
