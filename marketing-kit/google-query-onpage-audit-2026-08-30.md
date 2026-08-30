@@ -20,6 +20,7 @@ The target set comes from actual APS Drone Search Console impressions. Each quer
 - No keyword-stuffed city-page variants were created.
 - Sitemap `lastmod` was updated where the older Fort Worth page changed.
 - All 24 current JSON-LD blocks still parse after the on-page changes.
+- `node scripts/verify_site_integrity.js` now enforces these conditions in the repository: 19 sitemap pages, 19 unique titles and descriptions, exact canonical mappings, one H1 per page, the four query-to-page phrase mappings, 232 valid internal links, full homepage-graph reachability, 24 parseable JSON-LD blocks and four complete `VideoObject` watch pages.
 
 ## Measurement
 
