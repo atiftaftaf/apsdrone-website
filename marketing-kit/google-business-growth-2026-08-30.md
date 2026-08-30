@@ -243,6 +243,15 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - GitHub Pages deployed commits `03163a8`, `baa00df` and the attribution correction successfully. Live checks confirmed the HTTPS page, one quote form, the production endpoint, dedicated form script, zero browser console errors and no unintended portfolio modal.
 - The existing Google Business Booking action remains unchanged at `apsdrone.com` until the owner panel accepts the new simple destination `https://apsdrone.com/request-a-quote/`; no working destination was removed during Google's repeated Saving-state failure.
 
+## Homepage recrawl after service-area correction
+
+- A live Google brand search still showed the older `based in Dallas` snippet even though the homepage now correctly says APS Drone serves Dallas-Fort Worth as a hidden-address service-area business.
+- Search Console's stored Google-index record confirmed why: the indexed homepage copy was last crawled on August 25, 2026 at 4:38:43 PM, before the August 30 wording and conversion deployments. The stored record shows successful smartphone fetch, crawl allowed, indexing allowed and the correct self-canonical.
+- Ran one live URL test on August 30 at 3:00 PM. Google returned `URL is available to Google`, `Page can be indexed` and `Video detected` for the current deployed homepage.
+- Submitted one justified recrawl request after the successful live test. Google returned `Indexing requested` and added the homepage to its priority crawl queue; do not repeat the request because additional submissions do not change priority.
+- The Search Console overview now reports two total web-search clicks. Its homepage recommendation shows impressions up 369% for August 20–26 compared with August 13–19. These are early discovery signals, not proof of ranking or lead growth.
+- The page-level performance table attributes both clicks to `https://apsdrone.com/` (166 impressions). The Dallas services page has 257 impressions and the Fort Worth services page has 51 impressions, both with zero clicks. This makes the homepage the current conversion-priority page while the two location pages remain CTR/ranking-growth opportunities.
+
 ## Bing discovery and citation expansion
 
 - Signed into the official Bing Places owner surface with `apsdronetx@gmail.com` and imported the verified APS Drone Google Business Profile.

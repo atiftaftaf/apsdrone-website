@@ -47,6 +47,8 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 - Bing Webmaster Tools imported the verified site and both sitemaps from Google Search Console. Its first technical scan completed across 20 live pages with 0 errors and 0 warnings.
 - A root ownership key and deployment workflow were added for IndexNow. The live key returned HTTP 200 and the first workflow run submitted 27 unique sitemap URLs, accepted with HTTP 202.
 - A focused `/request-a-quote/` route is live for Google Business traffic. It uses the existing verified lead endpoint and GA4 conversion events; campaign and click-ID attribution now records the newest attributable touch instead of being overwritten by internal navigation.
+- Search Console now reports two total web-search clicks and a homepage recommendation showing 369% more impressions for Aug. 20–26 than Aug. 13–19. The stored homepage crawl is Aug. 25, before the service-area wording fix. An Aug. 30 live test returned available/indexable with video detected, and Google accepted one recrawl request; do not submit it again.
+- Page distribution for the same July 27–Aug. 28 window: homepage 2 clicks/166 impressions; Dallas services 0/257; Fort Worth services 0/51. The remaining reported impressions belong to homepage fragment URLs and are too small to guide changes.
 
 ## Decision thresholds
 
