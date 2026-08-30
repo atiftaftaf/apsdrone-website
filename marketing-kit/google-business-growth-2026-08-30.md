@@ -151,6 +151,13 @@ An isolated Chrome profile was used for Lighthouse 13.4.1 mobile lab tests on Au
 
 These are controlled lab results, not field Core Web Vitals. Search Console still reports insufficient Chrome UX field data, so real-user performance must continue to be monitored as traffic grows.
 
+### Dallas video-page startup optimization
+
+- A cache-busted mobile Lighthouse baseline on the live Dallas drone-videography page measured 91 Performance, 3.5-second LCP, zero CLS and 1,275 KiB transferred.
+- Commit `03ea554` changed all ten embedded site videos to `preload="none"`, added three right-sized WebP video posters and a 400-pixel transparent WebP navigation logo, and extended the integrity verifier to fail on eager video downloads or missing local media.
+- After deployment, the same cache-busted live page measured 100 Performance, 1.9-second LCP, zero CLS and 348 KiB transferred. No MP4 was downloaded before user playback.
+- The controlled result is a 72.7% reduction in initial transferred bytes for that page. It remains lab evidence; field Core Web Vitals still require real-user data.
+
 ## Additional vertical-video indexing target
 
 - Added a dedicated, crawlable watch page at `https://apsdrone.com/dfw-real-estate-vertical-drone-reel/` for the eight-second 9:16 property reel.
