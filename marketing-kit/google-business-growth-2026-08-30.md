@@ -156,3 +156,10 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Reparsed all 23 JSON-LD blocks after the update with zero errors.
 - The outdated LinkedIn company page is intentionally excluded from site `sameAs` until its Houston location and insecure website URL are corrected.
 - GitHub Pages deployment for commit `907b65b` completed successfully. Live checks returned HTTP 200 and confirmed the Google Business Profile and Facebook entity links on the real-estate, commercial and Dallas-services pages.
+
+## Search-query on-page alignment
+
+- Updated the Dallas videography page title and H1 to match the real `dallas drone videographer` impression query while preserving its substantive 4K and vertical-reel scope.
+- Updated the DFW commercial page title and H1 to match `commercial drone services` while keeping one broad commercial page rather than creating thin variants.
+- Updated the Fort Worth page title and H1 to match `fort worth drone photography` and refreshed its sitemap modification date.
+- Titles, descriptions and social metadata remain unique and concise; all structured-data blocks still parse.
