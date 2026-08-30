@@ -19,12 +19,13 @@ Updated: August 30, 2026
 | APS Drone website | Live homepage contains DFW service-area language, canonical phone, email and social links | Consistent | Continue using as the canonical entity source |
 | Google Business Profile | Live owner view showed hidden street address, DFW service areas, current phone, website, categories and services | Consistent | Continue weekly posts, real project media and review requests |
 | Search Console | Verified URL-prefix property is connected to GA4; main sitemap is successful; video sitemap was accepted with four discovered pages and four discovered videos; all four video watch pages received one-time indexing-request confirmations | Consistent; Google processing pending | Monitor the Video pages report and avoid duplicate indexing requests |
-| Facebook | Authenticated About view shows DFW service wording, `832-938-9570`, `apsdronetx@gmail.com` and the correct Instagram handle; the bio-generated `APSDrone.com` link currently resolves through `http://APSDrone.com/` | Mostly consistent; URL protocol should be corrected | Replace the plain-domain bio reference with the canonical `https://apsdrone.com/` URL |
+| Facebook | Authenticated active-page view shows DFW service wording, `832-938-9570`, the correct Instagram handle and a live-reverified canonical `https://apsdrone.com/` bio link | Consistent; empty duplicate remains | Permanently delete the empty `Aps Drone TX` duplicate after password confirmation; preserve the active `APS Drone` page |
 | Instagram | Authenticated `@apsdronetx` profile and edit view show DFW services, $249 listing positioning and `APSDrone.com`; the desktop Website field is empty/disabled and Instagram states that link editing is mobile-only | DFW positioning consistent; clickable canonical website link is missing or not verifiable | Add `https://apsdrone.com/` as the profile website from the Instagram mobile app, then verify it publicly |
 | LinkedIn company page | Public page was rechecked on August 30, 2026 and still says `Houston, Texas`, headquarters `Houston, Texas`, and primary location `Houston, Texas 77024, US`; website is still `http://apsdrone.com` | Inconsistent | Update to Dallas-Fort Worth service-area wording, remove the obsolete Houston location, use HTTPS website and current concise description |
-| Bing Places | Official setup was started, but Google sign-in did not complete and no duplicate was created | Incomplete | Resume only with the correct APS Drone owner account and reconcile against canonical data before publishing |
+| Bing Places | Official APSDroneTX owner account imported the verified Google Business Profile; Bing shows verification complete, weekly sync enabled and `Pending publish` with a 7–12 day estimate | Consistent; publication processing | Monitor the single canonical listing and do not create another record |
+| Bing Webmaster Tools | Verified `https://apsdrone.com/` property imported from Google Search Console with Administrator role; main and video sitemaps are Processing with zero errors/warnings; a 100-page Site Scan is Queued | Connected and processing | Review sitemap, crawl and AI Performance data after Microsoft finishes processing |
 | Apple Business Connect | No completed listing evidence | Incomplete | Create or claim a service-area presence using canonical data; never expose a private unit address |
-| Yelp Business | No completed listing evidence | Incomplete | Claim the correct business and use canonical DFW service-area data |
+| Yelp Business | Public and owner-directory searches found no APS Drone listing; a hidden-address record was prepared with the canonical phone, website and three truthful categories | Prepared; phone verification required | Complete the one-time SMS or call code, then verify that only city/state/ZIP are public |
 
 ## LinkedIn correction package
 
@@ -40,7 +41,7 @@ Suggested replacement fields:
 
 ## Facebook and Instagram correction package
 
-- Facebook bio replacement: `DFW drone photography + video for real estate, commercial properties, construction progress, roofs and thermal documentation. FAA Part 107. From $249. Quotes: https://apsdrone.com/ | 832-938-9570`
+- Facebook bio is live with the canonical HTTPS link: `DFW drone photography + video for real estate, commercial properties, construction progress, roofs and thermal documentation. FAA Part 107. Services from $249. Quotes: https://apsdrone.com/ | 832-938-9570`
 - Instagram bio text is already DFW-focused and uses the correct `.com` spelling in the authenticated edit field; the apparent `.co` ending on the public accessibility snapshot was only truncation.
 - Instagram website link: `https://apsdrone.com/` (Instagram currently requires this field to be edited in the mobile app.)
 
@@ -62,10 +63,11 @@ Suggested replacement fields:
 
 - The isolated APSDroneTX in-app browser visibly identified `apsdronetx@gmail.com` in Google account controls; the personal browser profile was not used.
 - LinkedIn displayed the public APS Drone page behind an auth wall and offered `Continue as Atif`, but the consent text explicitly said it would **create** a LinkedIn account. It was not clicked because that would not prove administrator access to the existing company page and could create an unwanted duplicate identity.
-- Bing Places opened its official management portal in a signed-out state with only `Sign in` and `Get started`; no owned listing or duplicate-search result was available without authentication.
+- Bing Places now has one verified APS Drone record under the APSDroneTX owner account. Google synchronization completed successfully and is scheduled weekly; public publication is still processing.
 - Apple Business opened the official Apple Business portal in a signed-out state; no owned Maps place or claim state was visible.
-- Yelp's public search surface rendered only an inaccessible embedded frame in this browser, so it did not produce authoritative evidence of a listing or absence.
-- These results reinforce the fail-closed rule: do not create Bing, Apple, Yelp or LinkedIn records until the correct owner account can first search and reconcile existing records.
+- Yelp's public Dallas search and official owner-directory search both failed to find APS Drone. The new hidden-address record is held at the ownership-verification step; no second record should be created.
+- Facebook exposes two managed pages: the active `APS Drone` page and an empty `Aps Drone TX` page with zero followers and zero posts. Permanent deletion of the empty page is password-gated.
+- Apple and LinkedIn remain fail-closed until the correct owner credentials can establish access without creating duplicate identities.
 
 ## Additional branded-search inconsistency
 

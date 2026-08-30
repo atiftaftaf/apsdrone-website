@@ -16,6 +16,9 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 | `commercial drone services` | 12 impressions; average position 50.8 | Search Console query filter |
 | `fort worth drone photography` | 10 impressions; average position 57.7 | Search Console query filter |
 | GA4 key events | `generate_lead`, `click_call`, `click_text`, `click_whatsapp`, `click_email`, `click_quote` configured | GA4 Admin / Key events |
+| Bing Places | Google-verified; weekly sync enabled; Pending publish with 7–12 day estimate | Bing Places owner dashboard |
+| Bing Webmaster Tools | `apsdrone.com` imported with Administrator role; 2 sitemaps Processing; 0 errors and 0 warnings | Bing Webmaster Tools |
+| Bing Site Scan | 100-page full-site scan Queued | Bing Webmaster Tools Site Scan |
 
 ## Weekly review sequence
 
@@ -33,6 +36,9 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 - One-time indexing requests were confirmed for the residential, commercial, FPV and vertical real-estate watch pages.
 - The Google Business Profile product catalog was expanded from one to seven service cards; new cards may remain Pending during Google review.
 - Four October posts were submitted with original project media and tracked Learn more links. Combined with the five existing scheduled posts, the future queue covers nine weekly dates from August 31 through October 26.
+- Bing Places imported and verified the canonical APS Drone Google profile, enabled weekly synchronization and entered Pending publish.
+- Bing Webmaster Tools imported the verified site and both sitemaps from Google Search Console, and a 100-page technical scan was queued.
+- A root ownership key and deployment workflow were added for IndexNow submission of the current main/video sitemap URL set.
 
 ## Decision thresholds
 

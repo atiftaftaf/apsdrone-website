@@ -86,8 +86,8 @@ Do not submit the same URL repeatedly; Search Console states that repeated submi
 
 - Google Search Console reported 0 external links and 2 internal links on August 30, 2026.
 - A substantive shareable resource was added at `https://apsdrone.com/dfw-commercial-drone-project-checklist/`.
-- Bing Places setup was started through the official portal, but Google sign-in did not complete in the current browser session; no duplicate listing was created.
-- Priority citation sources are Bing Places, Apple Business Connect, Yelp for Business, the existing APS Drone LinkedIn profile and genuine DFW partner/association references.
+- Bing Places is now connected to `apsdronetx@gmail.com`, verified through the existing Google Business Profile and configured for weekly synchronization. Microsoft reports `Pending publish` with a 7–12 day publishing estimate; no duplicate was created.
+- Priority remaining citation sources are Apple Business Connect, Yelp for Business, the existing APS Drone LinkedIn profile and genuine DFW partner/association references.
 - Never buy links or use automated directory blasts.
 
 ## August 30 deployment verification
@@ -227,6 +227,17 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Added six service products, bringing the Google Business Profile catalog to seven total cards. Google accepted every submission; review-dependent cards are marked Pending.
 - Submitted four October weekly posts with original project media, Learn more calls to action and GA4 UTM links. Together with the five existing posts, the profile now has a nine-week future content queue from August 31 through October 26.
 - No advertising spend was started, no review was fabricated and no private street/unit address was published.
+
+## Bing discovery and citation expansion
+
+- Signed into the official Bing Places owner surface with `apsdronetx@gmail.com` and imported the verified APS Drone Google Business Profile.
+- Bing confirmed verification, completed the first sync and created one canonical APS Drone record with the correct phone, website, DFW description, categories, hours, photos and hidden-address service-area presentation. Status is `Pending publish`; Microsoft estimates 7–12 days.
+- Enabled weekly Google Business Profile synchronization so future canonical profile updates flow into Bing without manual duplicate creation.
+- Imported the verified `https://apsdrone.com/` Google Search Console property into Bing Webmaster Tools with read-only access. Bing imported both `sitemap.xml` and `video-sitemap.xml`; both are currently Processing with zero errors and zero warnings.
+- Started a 100-page Bing Site Scan named `APS Drone full technical scan 2026-08-30`; its server-visible state is Queued.
+- Added a root IndexNow ownership key and a GitHub workflow that waits for the deployed key, parses both sitemap files and submits the current unique APS Drone URLs to the official IndexNow endpoint after relevant production changes.
+- A public Yelp search and the official owner directory found no existing APS Drone result. A canonical hidden-address Yelp record was prepared with the approved phone, website and relevant real-estate photography/video categories, but final ownership verification requires an SMS or phone code and was intentionally left for the owner.
+- Facebook's active APS Drone page bio now uses the canonical `https://apsdrone.com/` URL and was live-reverified. A second empty page named `Aps Drone TX` has zero followers and zero posts; deletion is prepared but password-gated, so it was not completed.
 
 ## Index-quality cleanup
 

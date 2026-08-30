@@ -1,0 +1,95 @@
+name: Submit updated APS Drone URLs to IndexNow
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**/*.html"
+      - "assets/**"
+      - "sitemap.xml"
+      - "video-sitemap.xml"
+      - "f2d4fa6b60404722b9650731cdb0bd072c9e2eabdf9946e483296450d312196a.txt"
+      - ".github/workflows/indexnow.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-main
+  cancel-in-progress: true
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the published source
+        uses: actions/checkout@v4
+
+      - name: Wait for the IndexNow key file to be live
+        shell: bash
+        run: |
+          set -euo pipefail
+          key="f2d4fa6b60404722b9650731cdb0bd072c9e2eabdf9946e483296450d312196a"
+          key_url="https://apsdrone.com/${key}.txt"
+          body=""
+          for attempt in $(seq 1 60); do
+            body="$(curl --fail --silent --show-error "$key_url" 2>/dev/null || true)"
+            if [ "$body" = "$key" ]; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "The deployed IndexNow key file did not become available." >&2
+          exit 1
+
+      - name: Submit current sitemap URLs to IndexNow
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import urllib.error
+          import urllib.request
+          import xml.etree.ElementTree as ET
+
+          host = "apsdrone.com"
+          key = "f2d4fa6b60404722b9650731cdb0bd072c9e2eabdf9946e483296450d312196a"
+          key_location = f"https://{host}/{key}.txt"
+          urls = set()
+
+          for sitemap in ("sitemap.xml", "video-sitemap.xml"):
+              root = ET.parse(sitemap).getroot()
+              for element in root.iter():
+                  if element.tag.endswith("loc") and element.text:
+                      url = element.text.strip()
+                      if url.startswith(f"https://{host}/"):
+                          urls.add(url)
+
+          payload = json.dumps(
+              {
+                  "host": host,
+                  "key": key,
+                  "keyLocation": key_location,
+                  "urlList": sorted(urls),
+              }
+          ).encode("utf-8")
+          request = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=payload,
+              headers={"Content-Type": "application/json; charset=utf-8"},
+              method="POST",
+          )
+
+          try:
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  status = response.status
+          except urllib.error.HTTPError as error:
+              status = error.code
+
+          if status not in (200, 202):
+              raise SystemExit(f"IndexNow returned HTTP {status}")
+
+          print(f"IndexNow accepted {len(urls)} unique URLs with HTTP {status}.")
+          PY
