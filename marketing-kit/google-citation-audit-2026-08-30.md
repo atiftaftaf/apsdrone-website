@@ -19,8 +19,8 @@ Updated: August 30, 2026
 | APS Drone website | Live homepage contains DFW service-area language, canonical phone, email and social links | Consistent | Continue using as the canonical entity source |
 | Google Business Profile | Live owner view showed hidden street address, DFW service areas, current phone, website, categories and services | Consistent | Continue weekly posts, real project media and review requests |
 | Search Console | Verified URL-prefix property is connected to GA4; sitemap is successful | Consistent but discovery update pending | Submit the prepared video sitemap and request priority indexing after action-time confirmation |
-| Facebook | Website and structured data point to the existing APS Drone page; a public checklist post was previously verified | Partially verified | Recheck About data for DFW wording and canonical phone during the next authenticated profile audit |
-| Instagram | Website and structured data point to `@apsdronetx`; live account ownership was previously verified | Partially verified | Recheck bio link, DFW wording and contact button during the next authenticated profile audit |
+| Facebook | Authenticated About view shows DFW service wording, `832-938-9570`, `apsdronetx@gmail.com` and the correct Instagram handle; the bio-generated `APSDrone.com` link currently resolves through `http://APSDrone.com/` | Mostly consistent; URL protocol should be corrected | Replace the plain-domain bio reference with the canonical `https://apsdrone.com/` URL |
+| Instagram | Authenticated `@apsdronetx` profile and edit view show DFW services, $249 listing positioning and `APSDrone.com`; the desktop Website field is empty/disabled and Instagram states that link editing is mobile-only | DFW positioning consistent; clickable canonical website link is missing or not verifiable | Add `https://apsdrone.com/` as the profile website from the Instagram mobile app, then verify it publicly |
 | LinkedIn company page | Public page was rechecked on August 30, 2026 and still says `Houston, Texas`, headquarters `Houston, Texas`, and primary location `Houston, Texas 77024, US`; website is still `http://apsdrone.com` | Inconsistent | Update to Dallas-Fort Worth service-area wording, remove the obsolete Houston location, use HTTPS website and current concise description |
 | Bing Places | Official setup was started, but Google sign-in did not complete and no duplicate was created | Incomplete | Resume only with the correct APS Drone owner account and reconcile against canonical data before publishing |
 | Apple Business Connect | No completed listing evidence | Incomplete | Create or claim a service-area presence using canonical data; never expose a private unit address |
@@ -37,6 +37,12 @@ Suggested replacement fields:
 - Website: `https://apsdrone.com/`
 - Headquarters/location: remove the obsolete Houston address; use Dallas-Fort Worth service-area wording if LinkedIn permits it without publishing a private address.
 - Industry: Photography
+
+## Facebook and Instagram correction package
+
+- Facebook bio replacement: `DFW drone photography + video for real estate, commercial properties, construction progress, roofs and thermal documentation. FAA Part 107. From $249. Quotes: https://apsdrone.com/ | 832-938-9570`
+- Instagram bio text is already DFW-focused and uses the correct `.com` spelling in the authenticated edit field; the apparent `.co` ending on the public accessibility snapshot was only truncation.
+- Instagram website link: `https://apsdrone.com/` (Instagram currently requires this field to be edited in the mobile app.)
 
 ## Fail-closed rules
 
