@@ -199,3 +199,11 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - The live media manager currently shows 16 numbered photos and six numbered videos in addition to the cover and logo. One of the newest videos remains Pending; older visible media examples show up to 223 views.
 - The live profile currently exposes one `$249` real-estate product. Prepared six factual, non-overlapping product definitions for vertical-reel, commercial, construction-progress, roof, FPV and thermal services in `google-business-products-2026.md`, each with a product-specific GA4 UTM URL and a real project-media source.
 - No product was publicly saved during this preparation pass.
+
+## Index-quality cleanup
+
+- Search Console's August 20 page-indexing snapshot identified Arlington, Plano, Frisco and the privacy notice as four `Discovered - currently not indexed` URLs; none had a recorded crawl date.
+- Expanded Arlington into a substantive page using two location-verified industrial-property images, a privacy-safe objective/deliverables section, visible FAQs, Service/Breadcrumb/FAQ schema and contextual links to commercial, construction, roof, video and planning resources.
+- Marked the repetitive, unsupported Plano and Frisco legacy city pages `noindex,follow`, removed them from the sitemap and replaced their homepage page links with direct availability actions.
+- Marked the privacy notice `noindex,follow` and removed it from the sitemap because it is a user/legal utility page rather than a ranking target.
+- The current main sitemap contains 18 indexable URLs; all 18 are reachable from the homepage graph, 14 are linked directly from the homepage, there are zero orphan indexable pages, zero sitemap `noindex` conflicts and all 23 indexable-page JSON-LD blocks parse.
