@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="../analytics.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a DFW Drone Quote | APS Drone</title>
+  <meta name="description" content="Request availability and a written quote for professional drone photography, video, inspection documentation or construction progress work across Dallas-Fort Worth.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://apsdrone.com/request-a-quote/">
+  <meta property="og:title" content="Request a DFW Drone Quote | APS Drone">
+  <meta property="og:description" content="Share your location, service and preferred date. APS Drone will review feasibility and reply with availability and pricing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://apsdrone.com/request-a-quote/">
+  <meta property="og:image" content="https://apsdrone.com/assets/media/dfw-fort-worth-property.webp">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../service-page.css">
+  <style>
+    .quote-layout { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(260px, .75fr); gap: 18px; align-items: start; }
+    .quote-form { display: grid; gap: 15px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { display: grid; gap: 6px; }
+    .form-group label, .form-consent label { color: var(--text); font-weight: 750; font-size: .92rem; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 13px; border: 1px solid #b9cbe0; border-radius: 10px;
+      background: #fff; color: var(--text); font: inherit;
+    }
+    .form-group textarea { min-height: 132px; resize: vertical; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: 3px solid rgba(37, 99, 235, .17); border-color: var(--primary);
+    }
+    .form-consent { display: grid; grid-template-columns: auto 1fr; gap: 9px; align-items: start; }
+    .form-consent input { margin-top: 4px; }
+    .form-consent label { font-weight: 500; line-height: 1.55; color: var(--muted); }
+    .form-status { min-height: 24px; color: var(--muted); font-weight: 650; }
+    .submit { width: 100%; border: 0; cursor: pointer; font: inherit; }
+    .submit:disabled { cursor: wait; opacity: .72; }
+    .honeypot { position: absolute !important; left: -10000px !important; width: 1px; height: 1px; overflow: hidden; }
+    .side-card + .side-card { margin-top: 14px; }
+    .side-card p, .side-card ul { margin-bottom: 0; }
+    .contact-options { display: grid; gap: 9px; margin-top: 15px; }
+    .contact-options a { display: block; padding: 11px 13px; border: 1px solid var(--border); border-radius: 10px; background: var(--soft); font-weight: 800; text-decoration: none; }
+    .small { font-size: .88rem; }
+    @media (max-width: 760px) { .quote-layout, .form-row { grid-template-columns: 1fr; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://apsdrone.com/request-a-quote/#page",
+        "url": "https://apsdrone.com/request-a-quote/",
+        "name": "Request a DFW Drone Quote",
+        "description": "Quote and availability request for APS Drone services across Dallas-Fort Worth.",
+        "dateModified": "2026-08-30",
+        "about": {"@id": "https://apsdrone.com/#business"}
+      },
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": "https://apsdrone.com/#business",
+        "name": "APS Drone",
+        "url": "https://apsdrone.com/",
+        "telephone": "+1-832-938-9570",
+        "email": "apsdronetx@gmail.com",
+        "priceRange": "$249 and up",
+        "areaServed": "Dallas-Fort Worth, Texas",
+        "sameAs": [
+          "https://g.page/r/CbNNLDqa9yVeEBI",
+          "https://www.instagram.com/apsdronetx/",
+          "https://www.tiktok.com/@apsdronetx",
+          "https://www.facebook.com/100089827669029/"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <main class="wrap" id="main-content">
+    <div class="top">
+      <a class="brand" href="https://apsdrone.com/"><img src="../assets/brand-logo.png" alt="APS Drone" width="1000" height="214"></a>
+      <a class="back" href="https://apsdrone.com/">Back to APS Drone</a>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">Dallas-Fort Worth drone services</p>
+      <h1>Request availability and a written quote</h1>
+      <p class="lede">Tell us where the project is, what you need and your preferred date. APS Drone will review airspace, weather, access and scope, then reply with availability and pricing—typically within one business day.</p>
+      <div class="chips"><span>FAA Part 107 Certified</span><span>Insured</span><span>DFW Service Area</span><span>Packages From $249</span></div>
+    </section>
+
+    <div class="quote-layout">
+      <section class="section" aria-labelledby="quote-form-title">
+        <h2 id="quote-form-title">Project details</h2>
+        <p>Required fields help us confirm whether the location and timeline are workable. You are requesting a quote, not committing to a purchase.</p>
+        <form class="quote-form" id="contact-form" action="https://formspree.io/f/mwvnoboy" method="POST" data-success-url="../thank-you.html">
+          <input type="hidden" name="_subject" value="[APS LEAD] Google Business Quote Request">
+          <input type="hidden" name="_next" value="https://apsdrone.com/thank-you.html">
+          <input type="hidden" name="landing_page" id="landing-page">
+          <input type="hidden" name="referrer" id="lead-referrer">
+          <input type="hidden" name="utm_source" id="utm-source">
+          <input type="hidden" name="utm_medium" id="utm-medium">
+          <input type="hidden" name="utm_campaign" id="utm-campaign">
+          <input type="hidden" name="utm_content" id="utm-content">
+          <input type="hidden" name="utm_term" id="utm-term">
+          <input type="hidden" name="gclid" id="gclid">
+          <input type="hidden" name="gbraid" id="gbraid">
+          <input type="hidden" name="wbraid" id="wbraid">
+          <input type="hidden" name="fbclid" id="fbclid">
+          <input type="hidden" name="ttclid" id="ttclid">
+          <div class="honeypot" aria-hidden="true">
+            <label for="website">Leave this field empty</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="company">Company (optional)</label>
+              <input type="text" id="company" name="company" autocomplete="organization">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone / text number (optional)</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="project-location">Project address or city</label>
+            <input type="text" id="project-location" name="project_location" placeholder="Dallas, TX or project address" autocomplete="street-address" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="real-estate">Real Estate Photography</option>
+                <option value="photos-reel">Photos + Vertical Reel</option>
+                <option value="commercial">Commercial Photography / Video</option>
+                <option value="construction">Construction Progress Documentation</option>
+                <option value="thermal">Thermal Documentation</option>
+                <option value="mapping-support">Aerial Mapping Support</option>
+                <option value="fpv">FPV Drone Tour</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="shoot-date">Preferred shoot date (optional)</label>
+              <input type="date" id="shoot-date" name="preferred_shoot_date">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="budget">Estimated budget (optional)</label>
+            <select id="budget" name="budget">
+              <option value="" selected>Select a range</option>
+              <option value="249-499">$249–$499</option>
+              <option value="500-999">$500–$999</option>
+              <option value="1000-1999">$1,000–$1,999</option>
+              <option value="2000-plus">$2,000+</option>
+              <option value="not-sure">Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">What should the final images or video show?</label>
+            <textarea id="message" name="message" placeholder="Property type, required angles, deliverables, deadline and any access details" required></textarea>
+          </div>
+          <div class="form-consent">
+            <input type="checkbox" id="contact-consent" name="contact_consent" value="yes" required>
+            <label for="contact-consent">I agree that APS Drone may contact me about this request. See the <a href="../privacy.html">privacy notice</a>.</label>
+          </div>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          <button type="submit" class="btn submit" data-track="quote-form-submit">Check Availability &amp; Get a Quote</button>
+        </form>
+      </section>
+
+      <aside aria-label="Quote guidance">
+        <section class="card side-card">
+          <h2>Fastest response</h2>
+          <p>For urgent or same-week projects, include the exact location and deadline. Call or text if the form does not work.</p>
+          <div class="contact-options">
+            <a href="tel:+18329389570">Call (832) 938-9570</a>
+            <a href="sms:+18329389570">Text project details</a>
+            <a href="mailto:apsdronetx@gmail.com">Email APS Drone</a>
+          </div>
+        </section>
+        <section class="card side-card">
+          <h2>Before confirmation</h2>
+          <ul class="facts">
+            <li>Airspace and temporary restrictions are checked.</li>
+            <li>Weather and site access must be workable.</li>
+            <li>Deliverables and usage are confirmed in writing.</li>
+            <li>Payment is not collected through this form.</li>
+          </ul>
+          <p class="small">Standard drone photography packages start at $249. Final pricing depends on location, scope, travel, access and deliverables.</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer><p>APS Drone · FAA Part 107 certified and insured · Serving Dallas-Fort Worth · <a href="../drone-photography-pricing-dallas/">Pricing</a> · <a href="../privacy.html">Privacy</a></p></footer>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>
