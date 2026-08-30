@@ -19,8 +19,8 @@ The target set comes from actual APS Drone Search Console impressions. Each quer
 - All three updated meta descriptions are 155 characters or fewer.
 - No keyword-stuffed city-page variants were created.
 - Sitemap `lastmod` was updated where the older Fort Worth page changed.
-- All 24 current JSON-LD blocks still parse after the on-page changes.
-- `node scripts/verify_site_integrity.js` now enforces these conditions in the repository: 19 sitemap pages, 19 unique titles and descriptions, exact canonical mappings, one H1 per page, the four query-to-page phrase mappings, 232 valid internal links, full homepage-graph reachability, 24 parseable JSON-LD blocks and four complete `VideoObject` watch pages.
+- All 25 current JSON-LD blocks still parse after the on-page changes.
+- `node scripts/verify_site_integrity.js` now enforces these conditions in the repository: 20 sitemap pages, 20 unique titles and descriptions, exact canonical mappings, one H1 per page, the four query-to-page phrase mappings, 253 valid internal links, full homepage-graph reachability, 25 parseable JSON-LD blocks and four complete `VideoObject` watch pages.
 
 ## Measurement
 
@@ -54,6 +54,13 @@ Authenticated Search Console was filtered to exactly `https://apsdrone.com/dalla
 Interpretation: Google is already testing the broad Dallas page for the primary service phrase, while video and commercial variants also reach it. The new internal links give those narrower intents a clear crawl path to their stronger specialist pages without adding repetitive doorway pages. Reassess after recrawl; the current sample is too small to justify keyword repetition or a title rewrite.
 
 GitHub Pages deployment for commit `8ab735b` completed successfully. A cache-busted live check confirmed the commercial-service link, exact Dallas case-study anchor, vertical-reel watch link and the Dallas sitemap modification date.
+
+## Dallas conversion-path follow-up
+
+- Replaced every Dallas-services-page homepage-fragment quote link with the focused `/request-a-quote/` route and campaign attribution `utm_source=google`, `utm_medium=organic`, `utm_campaign=dallas_drone_services`.
+- Updated the Service offer URL to the canonical quote route and clarified the primary button as `Request a Dallas Drone Quote`.
+- The existing analytics layer records outbound page-to-quote clicks as `click_booking` and quote-page arrivals as `booking_landing`, while the form continues to record `form_start`, `form_submit` and `generate_lead`.
+- Local verification passed with 20 sitemap pages, 253 valid internal links, 25 parseable JSON-LD blocks, complete homepage-graph reachability and the conversion-tracking verifier green.
 
 ## Fort Worth evidence and depth follow-up
 

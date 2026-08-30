@@ -164,7 +164,7 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - The authenticated Search Console URL-prefix property accepted `video-sitemap.xml` and immediately reported Success with four discovered pages and four discovered videos.
 - One-time indexing requests were submitted and confirmed for all four watch pages: residential, commercial, FPV business tour and the vertical real-estate reel.
 - URL Inspection live tests on all four watch pages reported that the URL is available to Google, the video is detected and one valid video item is present. Their final index state remains dependent on Google's crawl and processing schedule, not on a demonstrated technical video error.
-- After consolidating repetitive city pages, the current full local/live coverage audit finds 19 valid main-sitemap URLs, zero missing content pages, zero canonical mismatches, zero `noindex` sitemap pages, zero missing titles/H1s and 19/19 indexable pages reachable from the homepage link graph. Search Console's 13-page count is therefore behind the current deployed sitemap.
+- After consolidating repetitive city pages and adding the focused quote and planning resources, the current full local/live coverage audit finds 20 valid main-sitemap URLs, zero missing content pages, zero canonical mismatches, zero `noindex` sitemap pages, zero missing titles/H1s and 20/20 indexable pages reachable from the homepage link graph. Search Console's 13-page count is therefore behind the current deployed sitemap.
 
 ## Entity consistency follow-up
 

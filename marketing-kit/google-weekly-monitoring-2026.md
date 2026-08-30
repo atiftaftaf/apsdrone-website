@@ -7,7 +7,7 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 | Signal | Verified baseline | Source |
 |---|---:|---|
 | Main sitemap | Success; 13 pages reported by Google | Search Console Sitemaps |
-| Current live sitemap | 19 indexable URLs | Live `sitemap.xml` and local crawl |
+| Current live sitemap | 20 indexable URLs | Live `sitemap.xml` and local crawl |
 | Video discovery | Dedicated video sitemap submitted successfully; 4 pages and 4 videos discovered; Aug. 26 indexing report still contains only the older homepage hero-video warning; Aug. 28 Videos enhancement report says no data; both reports predate the Aug. 30 watch-page deployment | Search Console Sitemaps, Video indexing and Videos enhancement reports |
 | External links | 0 | Search Console Links |
 | Dallas services page | 257 impressions; 0 clicks; 0% CTR; average position 50.3 | Search Console page filter, July 27–August 28 |
@@ -54,6 +54,7 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 - Gmail and the authenticated Search Console Page indexing report both confirmed the validation start. The four examples are Arlington, Frisco, Plano and the privacy notice. Arlington is the sole indexable target and is now substantive, internally linked and sitemap-listed; Frisco, Plano and the privacy notice are intentionally `noindex,follow` and excluded from the sitemap. A successful validation may therefore reclassify those three rather than index them.
 - The live Video indexing report still shows only the older homepage `hero-dfw.mp4` warning, `Video isn't on a watch page`, last crawled August 25. The homepage video is intentionally decorative. The separate video sitemap remains Success with four discovered pages and four discovered videos, so no false validation or repeat submission was made while Google processes the new watch pages.
 - Submitted a new factual Arlington industrial-property Google Business update with an original privacy-safe project image and the profile's existing `Call now` action. The post is server-visible as `Pending`; the existing weekly schedule from August 31 through October 26 remains intact.
+- Routed every Dallas-services-page quote action into the dedicated tracked quote page with a `dallas_drone_services` campaign tag. This gives the 257-impression/zero-click page a focused conversion destination without adding a thin city page or changing its already aligned search-result title.
 - Page distribution for the same July 27–Aug. 28 window: homepage 2 clicks/166 impressions; Dallas services 0/257; Fort Worth services 0/51. The remaining reported impressions belong to homepage fragment URLs and are too small to guide changes.
 
 ## Decision thresholds
