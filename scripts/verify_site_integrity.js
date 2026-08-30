@@ -63,6 +63,8 @@ const pages = new Map();
 const titles = new Map();
 const descriptions = new Map();
 let jsonLdCount = 0;
+let videoTagsChecked = 0;
+let localAssetsChecked = 0;
 
 for (const url of sitemapUrls) {
   const relativePath = localPathForUrl(url);
@@ -81,6 +83,22 @@ for (const url of sitemapUrls) {
   assert.equal(canonicalMatch[1], url, `${relativePath} canonical must match sitemap URL`);
   assert.equal(h1s.length, 1, `${relativePath} must have exactly one H1`);
   assert.match(html, /analytics\.js\?v=20260830-2/, `${relativePath} must load the current Analytics build`);
+
+  const videoTags = [...html.matchAll(/<video\b[^>]*>/gi)].map((match) => match[0]);
+  for (const videoTag of videoTags) {
+    assert.match(videoTag, /\bpreload=["']none["']/i, `${relativePath} videos must defer downloads until playback`);
+    assert.match(videoTag, /\bposter=["'][^"']+["']/i, `${relativePath} videos need a poster image`);
+    videoTagsChecked += 1;
+  }
+
+  const localAssetReferences = [...html.matchAll(/\b(?:src|data-src|poster)=["']([^"']+)["']/gi)]
+    .map((match) => decodeHtml(match[1]))
+    .filter((assetUrl) => !/^(?:data:|https?:\/\/)/i.test(assetUrl));
+  for (const assetUrl of localAssetReferences) {
+    const assetPath = localPathForUrl(new URL(assetUrl, url).href);
+    assert.ok(assetPath && fs.existsSync(path.join(root, assetPath)), `${relativePath} references missing local asset ${assetUrl}`);
+    localAssetsChecked += 1;
+  }
 
   const title = textOnly(titleMatch[1]);
   const description = decodeHtml(descriptionMatch[1]).trim();
@@ -166,6 +184,7 @@ const videoSitemap = read('video-sitemap.xml');
 const videoPageUrls = [...videoSitemap.matchAll(/<loc>(https:\/\/apsdrone\.com\/[^<]*)<\/loc>/g)].map((match) => match[1]);
 assert.equal(videoPageUrls.length, watchPages.length, 'video sitemap should contain all four watch pages');
 assert.deepEqual(new Set(videoPageUrls), new Set(watchPages.map((pathname) => `${origin}${pathname}`)));
+assert.equal(videoTagsChecked, 10, 'all ten embedded videos should be covered by deferred-loading checks');
 
 console.log(JSON.stringify({
   sitemapPages: sitemapUrls.length,
@@ -174,6 +193,8 @@ console.log(JSON.stringify({
   jsonLdBlocks: jsonLdCount,
   internalLinksChecked,
   homepageReachablePages: reached.size,
-  videoWatchPages: watchPages.length
+  videoWatchPages: watchPages.length,
+  videoTagsChecked,
+  localAssetsChecked
 }, null, 2));
 console.log('Site integrity verification passed.');
