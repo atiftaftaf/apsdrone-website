@@ -170,6 +170,7 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Search Console showed 10 impressions and average position 57.7 for `fort worth drone photography`, so the existing canonical page was expanded rather than creating thin nearby-city pages.
 - Added three location-verified Fort Worth images, a privacy-safe property example, a matched visual/thermal example, six linked service routes, quote-input guidance, four FAQs and a combined Service/Breadcrumb/FAQ graph.
 - Local validation found valid structured data, zero missing local destinations, 16 links and four images. Full-page desktop and 390-pixel mobile renders were visually checked. Isolated mobile Lighthouse scored 97 Performance and 100 each for Accessibility, Best Practices and SEO, with zero CLS and 20 ms total blocking time.
+- Deployed as commit `2a2b842`; GitHub Pages run `33328721746` completed successfully. A cache-busted live request returned HTTP 200 and confirmed the new title, project proof, thermal content, FAQ graph and Fort Worth hero image.
 
 ## Dallas internal-link strengthening
 
