@@ -147,3 +147,9 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 
 - The live Sitemaps report still shows only `/sitemap.xml`, with Success status, 13 discovered pages and zero discovered videos.
 - The `video-sitemap.xml` field is prepared in the authenticated Search Console form but has not been submitted. Final submission remains pending action-time confirmation.
+
+## Entity consistency follow-up
+
+- Standardized `sameAs` entity links across the homepage and six entity-bearing service pages using the verified Google Business Profile, `@apsdronetx` Instagram and TikTok identities, and the authenticated APS Drone Facebook page.
+- Reparsed all 23 JSON-LD blocks after the update with zero errors.
+- The outdated LinkedIn company page is intentionally excluded from site `sameAs` until its Houston location and insecure website URL are corrected.
