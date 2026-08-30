@@ -17,7 +17,7 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 | `fort worth drone photography` | 10 impressions; average position 57.7 | Search Console query filter |
 | GA4 key events | `generate_lead`, `click_call`, `click_text`, `click_whatsapp`, `click_email`, `click_quote` configured | GA4 Admin / Key events |
 | Bing Places | Google-verified; weekly sync enabled; Pending publish with 7–12 day estimate | Bing Places owner dashboard |
-| Bing Webmaster Tools | `apsdrone.com` imported with Administrator role; 2 sitemaps Processing; 0 errors and 0 warnings | Bing Webmaster Tools |
+| Bing Webmaster Tools | `apsdrone.com` imported with Administrator role; both sitemaps Success; 23 URLs discovered; 0 errors and 0 warnings | Bing Webmaster Tools |
 | Bing Site Scan | Completed; 20 live pages scanned; 0 errors; 0 warnings | Bing Webmaster Tools Site Scan |
 | IndexNow | Live key HTTP 200; 27 unique URLs accepted with HTTP 202 | GitHub Actions run `33330895103` and live key check |
 
