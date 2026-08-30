@@ -29,8 +29,12 @@ The site sends standard page views plus these lead and contact events:
 - `click_text`
 - `click_whatsapp`
 - `click_email`
+- `click_booking`
+- `booking_landing`
 
 The quote form also stores first-touch campaign attribution in hidden Formspree fields: landing page, referrer, UTM values, Google click identifiers, Meta click identifier and TikTok click identifier.
+
+`click_booking` records site links that open the dedicated quote route. `booking_landing` records successful browser arrival on `/request-a-quote/`, including the stored/default traffic source, medium and campaign. The landing event covers Google Business booking traffic because clicks happen on Google's surface before the visitor reaches APSDrone.com.
 
 ## Verification status
 

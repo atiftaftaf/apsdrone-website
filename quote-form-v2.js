@@ -101,6 +101,19 @@
   if (!form) return;
 
   populateAttributionFields();
+  if (/\/request-a-quote\/?$/.test(window.location.pathname)) {
+    const valueOf = function (id) {
+      const field = document.getElementById(id);
+      return field ? field.value : '';
+    };
+    track('booking_landing', {
+      form_name: 'website_quote',
+      traffic_source: valueOf('utm-source') || 'direct',
+      traffic_medium: valueOf('utm-medium') || 'none',
+      traffic_campaign: valueOf('utm-campaign') || 'none',
+      page_location: window.location.href
+    });
+  }
   const shootDate = document.getElementById('shoot-date');
   if (shootDate) {
     const today = new Date();

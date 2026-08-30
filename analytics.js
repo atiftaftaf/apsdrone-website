@@ -28,6 +28,17 @@
     else if (href.startsWith('sms:')) eventName = 'click_text';
     else if (href.startsWith('mailto:')) eventName = 'click_email';
     else if (href.includes('#contact')) eventName = 'click_quote';
+    else {
+      try {
+        const destination = new URL(link.href, window.location.href);
+        if (
+          destination.origin === window.location.origin &&
+          destination.pathname.replace(/\/+$/, '') === '/request-a-quote'
+        ) eventName = 'click_booking';
+      } catch (_) {
+        eventName = '';
+      }
+    }
 
     if (!eventName) return;
     window.gtag('event', eventName, {

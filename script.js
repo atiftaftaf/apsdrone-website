@@ -491,6 +491,7 @@ qsa('[data-track]').forEach((el) => {
     else if (placement.includes('text')) eventName = 'click_text';
     else if (placement.includes('call')) eventName = 'click_call';
     else if (placement.includes('email')) eventName = 'click_email';
+    else if (placement.includes('booking')) eventName = 'click_booking';
     else if (placement.includes('quote')) eventName = 'click_quote';
     pushTrackingEvent(eventName, { placement, page_location: window.location.href });
   });
