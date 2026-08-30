@@ -8,7 +8,7 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 |---|---:|---|
 | Main sitemap | Success; 13 pages reported by Google | Search Console Sitemaps |
 | Current live sitemap | 19 indexable URLs | Live `sitemap.xml` and local crawl |
-| Video discovery | Dedicated video sitemap submitted successfully; 4 pages and 4 videos discovered; stored index report still awaiting Google processing | Search Console Sitemaps and Video pages |
+| Video discovery | Dedicated video sitemap submitted successfully; 4 pages and 4 videos discovered; Aug. 26 indexing report still contains only the older homepage hero-video warning; Aug. 28 Videos enhancement report says no data; both reports predate the Aug. 30 watch-page deployment | Search Console Sitemaps, Video indexing and Videos enhancement reports |
 | External links | 0 | Search Console Links |
 | Dallas services page | 257 impressions; 0 clicks; 0% CTR; average position 50.3 | Search Console page filter, July 27–August 28 |
 | `dallas drone services` | 46 impressions; average position 20.7 | Search Console query filter |
@@ -38,6 +38,7 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 
 - Search Console accepted `video-sitemap.xml` with four discovered pages and four discovered videos.
 - One-time indexing requests were confirmed for the residential, commercial, FPV and vertical real-estate watch pages.
+- The live Video indexing drilldown shows that its sole warning is `https://apsdrone.com/` with `hero-dfw.mp4`, last crawled Aug. 25; the homepage is intentionally not a watch page. The stored report is dated Aug. 26 and the Videos structured-data report is dated Aug. 28, so neither yet reflects the Aug. 30 watch-page deployment. No false validation or duplicate request was submitted.
 - The Google Business Profile product catalog was expanded from one to seven service cards; new cards may remain Pending during Google review.
 - Four October posts were submitted with original project media and tracked Learn more links. Combined with the five existing scheduled posts, the future queue covers nine weekly dates from August 31 through October 26.
 - The Business Profile now saves the verified Instagram, active Facebook and TikTok identities. Google also completed review of the public business number and shows `sms:+18329389570` as the active Primary texting destination.
