@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://apsdrone.com/dfw-residential-drone-video/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://apsdrone.com/assets/media/dfw-fort-worth-property.webp</video:thumbnail_loc>
+      <video:title>DFW Residential Drone Video Example</video:title>
+      <video:description>A short aerial approach showing residential property context for real estate marketing in Dallas-Fort Worth.</video:description>
+      <video:content_loc>https://apsdrone.com/assets/media/hero-loop-09.mp4</video:content_loc>
+      <video:duration>8</video:duration>
+      <video:publication_date>2026-08-31T09:00:00-05:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://apsdrone.com/dfw-commercial-drone-video/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://apsdrone.com/assets/media/dfw-dallas-commercial.webp</video:thumbnail_loc>
+      <video:title>DFW Commercial Property Drone Video Example</video:title>
+      <video:description>A short commercial property aerial sequence showing the building, access, parking and surrounding context in Dallas-Fort Worth.</video:description>
+      <video:content_loc>https://apsdrone.com/assets/media/hero-loop-04.mp4</video:content_loc>
+      <video:duration>8</video:duration>
+      <video:publication_date>2026-08-31T09:00:00-05:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://apsdrone.com/dfw-fpv-business-tour-video/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://apsdrone.com/assets/media/fpv-club-pilates-crossroads-poster.jpg</video:thumbnail_loc>
+      <video:title>DFW FPV Business Tour Video Example</video:title>
+      <video:description>An immersive vertical FPV fly-through example for suitable Dallas-Fort Worth businesses, venues and social media campaigns.</video:description>
+      <video:content_loc>https://apsdrone.com/assets/media/fpv-club-pilates-crossroads-web.mp4</video:content_loc>
+      <video:duration>35</video:duration>
+      <video:publication_date>2026-08-31T09:00:00-05:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+</urlset>

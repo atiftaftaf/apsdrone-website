@@ -287,8 +287,8 @@ function pushTrackingEvent(eventName, payload = {}) {
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event: eventName, ...payload });
 
-  // Fallback for a future direct gtag installation. No measurement ID is assumed here.
-  if (typeof window.gtag === 'function' && !window.google_tag_manager) {
+  // Send the same event to the direct GA4 installation when it is available.
+  if (typeof window.gtag === 'function') {
     window.gtag('event', eventName, payload);
   }
 }
@@ -468,6 +468,8 @@ qsa('[data-track]').forEach((el) => {
     if (placement.includes('whatsapp')) eventName = 'click_whatsapp';
     else if (placement.includes('text')) eventName = 'click_text';
     else if (placement.includes('call')) eventName = 'click_call';
+    else if (placement.includes('email')) eventName = 'click_email';
+    else if (placement.includes('quote')) eventName = 'click_quote';
     pushTrackingEvent(eventName, { placement, page_location: window.location.href });
   });
 });

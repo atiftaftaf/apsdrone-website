@@ -14,3 +14,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://apsdrone.com/sitemap.xml
+Sitemap: https://apsdrone.com/video-sitemap.xml
