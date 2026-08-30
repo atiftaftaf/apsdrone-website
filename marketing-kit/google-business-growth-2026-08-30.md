@@ -94,7 +94,7 @@ Do not submit the same URL repeatedly; Search Console states that repeated submi
 - Published dedicated crawlable residential, commercial and FPV video pages with `VideoObject` structured data.
 - Published `https://apsdrone.com/video-sitemap.xml` and declared it in `robots.txt`.
 - Reduced the referenced FPV web video from 53.6 MB to 7.7 MB without modifying or deleting the source file.
-- Added dedicated roof documentation, thermal imaging and FPV service pages plus four location-verified DFW case studies.
+- Added dedicated roof documentation, thermal imaging and FPV service pages plus seven evidence-limited case studies covering Arlington industrial property, Dallas commercial property, a construction-progress baseline workflow, Fort Worth property context, residential listing photos with a vertical reel, Irving roof documentation and matched Fort Worth visual/thermal capture.
 
 ## Additional Google profile media
 
@@ -111,3 +111,11 @@ Do not submit the same URL repeatedly; Search Console states that repeated submi
 - The audit identifies transparent pricing, local case-study proof, review growth, recurring construction scopes and low-friction quoting as the defensible priorities; it explicitly rejects copied claims, bought reviews and link farms.
 - GitHub Pages deployment for commit `fddd4aa` completed successfully. The two new WebP derivatives, `video-sitemap.xml` and the DFW project case-study page all returned HTTP 200 after deployment.
 - All local JSON-LD blocks parsed successfully after the deployment changes.
+
+## Case-study proof expansion
+
+- Added two web-optimized Arlington industrial-property derivatives from verified APS Drone source files. The original archive files were not modified or deleted.
+- Published a transparent construction-progress baseline example that clearly states the displayed visit is a baseline capture, not a claimed multi-date time series.
+- Added a real-estate listing photo and eight-second 9:16 property reel example derived from existing APS Drone footage; no customer name or exact address is exposed.
+- Added direct internal links from the Arlington, commercial, construction-progress and real-estate service pages to the relevant case-study sections.
+- The expanded case-study page now answers objective, deliverables and practical-result questions for all seven examples while avoiding unverifiable performance claims.
