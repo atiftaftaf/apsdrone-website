@@ -173,3 +173,15 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Updated the Dallas services sitemap modification date and verified all twelve unique relative destinations exist locally; all three page JSON-LD blocks parse.
 - Authenticated Search Console page filtering showed 257 impressions, 0 clicks, 0% CTR and average position 50.3 for the Dallas services URL. Its leading query is `dallas drone services` at 46 impressions and position 20.7; the full top-ten page-query breakdown is recorded in `google-query-onpage-audit-2026-08-30.md`.
 - GitHub Pages deployment for commit `8ab735b` completed successfully. Cache-busted live checks confirmed the new commercial-service link, Dallas case-study anchor, vertical-reel watch link and Dallas sitemap modification date.
+
+## Video indexing readiness recheck
+
+- Authenticated Search Console still reports one older non-watch-page video record and zero indexed videos; the stored report was last updated August 26, before the four new watch pages were deployed.
+- `/sitemap.xml` remains the only submitted sitemap and reports Success, 13 discovered pages and zero discovered videos.
+- The new `video-sitemap.xml` is filled into the APSDroneTX Search Console form with the Submit control enabled. The final submission and four one-time indexing requests remain pending action-time confirmation.
+
+## Service-area wording correction
+
+- Google's live brand result quoted the homepage About sentence `based in Dallas, Texas`, which could imply a physical Dallas storefront instead of the verified hidden-address DFW service-area model.
+- Replaced that sentence with `serving Dallas-Fort Worth, Texas` and tightened the following credential statement to the factual FAA Part 107 remote-pilot wording.
+- No private address was added or exposed.

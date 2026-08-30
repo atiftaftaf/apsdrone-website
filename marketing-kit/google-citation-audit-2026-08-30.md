@@ -56,3 +56,4 @@ Suggested replacement fields:
 
 - A fresh public web search on August 30, 2026 did not surface an identifiable APS Drone Yelp, Bing Maps or Apple Maps record. This is not proof that no listing exists because those directories can restrict crawling; an authenticated directory search is still required before creating anything.
 - The existing LinkedIn page remains publicly discoverable and continues to expose the obsolete Houston entity data, making it the highest-priority citation correction.
+- Google currently displays the homepage snippet phrase `based in Dallas, Texas`, which came from the public About copy. The source was corrected to the accurate service-area wording `serving Dallas-Fort Worth, Texas`; the public address remains hidden.
