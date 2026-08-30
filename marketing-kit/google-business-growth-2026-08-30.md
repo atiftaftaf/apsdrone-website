@@ -20,8 +20,10 @@ Updated: August 30, 2026
 - The manager surface reported **Profile Strength: Complete** and one customer interaction.
 - The live profile showed the correct primary category (`Aerial photographer`), website, phone `(832) 938-9570`, service-area presentation and DFW-focused description.
 - The media manager contained **16 numbered photos and six numbered videos**, plus cover and logo. One video remained `Pending`; the other visible media was not marked pending.
+- A 3:05 PM Central recheck found the same 16-photo/six-video inventory and the same single pending video, with no new rejection or profile warning.
 - Several older media items showed public-view counts between fewer than 100 and 223, proving that Google profile media is already receiving some discovery.
 - The public profile still has no Google reviews. The product catalog now contains seven service cards, and nine future weekly posts are submitted or scheduled through October 26, 2026. Genuine customer reviews remain the clearest owner-dependent profile gap.
+- The live review panel generated `https://g.page/r/CbNNLDqa9yVeECE/review`; the existing site/template short link ending in `...VeEBI/review` was also tested. Both redirect to the same APS Drone Place ID (`ChIJoWQtNyLFQIYRs00sOpr3JV4`), so the existing review request path is valid and does not need churn.
 
 ## Scheduled weekly posts
 

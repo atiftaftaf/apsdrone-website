@@ -25,15 +25,16 @@ Search Console's live test fetched each public watch page. No indexing request w
 
 The four pages pass Google's current live eligibility and video-detection checks. The remaining issue is discovery/index processing, not a demonstrated technical VideoObject or crawlability failure.
 
-## Next action
+## Completed discovery actions
 
-1. Submit `https://apsdrone.com/video-sitemap.xml` in the authenticated Search Console property.
-2. Request indexing once for each of the four watch pages.
-3. Recheck the Video indexing report after Google has time to process the sitemap and requests.
+- Submitted `https://apsdrone.com/video-sitemap.xml` once in the authenticated APSDroneTX Search Console property.
+- Search Console accepted the sitemap with `Success` and reported four discovered pages and four discovered videos.
+- Requested indexing once for each of the four watch pages after its successful live URL test.
+- No duplicate sitemap or URL request was submitted.
+
+## Processing follow-up
+
+1. Wait for Google to recrawl and process the already submitted sitemap and watch pages.
+2. Recheck both the Video indexing report and the Videos enhancement report after their stored dates advance beyond the August 30 deployment.
+3. Do not treat the older homepage hero-video warning as a watch-page validation target.
 4. Do not repeatedly resubmit the same URLs; repeated requests do not increase queue priority.
-
-## Submission readiness
-
-- Search Console currently lists only `/sitemap.xml`, submitted and last read August 30 with `Success`, 13 discovered pages and 0 discovered videos.
-- The authenticated APSDroneTX sitemap form is filled with `video-sitemap.xml`; the final Submit control is enabled but has not been clicked.
-- The final sitemap submission and four indexing requests remain external Google actions and were intentionally left pending action-time confirmation.

@@ -30,4 +30,4 @@ The authenticated Search Console Page indexing report was last updated August 20
 
 ## Next action
 
-Allow Google to re-read the already submitted main sitemap, submit `video-sitemap.xml` once after action-time confirmation, and monitor Arlington after recrawl. Do not repeatedly submit the same sitemap or URLs.
+Allow Google to re-read the already submitted main and video sitemaps, then monitor Arlington and the four watch pages after recrawl. The video sitemap was submitted once and accepted with four discovered pages and four discovered videos; all four watch pages received one-time indexing requests. Do not repeatedly submit the same sitemap or URLs.
