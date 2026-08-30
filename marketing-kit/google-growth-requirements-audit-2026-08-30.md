@@ -31,6 +31,7 @@ This audit maps the full Google-growth objective to current authoritative eviden
 3. Genuine reviews require completed customer work, real customer participation and Google's review process; they cannot be manufactured.
 4. Google Ads remains intentionally paused until the owner supplies a budget and approves spend.
 5. Genuine backlinks and partner citations depend on third-party cooperation and cannot be self-created as fake endorsements.
+6. The dedicated Google Business quote route is live and verified, but replacing the current Booking URL with `https://apsdrone.com/request-a-quote/` remains an external public-profile action awaiting the owner's action-time confirmation; the prepared editor must not be saved without that confirmation.
 
 ## Ranking reality
 
