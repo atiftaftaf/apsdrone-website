@@ -148,6 +148,7 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - The live Sitemaps report still shows only `/sitemap.xml`, with Success status, 13 discovered pages and zero discovered videos.
 - The `video-sitemap.xml` field is prepared in the authenticated Search Console form but has not been submitted. Final submission remains pending action-time confirmation.
 - URL Inspection live tests on all four watch pages reported that the URL is available to Google, the video is detected and one valid video item is present. Their stored index state remains unknown/not indexed, so discovery and index processing—not a demonstrated technical video error—is the current gap.
+- A full local/live coverage audit found 21 valid main-sitemap URLs, zero missing content pages, zero canonical mismatches, zero `noindex` pages, zero missing titles/H1s and 20/20 public pages reachable from the homepage link graph. Search Console's 13-page count is therefore behind the current deployed sitemap.
 
 ## Entity consistency follow-up
 
