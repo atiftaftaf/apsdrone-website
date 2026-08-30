@@ -114,6 +114,66 @@ function runBookingLandingChecks() {
   assert.equal(typeof formListeners.get('submit'), 'function');
 }
 
+function runAttributedLandingPageChecks() {
+  const campaigns = {
+    'about-aps-drone': 'about_aps_drone',
+    'dallas-drone-services': 'dallas_drone_services',
+    'fort-worth-drone-services': 'fort_worth_drone_photography',
+    'arlington-drone-services': 'arlington_drone_services',
+    'real-estate-drone-photography-dallas': 'real_estate_drone_photography',
+    'commercial-drone-photography-dfw': 'commercial_drone_services',
+    'construction-progress-drone-dfw': 'construction_progress',
+    'drone-photography-pricing-dallas': 'drone_photography_pricing',
+    'dallas-drone-videography': 'dallas_drone_videographer',
+    'dfw-commercial-drone-project-checklist': 'commercial_project_checklist',
+    'dfw-real-estate-drone-shot-list': 'real_estate_shot_list',
+    'dfw-residential-drone-video': 'residential_drone_video',
+    'dfw-commercial-drone-video': 'commercial_drone_video',
+    'dfw-fpv-business-tour-video': 'fpv_business_tour_video',
+    'dfw-drone-roof-inspection': 'roof_documentation',
+    'dfw-thermal-drone-inspection': 'thermal_drone_imaging',
+    'dfw-fpv-drone-tours': 'fpv_drone_tours',
+    'dfw-drone-project-case-studies': 'dfw_case_studies',
+    'dfw-real-estate-vertical-drone-reel': 'real_estate_vertical_reel'
+  };
+
+  const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+  const sitemapPaths = [...sitemap.matchAll(/<loc>https:\/\/apsdrone\.com\/(.*?)<\/loc>/g)]
+    .map((match) => match[1].replace(/\/$/, ''))
+    .filter(Boolean)
+    .sort();
+  assert.deepEqual(
+    Object.keys(campaigns).sort(),
+    sitemapPaths,
+    'every non-home sitemap page should have an attributed quote campaign'
+  );
+
+  for (const [slug, campaign] of Object.entries(campaigns)) {
+    const html = fs.readFileSync(path.join(root, slug, 'index.html'), 'utf8');
+    assert.ok(
+      html.includes('request-a-quote/'),
+      `${slug} should link to the dedicated quote route`
+    );
+    assert.ok(
+      html.includes(`utm_campaign=${campaign}`),
+      `${slug} should include its attributed campaign`
+    );
+    assert.doesNotMatch(
+      html,
+      /https:\/\/apsdrone\.com\/#contact|href="\.\.\/#contact"|href="\/#contact"/,
+      `${slug} should not send quote intent back to a homepage fragment`
+    );
+  }
+
+  const about = fs.readFileSync(path.join(root, 'about-aps-drone', 'index.html'), 'utf8');
+  assert.doesNotMatch(
+    about,
+    /data-track="(?:quote|call|text|email)-about/,
+    'About-page contact links must be handled by analytics.js instead of an unloaded data-track handler'
+  );
+}
+
 runAnalyticsChecks();
 runBookingLandingChecks();
+runAttributedLandingPageChecks();
 console.log('Conversion tracking verification passed.');

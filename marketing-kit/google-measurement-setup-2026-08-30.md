@@ -36,7 +36,7 @@ The quote form also stores first-touch campaign attribution in hidden Formspree 
 
 `click_booking` records site links that open the dedicated quote route. `booking_landing` records successful browser arrival on `/request-a-quote/`, including the stored/default traffic source, medium and campaign. The landing event covers Google Business booking traffic because clicks happen on Google's surface before the visitor reaches APSDrone.com.
 
-The five pages mapped to current Search Console opportunities now send quote actions into the same measured route with distinct organic campaign names: `dallas_drone_services`, `dallas_drone_videographer`, `commercial_drone_services`, `fort_worth_drone_photography` and `real_estate_drone_photography`. Arlington uses `arlington_drone_services`. Canonical Offer schema URLs remain clean and untagged.
+Every non-home sitemap page now sends quote actions into the same measured route with a distinct campaign name. This includes the five current Search Console opportunities, Arlington, About, pricing, construction, roof, thermal, FPV, planning-resource, case-study and video-watch pages. Canonical Offer schema URLs remain clean and untagged.
 
 ## Verification status
 
@@ -47,6 +47,7 @@ The five pages mapped to current Search Console opportunities now send quote act
 - A controlled live-site QA visit using `utm_source=codex_test`, `utm_medium=qa` and `utm_campaign=ga4_validation` produced the custom Realtime events `click_quote` and `form_start`. The form was not submitted, so no false lead was created.
 - Commit `5df96a2` deployed the cache-busted booking-route tracking update successfully. Live HTTP checks confirmed `click_booking` in `analytics.js`, the new Analytics version on `/request-a-quote/`, and the updated quote-form build. `node scripts/verify_conversion_tracking.js` executes the production scripts against deterministic DOM stubs and verifies call, booking, quote and attributed `booking_landing` events without sending a form or creating a lead.
 - The current query-mapped service-page conversion update passed both `verify_site_integrity.js` and `verify_conversion_tracking.js`: 20 sitemap pages, 253 valid internal links, 25 parseable JSON-LD blocks and all measured quote-route events green.
+- The conversion verifier now compares its campaign map with the live sitemap, requires all 19 non-home sitemap pages to use the dedicated quote route, requires a page-specific campaign, and fails if a legacy homepage-fragment quote link returns. It also guards the About-page analytics fix so call, text, email and quote links cannot be silently skipped by an unloaded handler.
 - The following lead/contact events are configured and server-visible in the GA4 Key events table: `generate_lead`, `click_call`, `click_text`, `click_whatsapp`, `click_email` and `click_quote`.
 - No arbitrary monetary value was assigned to `click_email` or `click_quote`; they retain any real event value supplied by the website.
 - Ordinary page views, `form_start`, `form_submit` and `form_error` are not marked as key events.
