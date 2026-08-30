@@ -229,6 +229,7 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Requested indexing once for each of the four video watch pages and received an `Indexing requested` confirmation for every URL.
 - Added six service products, bringing the Google Business Profile catalog to seven total cards. Google accepted every submission; review-dependent cards are marked Pending.
 - Submitted four October weekly posts with original project media, Learn more calls to action and GA4 UTM links. Together with the five existing posts, the profile now has a nine-week future content queue from August 31 through October 26.
+- Submitted one additional Arlington industrial-property update using the verified privacy-safe project image and the existing public business phone as a `Call now` action. Google's owner surface shows the new item first in `Your posts` with status `Pending`; all scheduled August 31–October 26 posts remain present.
 - No advertising spend was started, no review was fabricated and no private street/unit address was published.
 
 ## Google Business conversion and entity expansion
@@ -275,6 +276,7 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - The current main sitemap contains 18 indexable URLs; all 18 are reachable from the homepage graph, 14 are linked directly from the homepage, there are zero orphan indexable pages, zero sitemap `noindex` conflicts and all 23 indexable-page JSON-LD blocks parse.
 - Deployed commit `cca86a8` through a successful GitHub Pages build. Cache-busted live checks confirmed the new Arlington title, both project images and the commercial checklist link; confirmed `noindex,follow` on Plano, Frisco and the privacy notice; and confirmed the live sitemap contains 18 URLs and excludes all three non-ranking pages.
 - Search Console's stored August 20 report still lists the four pre-cleanup examples, but the authenticated property accepted `Validate fix` on August 30 and now shows `Validation Started` for all four affected URLs. This is a Google processing state, not a reason to resubmit or reverse the intentional `noindex` cleanup.
+- Search Console also emailed the verified APSDroneTX account that validation had started. Live reinspection confirmed Arlington is the only indexable target in that four-URL group; Frisco, Plano and the privacy notice remain intentionally `noindex,follow`. The Video indexing report still contains only the older decorative homepage hero-video warning, while `video-sitemap.xml` remains Success with four discovered pages and four discovered videos. No duplicate validation or submission was made.
 
 ## Real-estate listing resource
 
