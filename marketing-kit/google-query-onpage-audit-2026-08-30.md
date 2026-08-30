@@ -19,7 +19,7 @@ The target set comes from actual APS Drone Search Console impressions. Each quer
 - All three updated meta descriptions are 155 characters or fewer.
 - No keyword-stuffed city-page variants were created.
 - Sitemap `lastmod` was updated where the older Fort Worth page changed.
-- All 23 JSON-LD blocks still parse after the on-page changes.
+- All 24 current JSON-LD blocks still parse after the on-page changes.
 
 ## Measurement
 

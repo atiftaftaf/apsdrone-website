@@ -13,6 +13,16 @@ Updated: August 30, 2026
 - Service areas include Dallas, Fort Worth, Plano, Arlington, McKinney, Prosper, Celina, Carrollton, Irving, Grapevine, Southlake and surrounding DFW communities.
 - Four new project photos and two 24-second project videos were uploaded on August 30, 2026. Google displayed the new videos as Pending after upload.
 
+### Live branded-search and profile recheck
+
+- Reverified the managed profile in the authenticated `apsdronetx@gmail.com` Google session on August 30, 2026.
+- A non-personalized `APS Drone` search showed `https://apsdrone.com/` as the first organic result. The Dallas services page and Instagram profile also appeared on the first results page.
+- The manager surface reported **Profile Strength: Complete** and one customer interaction.
+- The live profile showed the correct primary category (`Aerial photographer`), website, phone `(832) 938-9570`, service-area presentation and DFW-focused description.
+- The media manager contained **16 numbered photos and six numbered videos**, plus cover and logo. One video remained `Pending`; the other visible media was not marked pending.
+- Several older media items showed public-view counts between fewer than 100 and 223, proving that Google profile media is already receiving some discovery.
+- The public profile still has no Google reviews, only one product card (`Real Estate Drone Photography — $249`), and the newest visible owner update was dated July 27, 2026. These are the clearest remaining profile-content gaps.
+
 ## Scheduled weekly posts
 
 All posts use the APS Drone phone number as the Call now action.
@@ -148,12 +158,12 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - The live Sitemaps report still shows only `/sitemap.xml`, with Success status, 13 discovered pages and zero discovered videos.
 - The `video-sitemap.xml` field is prepared in the authenticated Search Console form but has not been submitted. Final submission remains pending action-time confirmation.
 - URL Inspection live tests on all four watch pages reported that the URL is available to Google, the video is detected and one valid video item is present. Their stored index state remains unknown/not indexed, so discovery and index processing—not a demonstrated technical video error—is the current gap.
-- A full local/live coverage audit found 21 valid main-sitemap URLs, zero missing content pages, zero canonical mismatches, zero `noindex` pages, zero missing titles/H1s and 20/20 public pages reachable from the homepage link graph. Search Console's 13-page count is therefore behind the current deployed sitemap.
+- After consolidating repetitive city pages, the current full local/live coverage audit finds 19 valid main-sitemap URLs, zero missing content pages, zero canonical mismatches, zero `noindex` sitemap pages, zero missing titles/H1s and 19/19 indexable pages reachable from the homepage link graph. Search Console's 13-page count is therefore behind the current deployed sitemap.
 
 ## Entity consistency follow-up
 
 - Standardized `sameAs` entity links across the homepage and six entity-bearing service pages using the verified Google Business Profile, `@apsdronetx` Instagram and TikTok identities, and the authenticated APS Drone Facebook page.
-- Reparsed all 23 JSON-LD blocks after the update with zero errors.
+- Reparsed all 24 current JSON-LD blocks after the update with zero errors.
 - The outdated LinkedIn company page is intentionally excluded from site `sameAs` until its Houston location and insecure website URL are corrected.
 - GitHub Pages deployment for commit `907b65b` completed successfully. Live checks returned HTTP 200 and confirmed the Google Business Profile and Facebook entity links on the real-estate, commercial and Dallas-services pages.
 

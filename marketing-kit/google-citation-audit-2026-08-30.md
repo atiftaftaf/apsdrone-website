@@ -66,3 +66,9 @@ Suggested replacement fields:
 - Apple Business opened the official Apple Business portal in a signed-out state; no owned Maps place or claim state was visible.
 - Yelp's public search surface rendered only an inaccessible embedded frame in this browser, so it did not produce authoritative evidence of a listing or absence.
 - These results reinforce the fail-closed rule: do not create Bing, Apple, Yelp or LinkedIn records until the correct owner account can first search and reconcile existing records.
+
+## Additional branded-search inconsistency
+
+- The August 30 branded Google result set surfaced a third-party Tracxn profile describing `APS Drone Services` as based in Houston. This is not an APS Drone-controlled source and may represent stale or conflated entity data.
+- Do not create or pay for a Tracxn profile solely for SEO. First determine whether the record can be claimed or corrected through a free verified-company process, and supply only the canonical website, DFW service-area wording and public contact details.
+- The live Google Business Profile and APS Drone website remain the authoritative entity sources; the private street/unit address must not be supplied to third-party aggregators.
