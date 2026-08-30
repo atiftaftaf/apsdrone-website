@@ -60,19 +60,26 @@
 
   function populateAttributionFields() {
     const lastTouch = captureAttribution();
+    const currentParams = new URLSearchParams(window.location.search);
+    const currentCampaign = {};
+    attributionKeys.forEach(function (key) {
+      const value = currentParams.get(key);
+      if (value) currentCampaign[key] = value.slice(0, 300);
+    });
+    const hasCurrentCampaign = Object.keys(currentCampaign).length > 0;
     const values = {
-      'landing-page': lastTouch.landing_page || window.location.href,
+      'landing-page': hasCurrentCampaign ? window.location.href : (lastTouch.landing_page || window.location.href),
       'lead-referrer': lastTouch.referrer || 'direct',
-      'utm-source': lastTouch.utm_source || '',
-      'utm-medium': lastTouch.utm_medium || '',
-      'utm-campaign': lastTouch.utm_campaign || '',
-      'utm-content': lastTouch.utm_content || '',
-      'utm-term': lastTouch.utm_term || '',
-      gclid: lastTouch.gclid || '',
-      gbraid: lastTouch.gbraid || '',
-      wbraid: lastTouch.wbraid || '',
-      fbclid: lastTouch.fbclid || '',
-      ttclid: lastTouch.ttclid || ''
+      'utm-source': currentCampaign.utm_source || lastTouch.utm_source || '',
+      'utm-medium': currentCampaign.utm_medium || lastTouch.utm_medium || '',
+      'utm-campaign': currentCampaign.utm_campaign || lastTouch.utm_campaign || '',
+      'utm-content': currentCampaign.utm_content || lastTouch.utm_content || '',
+      'utm-term': currentCampaign.utm_term || lastTouch.utm_term || '',
+      gclid: currentCampaign.gclid || lastTouch.gclid || '',
+      gbraid: currentCampaign.gbraid || lastTouch.gbraid || '',
+      wbraid: currentCampaign.wbraid || lastTouch.wbraid || '',
+      fbclid: currentCampaign.fbclid || lastTouch.fbclid || '',
+      ttclid: currentCampaign.ttclid || lastTouch.ttclid || ''
     };
     Object.keys(values).forEach(function (id) {
       const field = document.getElementById(id);
@@ -81,6 +88,7 @@
         field.setAttribute('value', values[id]);
       }
     });
+    form.dataset.attributionReady = 'true';
   }
 
   const form = document.getElementById('contact-form');
