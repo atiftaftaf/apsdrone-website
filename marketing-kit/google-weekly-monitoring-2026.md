@@ -40,7 +40,7 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 - One-time indexing requests were confirmed for the residential, commercial, FPV and vertical real-estate watch pages.
 - The Google Business Profile product catalog was expanded from one to seven service cards; new cards may remain Pending during Google review.
 - Four October posts were submitted with original project media and tracked Learn more links. Combined with the five existing scheduled posts, the future queue covers nine weekly dates from August 31 through October 26.
-- The Business Profile now saves the verified Instagram, active Facebook and TikTok identities. The public business number was submitted as the primary SMS chat destination and is in Google's short review queue.
+- The Business Profile now saves the verified Instagram, active Facebook and TikTok identities. Google also completed review of the public business number and shows `sms:+18329389570` as the active Primary texting destination.
 - The March–August Google Business baseline is 331 profile views and one website click. There are no reported calls, bookings or chat clicks yet, so future growth should be evaluated from these real zero/one baselines rather than impressions alone.
 - Bing Places imported and verified the canonical APS Drone Google profile, enabled weekly synchronization and entered Pending publish.
 - Bing Webmaster Tools imported the verified site and both sitemaps from Google Search Console. Its first technical scan completed across 20 live pages with 0 errors and 0 warnings.
