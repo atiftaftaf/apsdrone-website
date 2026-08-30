@@ -1,6 +1,15 @@
+SMS — send after the client confirms delivery
+
+Hi [First Name], thank you for choosing APS Drone. If the photos or video were helpful, would you mind sharing an honest Google review? https://g.page/r/CbNNLDqa9yVeEBI/review — Atif, APS Drone
+
+
+EMAIL
+
+Subject: Thank you from APS Drone
+
 Hi [First Name],
 
-Thank you for choosing APS Drone. If the photos or video helped your project, would you mind leaving a quick Google review? It only takes a minute:
+Thank you for choosing APS Drone for [Project Type]. If the delivery was helpful, would you mind sharing an honest Google review? Your feedback helps DFW customers understand what it is like to work with us:
 
 https://g.page/r/CbNNLDqa9yVeEBI/review
 
@@ -8,3 +17,10 @@ Thank you,
 Atif
 APS Drone
 
+
+ONE FOLLOW-UP — only if there was no response after 5–7 days
+
+Hi [First Name], just one quick follow-up in case my review link was buried. If you have a minute, an honest Google review would mean a lot: https://g.page/r/CbNNLDqa9yVeEBI/review Thank you again — Atif, APS Drone
+
+
+Rules: ask every genuine completed customer consistently; never offer payment, discount or another incentive; never ask only happy customers; do not pressure a customer; send no more than one follow-up.

@@ -84,3 +84,28 @@ Do not submit the same URL repeatedly; Search Console states that repeated submi
 - The updated sitemap was submitted successfully and Search Console immediately reported **13 discovered pages**.
 - A public APS Drone Facebook post linking to the new checklist was published and verified in the page feed.
 - A live Google Business information check showed the expanded 20-area DFW service list, four categories, current description, phone, website, hidden street address, appointment requirement and online appointment option. No rejected profile edit was visible at this checkpoint.
+
+## Analytics and video-indexing expansion
+
+- Created the APS Drone GA4 account/property and live web stream using measurement ID `G-81SXN88RSB`.
+- Connected the verified `https://apsdrone.com/` Search Console property to GA4.
+- Connected the APS Drone Google Business Profile listing to GA4.
+- Deployed page-view, quote-form, phone, text, WhatsApp and email conversion events across the website.
+- Published dedicated crawlable residential, commercial and FPV video pages with `VideoObject` structured data.
+- Published `https://apsdrone.com/video-sitemap.xml` and declared it in `robots.txt`.
+- Reduced the referenced FPV web video from 53.6 MB to 7.7 MB without modifying or deleting the source file.
+- Added dedicated roof documentation, thermal imaging and FPV service pages plus four location-verified DFW case studies.
+
+## Additional Google profile media
+
+- Uploaded three additional original-project images on August 30, 2026:
+  - Irving roof documentation.
+  - Fort Worth matched visual and thermal documentation.
+  - Dallas commercial property aerial photography.
+- Google displayed `Upload complete` after receiving the three JPEG derivatives. The source WebP files and all archive originals were preserved unchanged.
+
+## Performance and competitor follow-up
+
+- Replaced two 4.4–4.6 MB real-estate gallery JPEG references with 1600×900 WebP derivatives of approximately 247–279 KB each.
+- Added `marketing-kit/google-competitor-audit-2026-08-30.md` covering the current Dallas/DFW real-estate, commercial, thermal and FPV search set.
+- The audit identifies transparent pricing, local case-study proof, review growth, recurring construction scopes and low-friction quoting as the defensible priorities; it explicitly rejects copied claims, bought reviews and link farms.
