@@ -109,3 +109,5 @@ Do not submit the same URL repeatedly; Search Console states that repeated submi
 - Replaced two 4.4–4.6 MB real-estate gallery JPEG references with 1600×900 WebP derivatives of approximately 247–279 KB each.
 - Added `marketing-kit/google-competitor-audit-2026-08-30.md` covering the current Dallas/DFW real-estate, commercial, thermal and FPV search set.
 - The audit identifies transparent pricing, local case-study proof, review growth, recurring construction scopes and low-friction quoting as the defensible priorities; it explicitly rejects copied claims, bought reviews and link farms.
+- GitHub Pages deployment for commit `fddd4aa` completed successfully. The two new WebP derivatives, `video-sitemap.xml` and the DFW project case-study page all returned HTTP 200 after deployment.
+- All local JSON-LD blocks parsed successfully after the deployment changes.

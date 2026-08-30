@@ -40,6 +40,22 @@ Updated: August 30, 2026
 
 The Facebook post was server-visible on the official APS Drone page after publishing on August 30, 2026. Search Console may take time to discover or report the external reference, and social links may be treated as nofollow; the post is still a legitimate branded discovery path.
 
+## Genuine credit-request templates
+
+### Customer website credit
+
+> Hi [Name] — if you publish the APS Drone images or video on your project page, would you be comfortable adding a small credit such as “Aerial media by APS Drone” linked to https://apsdrone.com/? No problem if your site policy does not allow vendor credits.
+
+### Partner/vendor directory
+
+> Hi [Name] — APS Drone supported aerial media for [project/property]. If you maintain a genuine vendor or project-partner page, may we be listed as the aerial photography provider with a link to https://apsdrone.com/? I can send a short factual description and logo if helpful.
+
+### Resource-page suggestion
+
+> Hi [Name] — we published a free DFW commercial drone project checklist for owners, brokers and construction teams: https://apsdrone.com/dfw-commercial-drone-project-checklist/. If it is genuinely useful to your audience, feel free to reference it. No reciprocal link is required.
+
+Send a request only to a real customer, partner or association for which the statement is accurate. Track the page, contact, request date and resulting live URL; do not send bulk link requests.
+
 ## Safety rule
 
 Backlinks must come from real profiles, customers, associations, partners or useful editorial references. No paid link farms, automated directory blasts, doorway pages or fake reviews.

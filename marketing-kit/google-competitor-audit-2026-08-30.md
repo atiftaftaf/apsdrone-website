@@ -20,6 +20,24 @@ This is a point-in-time organic-search audit. Rankings vary by location, persona
 | FPV Dallas | High-authority specialist story and notable production credentials | Compete on local-business accessibility, practical FPV packages, clear process and fast DFW scheduling rather than celebrity positioning |
 | Skygraphy / Texas Drone Company | Dedicated FPV and property-tour pages with direct quote paths | Strengthen APS Drone's FPV service page with one polished case study, expected deliverables and a dedicated conversion CTA |
 
+## Google Maps top-three local-profile snapshot
+
+The non-sponsored results below were visible for `Dallas drone photography services` on August 30, 2026. Review recency is based on the newest review visible in the profile, not an estimate of future performance.
+
+| Profile | Primary category | Rating / reviews | Newest visible review | Media/profile signals | Landing page signal |
+|---|---|---:|---|---|---|
+| Dallas Drone Guy | Aerial photographer | 5.0 / 31 | 11 months ago | Photos/videos gallery; owner responses visible; review topics emphasize drone photography, communication and price | Direct business homepage and booking link |
+| Desert Drones LLC | Drone service | 5.0 / 15 | 3 months ago | Photos/videos gallery; three recent reviews and owner responses visible; topics emphasize quality, turnaround and clear communication | Dallas-specific local landing page with GBP campaign tracking |
+| Texas Drone Photography Services | Aerial photographer | 5.0 / 1 | 2 years ago | Photos/videos gallery; online appointments; one owner response | Direct business homepage |
+
+### Local-profile implications
+
+- APS Drone's immediate competitive gap is verified review volume and review recency, not a lack of service breadth.
+- Desert Drones demonstrates the strongest recent review velocity among the three visible profiles; APS Drone should trigger a fair review request after each completed assignment and respond to every review.
+- Dallas Drone Guy has the largest visible review base and strong communication/value language. APS Drone should reinforce its own transparent pricing, fast delivery and written-scope process with real customer feedback.
+- APS Drone already has a broader verified media mix than many single-service profiles; continue rotating commercial, real-estate, roof, thermal and FPV examples without uploading duplicates.
+- A dedicated Google Business landing URL with UTM tagging should be used on posts and links so GA4 can separate profile traffic from ordinary organic search.
+
 ## Defensible APS Drone advantages
 
 1. Clear $249 starting price is more accessible than several commercial-first competitors.
