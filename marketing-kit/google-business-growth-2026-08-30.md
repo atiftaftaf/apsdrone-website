@@ -21,17 +21,21 @@ Updated: August 30, 2026
 - The live profile showed the correct primary category (`Aerial photographer`), website, phone `(832) 938-9570`, service-area presentation and DFW-focused description.
 - The media manager contained **16 numbered photos and six numbered videos**, plus cover and logo. One video remained `Pending`; the other visible media was not marked pending.
 - Several older media items showed public-view counts between fewer than 100 and 223, proving that Google profile media is already receiving some discovery.
-- The public profile still has no Google reviews, only one product card (`Real Estate Drone Photography — $249`), and the newest visible owner update was dated July 27, 2026. These are the clearest remaining profile-content gaps.
+- The public profile still has no Google reviews. The product catalog now contains seven service cards, and nine future weekly posts are submitted or scheduled through October 26, 2026. Genuine customer reviews remain the clearest owner-dependent profile gap.
 
 ## Scheduled weekly posts
 
-All posts use the APS Drone phone number as the Call now action.
+The August–September posts use the APS Drone phone number as the Call now action. The October posts use tracked Learn more links to the matching service or case-study page.
 
 1. August 31, 2026 at 9:00 AM — Real estate drone photography from $249.
 2. September 7, 2026 at 9:00 AM — DFW commercial property photography and documentation.
 3. September 14, 2026 at 9:00 AM — Construction progress photography and recurring capture plans.
 4. September 21, 2026 at 9:00 AM — Roof and exterior visual documentation.
 5. September 28, 2026 at 9:00 AM — Dallas drone videography, 4K aerial video and vertical reels.
+6. October 5, 2026 at 9:00 AM — Arlington industrial-property context and site documentation.
+7. October 12, 2026 at 9:00 AM — Real-estate listing photos and a vertical property reel.
+8. October 19, 2026 at 9:00 AM — Fort Worth commercial-property aerial context.
+9. October 26, 2026 at 9:00 AM — Arlington wide-context and closer-detail documentation.
 
 Google confirmed each submission in the posts manager. The newest submission may show Pending while Google reviews it; earlier future posts display their scheduled dates.
 
@@ -155,9 +159,9 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 
 ## Search Console follow-up
 
-- The live Sitemaps report still shows only `/sitemap.xml`, with Success status, 13 discovered pages and zero discovered videos.
-- The `video-sitemap.xml` field is prepared in the authenticated Search Console form but has not been submitted. Final submission remains pending action-time confirmation.
-- URL Inspection live tests on all four watch pages reported that the URL is available to Google, the video is detected and one valid video item is present. Their stored index state remains unknown/not indexed, so discovery and index processing—not a demonstrated technical video error—is the current gap.
+- The authenticated Search Console URL-prefix property accepted `video-sitemap.xml` and immediately reported Success with four discovered pages and four discovered videos.
+- One-time indexing requests were submitted and confirmed for all four watch pages: residential, commercial, FPV business tour and the vertical real-estate reel.
+- URL Inspection live tests on all four watch pages reported that the URL is available to Google, the video is detected and one valid video item is present. Their final index state remains dependent on Google's crawl and processing schedule, not on a demonstrated technical video error.
 - After consolidating repetitive city pages, the current full local/live coverage audit finds 19 valid main-sitemap URLs, zero missing content pages, zero canonical mismatches, zero `noindex` sitemap pages, zero missing titles/H1s and 19/19 indexable pages reachable from the homepage link graph. Search Console's 13-page count is therefore behind the current deployed sitemap.
 
 ## Entity consistency follow-up
@@ -193,9 +197,8 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 
 ## Video indexing readiness recheck
 
-- Authenticated Search Console still reports one older non-watch-page video record and zero indexed videos; the stored report was last updated August 26, before the four new watch pages were deployed.
-- `/sitemap.xml` remains the only submitted sitemap and reports Success, 13 discovered pages and zero discovered videos.
-- The new `video-sitemap.xml` is filled into the APSDroneTX Search Console form with the Submit control enabled. The final submission and four one-time indexing requests remain pending action-time confirmation.
+- The stored Video pages report still reflects its older August 26 processing snapshot, but the dedicated video sitemap is now submitted successfully and reports four discovered pages and four discovered videos.
+- Search Console confirmed one-time indexing requests for all four new watch pages. Do not repeat those requests; monitor the next stored Video pages update.
 
 ## Service-area wording correction
 
@@ -214,8 +217,16 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 
 - The authenticated APSDroneTX profile shows Profile Strength `Complete` and one customer interaction.
 - The live media manager currently shows 16 numbered photos and six numbered videos in addition to the cover and logo. One of the newest videos remains Pending; older visible media examples show up to 223 views.
-- The live profile currently exposes one `$249` real-estate product. Prepared six factual, non-overlapping product definitions for vertical-reel, commercial, construction-progress, roof, FPV and thermal services in `google-business-products-2026.md`, each with a product-specific GA4 UTM URL and a real project-media source.
-- No product was publicly saved during this preparation pass.
+- The live product catalog now contains the original `$249` real-estate product plus six newly submitted, factual, non-overlapping cards for vertical-reel, commercial, construction-progress, roof, FPV and thermal services. Google confirmed each save; several new cards remain Pending review.
+- Every new product uses a product-specific GA4 UTM URL and a real APS Drone project-media source. Original archive files were not modified.
+
+## August 30 public Google action completion
+
+- Submitted `video-sitemap.xml` in the verified APSDroneTX Search Console property; Google reported Success, four discovered pages and four discovered videos.
+- Requested indexing once for each of the four video watch pages and received an `Indexing requested` confirmation for every URL.
+- Added six service products, bringing the Google Business Profile catalog to seven total cards. Google accepted every submission; review-dependent cards are marked Pending.
+- Submitted four October weekly posts with original project media, Learn more calls to action and GA4 UTM links. Together with the five existing posts, the profile now has a nine-week future content queue from August 31 through October 26.
+- No advertising spend was started, no review was fabricated and no private street/unit address was published.
 
 ## Index-quality cleanup
 

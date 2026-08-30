@@ -8,7 +8,7 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 |---|---:|---|
 | Main sitemap | Success; 13 pages reported by Google | Search Console Sitemaps |
 | Current live sitemap | 19 indexable URLs | Live `sitemap.xml` and local crawl |
-| Video discovery | 0 indexed videos in stored report | Search Console Video pages |
+| Video discovery | Dedicated video sitemap submitted successfully; 4 pages and 4 videos discovered; stored index report still awaiting Google processing | Search Console Sitemaps and Video pages |
 | External links | 0 | Search Console Links |
 | Dallas services page | 257 impressions; 0 clicks; 0% CTR; average position 50.3 | Search Console page filter, July 27–August 28 |
 | `dallas drone services` | 46 impressions; average position 20.7 | Search Console query filter |
@@ -26,6 +26,13 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 5. In GA4, record qualified `generate_lead` events separately from click-only key events. Never create test form submissions that look like real leads.
 6. Note Google Business Profile website/call/message activity when available and preserve UTM attribution on every post or product link.
 7. Make one evidence-based change at a time. Record the URL, change and deployment commit so the next comparison has a clear cause.
+
+## August 30 action checkpoint
+
+- Search Console accepted `video-sitemap.xml` with four discovered pages and four discovered videos.
+- One-time indexing requests were confirmed for the residential, commercial, FPV and vertical real-estate watch pages.
+- The Google Business Profile product catalog was expanded from one to seven service cards; new cards may remain Pending during Google review.
+- Four October posts were submitted with original project media and tracked Learn more links. Combined with the five existing scheduled posts, the future queue covers nine weekly dates from August 31 through October 26.
 
 ## Decision thresholds
 
