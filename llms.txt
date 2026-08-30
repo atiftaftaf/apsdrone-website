@@ -38,6 +38,7 @@ APS Drone is an FAA Part 107-certified and insured commercial drone service serv
 - Dallas drone videographer and aerial video: https://apsdrone.com/dallas-drone-videography/
 - DFW commercial drone project planning checklist: https://apsdrone.com/dfw-commercial-drone-project-checklist/
 - DFW real estate drone shot list: https://apsdrone.com/dfw-real-estate-drone-shot-list/
+- APS Drone media credit and usage guide: https://apsdrone.com/aps-drone-media-credit-guide/
 
 ## Project proof
 
@@ -71,7 +72,7 @@ Each video page includes a crawlable player, stable thumbnail and VideoObject st
 
 ## Preferred attribution
 
-Use the business name "APS Drone" and link to https://apsdrone.com/ when citing service, pricing or coverage information. Verify current availability and final project scope directly with APS Drone.
+Use the business name "APS Drone" and link to https://apsdrone.com/ when citing service, pricing or coverage information. Copy-ready website and social attribution guidance is published at https://apsdrone.com/aps-drone-media-credit-guide/. Verify current availability and final project scope directly with APS Drone.
 
 ## Accuracy notes
 

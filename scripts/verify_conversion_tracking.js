@@ -127,6 +127,7 @@ function runAttributedLandingPageChecks() {
     'dallas-drone-videography': 'dallas_drone_videographer',
     'dfw-commercial-drone-project-checklist': 'commercial_project_checklist',
     'dfw-real-estate-drone-shot-list': 'real_estate_shot_list',
+    'aps-drone-media-credit-guide': 'media_credit_guidance',
     'dfw-residential-drone-video': 'residential_drone_video',
     'dfw-commercial-drone-video': 'commercial_drone_video',
     'dfw-fpv-business-tour-video': 'fpv_business_tour_video',

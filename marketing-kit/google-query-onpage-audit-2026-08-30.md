@@ -20,7 +20,7 @@ The target set comes from actual APS Drone Search Console impressions. Each quer
 - No keyword-stuffed city-page variants were created.
 - Sitemap `lastmod` was updated where the older Fort Worth page changed.
 - All 25 current JSON-LD blocks still parse after the on-page changes.
-- `node scripts/verify_site_integrity.js` now enforces these conditions in the repository: 20 sitemap pages, 20 unique titles and descriptions, exact canonical mappings, one H1 per page, the four query-to-page phrase mappings, 253 valid internal links, full homepage-graph reachability, 25 parseable JSON-LD blocks and four complete `VideoObject` watch pages.
+- `node scripts/verify_site_integrity.js` now enforces these conditions in the repository: 21 sitemap pages, 21 unique titles and descriptions, exact canonical mappings, one H1 per page, the four query-to-page phrase mappings, 273 valid internal links, full homepage-graph reachability, 26 parseable JSON-LD blocks and four complete `VideoObject` watch pages.
 
 ## Measurement
 
@@ -60,7 +60,7 @@ GitHub Pages deployment for commit `8ab735b` completed successfully. A cache-bus
 - Replaced every Dallas-services-page homepage-fragment quote link with the focused `/request-a-quote/` route and campaign attribution `utm_source=google`, `utm_medium=organic`, `utm_campaign=dallas_drone_services`.
 - Updated the Service offer URL to the canonical quote route and clarified the primary button as `Request a Dallas Drone Quote`.
 - The existing analytics layer records outbound page-to-quote clicks as `click_booking` and quote-page arrivals as `booking_landing`, while the form continues to record `form_start`, `form_submit` and `generate_lead`.
-- Local verification passed with 20 sitemap pages, 253 valid internal links, 25 parseable JSON-LD blocks, complete homepage-graph reachability and the conversion-tracking verifier green.
+- Local verification passed with 21 sitemap pages, 273 valid internal links, 26 parseable JSON-LD blocks, complete homepage-graph reachability and the conversion-tracking verifier green.
 
 ## Fort Worth evidence and depth follow-up
 

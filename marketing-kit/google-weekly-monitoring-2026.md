@@ -7,7 +7,7 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 | Signal | Verified baseline | Source |
 |---|---:|---|
 | Main sitemap | Success; 13 pages reported by Google | Search Console Sitemaps |
-| Current live sitemap | 20 indexable URLs | Live `sitemap.xml` and local crawl |
+| Current live sitemap | 21 indexable URLs | Live `sitemap.xml` and local crawl |
 | Video discovery | Dedicated video sitemap submitted successfully; 4 pages and 4 videos discovered; Aug. 26 indexing report still contains only the older homepage hero-video warning; Aug. 28 Videos enhancement report says no data; both reports predate the Aug. 30 watch-page deployment | Search Console Sitemaps, Video indexing and Videos enhancement reports |
 | External links | 0 | Search Console Links |
 | Dallas services page | 257 impressions; 0 clicks; 0% CTR; average position 50.3 | Search Console page filter, July 27–August 28 |

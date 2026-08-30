@@ -10,6 +10,9 @@ Updated: August 30, 2026
 - A polished two-page printable PDF is now linked from that resource at `/output/pdf/dfw-commercial-drone-project-checklist.pdf`; it includes project-purpose, access, shot-list, safety and delivery checkboxes plus a tracked APS Drone quote URL.
 - A second audience-specific resource was prepared at `/dfw-real-estate-drone-shot-list/` for agents and listing teams. Its two-page printable PDF covers essential aerial angles, honest location context, property preparation, vertical-reel sequencing and delivery, with a tracked quote URL.
 - The second resource uses a privacy-safe community overview derivative; no customer name, exact project address, property-line claim or private street address is exposed.
+- A third linkable resource is published at `/aps-drone-media-credit-guide/`. It gives real customers and project partners copy-ready website credit, social attribution, logo downloads, privacy guidance and a canonical APS Drone link without requiring reciprocal links.
+- The new guide passed semantic browser rendering plus mobile Lighthouse at 98 Performance and 100 each for Accessibility, Best Practices and SEO, with 1.0-second LCP, zero CLS and 199 KiB transferred.
+- `genuine-backlink-tracker.csv` is the authoritative one-row-per-relationship ledger. A request may be logged only after the underlying customer, partner, project or association relationship is verified; a link is counted only after its public URL is opened and checked.
 
 ## Priority legitimate citations
 
@@ -48,10 +51,10 @@ Membership is not a backlink purchase. Join only if APS Drone will participate, 
 | Source | Status | Next step |
 | --- | --- | --- |
 | Google Business Profile | Active and optimized | Monitor pending edits/media |
-| Bing Places | Started; Google sign-in did not complete in the current browser session | Retry official sign-in without creating a duplicate |
-| Apple Business Connect | Not started | Sign in with the business Apple account and create/claim one service-area listing |
-| Yelp for Business | Not started | Search for APS Drone first, then claim or add only if no listing exists |
-| LinkedIn | Existing public APS Drone presence found | Add website/DFW positioning and share the checklist |
+| Bing Places | Google-verified, weekly sync enabled and Pending publish | Recheck after the platform's stated publication window; do not create a duplicate |
+| Apple Business Connect | APS Drone organization created; owner session is currently signed out | Complete owner sign-in, 2FA and any requested organization verification |
+| Yelp for Business | Free SMS claim completed; street hidden, six DFW service areas saved, moderator review pending | Recheck publication; do not create another APS Drone listing |
+| LinkedIn | Obsolete Houston company page deactivated; replacement DFW page blocked by the creating profile's connection minimum | Create one canonical page only after more than one genuine first-degree connection exists |
 | Facebook APS Drone page | Checklist post published publicly with a link to apsdrone.com | Keep the page information consistent and publish useful project resources, not link spam |
 
 The Facebook post was server-visible on the official APS Drone page after publishing on August 30, 2026. Search Console may take time to discover or report the external reference, and social links may be treated as nofollow; the post is still a legitimate branded discovery path.
@@ -61,6 +64,8 @@ The Facebook post was server-visible on the official APS Drone page after publis
 ### Customer website credit
 
 > Hi [Name] — if you publish the APS Drone images or video on your project page, would you be comfortable adding a small credit such as “Aerial media by APS Drone” linked to https://apsdrone.com/? No problem if your site policy does not allow vendor credits.
+
+If the publisher wants copy-ready wording, send `https://apsdrone.com/aps-drone-media-credit-guide/` rather than improvising a keyword-heavy anchor.
 
 ### Partner/vendor directory
 
