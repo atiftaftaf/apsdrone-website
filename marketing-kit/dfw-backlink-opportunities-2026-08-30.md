@@ -7,6 +7,7 @@ Updated: August 30, 2026
 - Google Search Console Links report: **0 external links**.
 - Search Console currently reports 2 internal links. This is a lagging crawl metric; the live website has broader navigation and contextual internal links.
 - A new linkable resource was published at `/dfw-commercial-drone-project-checklist/` to give partners and customers a useful page to reference instead of creating thin directory-only content.
+- A polished two-page printable PDF is now linked from that resource at `/output/pdf/dfw-commercial-drone-project-checklist.pdf`; it includes project-purpose, access, shot-list, safety and delivery checkboxes plus a tracked APS Drone quote URL.
 
 ## Priority legitimate citations
 

@@ -185,3 +185,10 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Google's live brand result quoted the homepage About sentence `based in Dallas, Texas`, which could imply a physical Dallas storefront instead of the verified hidden-address DFW service-area model.
 - Replaced that sentence with `serving Dallas-Fort Worth, Texas` and tightened the following credential statement to the factual FAA Part 107 remote-pilot wording.
 - No private address was added or exposed.
+
+## Downloadable commercial planning resource
+
+- Created a branded two-page DFW commercial drone project checklist PDF with project-purpose, quote-input, shot-list, access, safety and delivery sections.
+- Rendered both pages to PNG at 144 DPI and visually verified there are no clipped, overlapping or unreadable elements after correcting the initial two-column width.
+- Linked the PDF from the existing substantive checklist page and declared the downloadable media in the page's Article structured data.
+- The PDF preserves the hidden-address service-area model and contains no customer name, exact project address or unverifiable performance claim.
