@@ -5,9 +5,11 @@ APS Drone is an FAA Part 107-certified and insured commercial drone service serv
 ## Canonical website
 
 - https://apsdrone.com/
+- About APS Drone: https://apsdrone.com/about-aps-drone/
 
 ## Core facts
 
+- APS Drone is owner-operated by Atif Taftaf, an FAA Part 107-certified remote pilot.
 - Service area: Dallas-Fort Worth and surrounding North Texas communities.
 - Phone and text: +1-832-938-9570.
 - Email: apsdronetx@gmail.com.

@@ -56,7 +56,7 @@ function flattenSchema(value, output = []) {
 
 const sitemap = read('sitemap.xml');
 const sitemapUrls = [...sitemap.matchAll(/<loc>(https:\/\/apsdrone\.com\/[^<]*)<\/loc>/g)].map((match) => match[1]);
-assert.equal(sitemapUrls.length, 19, 'the canonical sitemap should contain 19 indexable pages');
+assert.equal(sitemapUrls.length, 20, 'the canonical sitemap should contain 20 indexable pages');
 assert.equal(new Set(sitemapUrls).size, sitemapUrls.length, 'sitemap URLs must be unique');
 
 const pages = new Map();
