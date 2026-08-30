@@ -163,3 +163,4 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 - Updated the DFW commercial page title and H1 to match `commercial drone services` while keeping one broad commercial page rather than creating thin variants.
 - Updated the Fort Worth page title and H1 to match `fort worth drone photography` and refreshed its sitemap modification date.
 - Titles, descriptions and social metadata remain unique and concise; all structured-data blocks still parse.
+- GitHub Pages deployment for commit `520423b` completed successfully. All three target pages returned HTTP 200 with the expected new live titles, and the Fort Worth sitemap `lastmod` is `2026-08-30`.
