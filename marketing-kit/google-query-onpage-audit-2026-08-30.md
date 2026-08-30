@@ -10,7 +10,7 @@ The target set comes from actual APS Drone Search Console impressions. Each quer
 | `drone services dallas` | `/dallas-drone-services/` | Same natural-language topic without keyword duplication | $249 starting price, FAA Part 107 and DFW service scope |
 | `dallas drone videographer` | `/dallas-drone-videography/` | Title and H1 use “Dallas Drone Videographer” and “Aerial Video” | 4K video, vertical reels, real estate, commercial property and construction |
 | `commercial drone services` | `/commercial-drone-photography-dfw/` | Title and H1 use “Commercial Drone Services DFW” | Industrial, retail, office, multifamily, venue and development-site coverage |
-| `fort worth drone photography` | `/fort-worth-drone-services/` | Title and H1 use “Fort Worth Drone Photography & Services” | 4K video, thermal capture and construction-progress documentation |
+| `fort worth drone photography` | `/fort-worth-drone-services/` | Title and H1 lead with “Fort Worth Drone Photography & Video” | Location-verified property and thermal proof, 4K video and recurring progress documentation |
 
 ## Validation rules
 
@@ -53,3 +53,10 @@ Authenticated Search Console was filtered to exactly `https://apsdrone.com/dalla
 Interpretation: Google is already testing the broad Dallas page for the primary service phrase, while video and commercial variants also reach it. The new internal links give those narrower intents a clear crawl path to their stronger specialist pages without adding repetitive doorway pages. Reassess after recrawl; the current sample is too small to justify keyword repetition or a title rewrite.
 
 GitHub Pages deployment for commit `8ab735b` completed successfully. A cache-busted live check confirmed the commercial-service link, exact Dallas case-study anchor, vertical-reel watch link and the Dallas sitemap modification date.
+
+## Fort Worth evidence and depth follow-up
+
+- Search Console recorded 10 impressions at average position 57.7 for `fort worth drone photography`, identifying the existing Fort Worth page as a real but weak-ranking opportunity.
+- Rebuilt the same canonical page instead of creating additional city variants. The page now includes three location-verified Fort Worth images, privacy-safe property and thermal proof, six linked service paths, quote-input guidance, four visible FAQs and one valid Service/Breadcrumb/FAQ JSON-LD graph.
+- The title and H1 retain the exact natural topic while the page explains deliverables, limitations, airspace review and project-fit details for people—not just search engines.
+- Local validation found zero missing links or media, 16 links, four images and valid structured data. Desktop and mobile renders were visually reviewed. Isolated mobile Lighthouse scored 97 Performance and 100 each for Accessibility, Best Practices and SEO, with zero CLS and 20 ms total blocking time.

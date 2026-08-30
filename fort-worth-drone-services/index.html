@@ -1,120 +1,161 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <script src="../analytics.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fort Worth Drone Photography &amp; Services | APS Drone</title>
-    <meta name="description" content="Fort Worth drone photography, 4K video, thermal capture and construction progress documentation from an FAA Part 107 pilot serving DFW.">
-  <meta name="keywords" content="drone services fort worth, aerial photography fort worth, drone inspection fort worth">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+  <title>Fort Worth Drone Photography &amp; Video | APS Drone</title>
+  <meta name="description" content="Fort Worth drone photography, 4K video, thermal imaging and construction progress documentation by an FAA Part 107 pilot serving Dallas-Fort Worth.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://apsdrone.com/fort-worth-drone-services/">
-  <meta property="og:title" content="Fort Worth Drone Photography &amp; Services | APS Drone">
-  <meta property="og:description" content="FAA Part 107 Fort Worth drone photography, 4K video, thermal capture and construction progress documentation across DFW.">
+  <meta property="og:title" content="Fort Worth Drone Photography &amp; Video | APS Drone">
+  <meta property="og:description" content="See location-verified Fort Worth aerial work and request drone photography, 4K video, thermal imaging or recurring site documentation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://apsdrone.com/fort-worth-drone-services/">
-  <meta property="og:image" content="https://apsdrone.com/assets/media/og-dfw.webp">
+  <meta property="og:image" content="https://apsdrone.com/assets/media/dfw-fort-worth-property.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Fort Worth Drone Photography &amp; Services | APS Drone">
-  <meta name="twitter:description" content="FAA Part 107 Fort Worth drone photography, 4K video, thermal capture and construction progress documentation across DFW.">
-  <meta name="twitter:image" content="https://apsdrone.com/assets/media/og-dfw.webp">
+  <meta name="twitter:title" content="Fort Worth Drone Photography &amp; Video | APS Drone">
+  <meta name="twitter:description" content="Location-verified aerial work and professional drone services for Fort Worth properties and projects.">
+  <meta name="twitter:image" content="https://apsdrone.com/assets/media/dfw-fort-worth-property.webp">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Fort Worth Drone Services",
-    "serviceType": "Drone Photography and Videography",
-    "provider": {
-      "@type": ["LocalBusiness", "ProfessionalService"],
-      "@id": "https://apsdrone.com/#business",
-      "name": "APS Drone",
-      "url": "https://apsdrone.com",
-      "telephone": "+1-832-938-9570"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Fort Worth"
-    },
-    "url": "https://apsdrone.com/fort-worth-drone-services/"
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://apsdrone.com/fort-worth-drone-services/#service",
+        "name": "Fort Worth Drone Photography and Video",
+        "serviceType": ["Drone Photography", "Aerial Videography", "Thermal Drone Imaging", "Construction Progress Documentation"],
+        "description": "Professional aerial photography, 4K video, thermal imaging and recurring site documentation for Fort Worth properties and projects.",
+        "provider": {"@type": ["LocalBusiness", "ProfessionalService"], "@id": "https://apsdrone.com/#business", "name": "APS Drone", "url": "https://apsdrone.com/", "telephone": "+1-832-938-9570"},
+        "areaServed": {"@type": "City", "name": "Fort Worth", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        "url": "https://apsdrone.com/fort-worth-drone-services/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "APS Drone", "item": "https://apsdrone.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Fort Worth Drone Photography", "item": "https://apsdrone.com/fort-worth-drone-services/"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "What Fort Worth drone photography services are available?", "acceptedAnswer": {"@type": "Answer", "text": "APS Drone provides edited aerial photographs, 4K video, vertical reels, visual roof documentation, thermal imaging and repeatable construction-progress captures for Fort Worth projects."}},
+          {"@type": "Question", "name": "Do you photograph residential and commercial properties in Fort Worth?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. APS Drone works with real estate professionals, builders, property managers, contractors and business owners, subject to site access, weather and airspace feasibility."}},
+          {"@type": "Question", "name": "How quickly are Fort Worth drone photos delivered?", "acceptedAnswer": {"@type": "Answer", "text": "Typical edited-photo delivery is 24 to 48 hours after a completed flight. Video, thermal and larger documentation scopes are confirmed with the quote."}},
+          {"@type": "Question", "name": "Can APS Drone repeat the same Fort Worth site views over time?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Weekly, biweekly and monthly progress plans can repeat agreed wide and detail viewpoints and organize files by visit date."}}
+        ]
+      }
+    ]
   }
   </script>
-    <style>
-      :root { --bg:#f6f8fc; --card:#ffffff; --txt:#0f172a; --muted:#334155; --primary:#2563eb; --border:#d6e2f0; }
-      * { box-sizing: border-box; }
-      body { margin:0; font-family: Inter, Arial, sans-serif; background:var(--bg); color:var(--txt); }
-      .wrap { max-width: 980px; margin: 0 auto; padding: 28px 20px 60px; }
-      .top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:22px; }
-      .brand img { height:38px; width:auto; display:block; }
-      .back { color:var(--primary); text-decoration:none; font-weight:700; }
-      .hero { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:28px; margin-bottom:18px; }
-      h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); line-height:1.15; margin: 0 0 12px; }
-      p { color:var(--muted); line-height:1.7; }
-      .chips { display:flex; flex-wrap:wrap; gap:8px; margin: 14px 0 0; }
-      .chips span { border:1px solid var(--border); border-radius:999px; padding:6px 12px; font-size:.86rem; color:var(--muted); background:#fff; }
-      .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px; }
-      .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px; }
-      .card h2 { margin:0 0 10px; font-size:1.1rem; }
-      .cta { margin-top:18px; display:flex; gap:10px; flex-wrap:wrap; }
-      .btn { display:inline-block; background:var(--primary); color:#fff; text-decoration:none; padding:12px 16px; border-radius:999px; font-weight:700; }
-      .btn.alt { background:#fff; color:var(--primary); border:1px solid var(--border); }
-      .faq details { background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px 14px; margin-top:10px; }
-      .faq summary { font-weight:700; cursor:pointer; }
-      footer { margin-top:22px; color:#64748b; font-size:.9rem; }
-      @media (max-width: 760px) { .grid { grid-template-columns:1fr; } }
-    </style>
+  <style>
+    :root { --bg:#f6f8fc; --card:#fff; --txt:#0f172a; --muted:#334155; --primary:#1d4ed8; --primary2:#0ea5e9; --border:#d6e2f0; --soft:#eaf2ff; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Inter,Arial,sans-serif; background:var(--bg); color:var(--txt); }
+    a { color:var(--primary); }
+    .wrap { max-width:1080px; margin:0 auto; padding:28px 20px 60px; }
+    .top { display:flex; justify-content:space-between; align-items:center; gap:14px; margin-bottom:22px; }
+    .brand img { height:38px; width:auto; display:block; }
+    .back { color:var(--primary); text-decoration:none; font-weight:800; overflow-wrap:anywhere; }
+    .hero,.section { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:clamp(22px,4vw,38px); margin-bottom:18px; }
+    .hero-grid,.proof-grid { display:grid; grid-template-columns:1.08fr .92fr; gap:26px; align-items:center; }
+    .eyebrow { margin:0 0 8px; color:var(--primary); font-weight:800; letter-spacing:.04em; text-transform:uppercase; font-size:.82rem; }
+    h1 { font-size:clamp(2rem,5vw,3.5rem); line-height:1.06; margin:0 0 14px; }
+    h2 { font-size:clamp(1.45rem,3vw,2.1rem); margin:0 0 12px; }
+    h3 { margin:0 0 8px; font-size:1.08rem; }
+    p,li { color:var(--muted); line-height:1.7; }
+    .hero img,.proof-grid img { width:100%; height:auto; border-radius:14px; display:block; object-fit:cover; }
+    .hero figure,.proof-grid figure { margin:0; }
+    figcaption { color:#64748b; font-size:.82rem; line-height:1.5; margin-top:8px; }
+    .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+    .chips span { border:1px solid var(--border); border-radius:999px; padding:7px 12px; font-size:.84rem; color:var(--muted); background:#fff; }
+    .cta { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+    .btn { display:inline-block; background:linear-gradient(135deg,var(--primary),var(--primary2)); color:#fff; text-decoration:none; padding:12px 17px; border-radius:999px; font-weight:800; }
+    .btn.alt { background:#fff; color:var(--primary); border:1px solid var(--border); }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .card { border:1px solid var(--border); background:#fff; border-radius:14px; padding:18px; }
+    .card p { margin-bottom:0; }
+    .card a { font-weight:800; text-decoration:none; }
+    .checklist { display:grid; grid-template-columns:1fr 1fr; gap:12px 28px; padding:0; list-style:none; }
+    .checklist li::before { content:"✓"; color:#047857; font-weight:900; margin-right:9px; }
+    .note { background:var(--soft); border-left:4px solid var(--primary); padding:14px 16px; border-radius:10px; }
+    .faq details { background:#fff; border:1px solid var(--border); border-radius:12px; padding:13px 15px; margin-top:10px; }
+    .faq summary { font-weight:800; cursor:pointer; }
+    footer { margin-top:22px; color:#64748b; font-size:.9rem; text-align:center; }
+    @media(max-width:780px){ .hero-grid,.proof-grid,.grid,.checklist{grid-template-columns:1fr}.hero figure{order:-1}.top{align-items:flex-start}.back{text-align:right;max-width:160px;font-size:.86rem}.brand img{height:34px} }
+  </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="top">
-      <a href="https://apsdrone.com" class="brand"><img src="../assets/brand-logo.png" alt="APS Drone"></a>
-    <a href="https://apsdrone.com/#contact" class="back">Check Availability</a>
-    </div>
+    <header class="top">
+      <a href="../" class="brand"><img src="../assets/brand-logo.png" alt="APS Drone"></a>
+      <a href="../#contact" class="back">Check Fort Worth Availability</a>
+    </header>
 
-    <section class="hero">
-                <h1>Fort Worth Drone Photography &amp; Services</h1>
-      <p>APS Drone delivers professional aerial photography, video, thermal imaging, and construction progress flights across Fort Worth, Texas.</p>
-      <div class="chips">
-        <span>FAA Part 107 Certified</span>
-        <span>Serving Dallas-Fort Worth</span>
-        <span>Fast 24-48h Delivery</span>
-      </div>
-      <div class="cta">
-        <a href="https://apsdrone.com/#contact" class="btn">Check Fort Worth Availability</a>
-        <a href="https://apsdrone.com/#portfolio" class="btn alt">View Portfolio</a>
-      </div>
-    </section>
+    <main>
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">FAA Part 107 · Dallas-Fort Worth</p>
+            <h1>Fort Worth Drone Photography &amp; Video</h1>
+            <p>APS Drone creates edited aerial photos, 4K video, thermal imagery and repeatable progress documentation for Fort Worth properties and projects. Tell us the address, intended use and deadline; we will confirm the scope, airspace and availability.</p>
+            <div class="chips"><span>Real estate</span><span>Commercial property</span><span>Construction progress</span><span>Thermal imaging</span><span>24–48h photo delivery</span></div>
+            <div class="cta"><a href="../#contact" class="btn">Request a Fort Worth Quote</a><a href="../drone-photography-pricing-dallas/" class="btn alt">View Starting Prices</a></div>
+          </div>
+          <figure><img src="../assets/media/dfw-fort-worth-property.webp" alt="Fort Worth property and neighborhood photographed by APS Drone" width="1200" height="900" fetchpriority="high"><figcaption>Location-verified APS Drone work in Fort Worth; exact customer and address are withheld for privacy.</figcaption></figure>
+        </div>
+      </section>
 
-    <section class="grid">
-      <article class="card">
-        <h2>Drone Services in Fort Worth</h2>
-        <p>APS Drone supports real estate agents, builders, contractors, developers, and local businesses in Fort Worth with high-quality aerial media and inspection-ready captures.</p>
-        <p>Common deliverables include listing photos, cinematic video, FPV tours, thermal inspections, and recurring construction progress updates.</p>
-      </article>
-      <article class="card">
-        <h2>Areas We Cover</h2>
-        <p>Downtown Fort Worth, Cultural District, West 7th, and nearby areas. If your project is in or near Fort Worth, send your address and timeline and we will confirm airspace feasibility and scheduling.</p>
-        <p>Need recurring coverage? Weekly and monthly plans are available for active sites and ongoing campaigns.</p>
-      </article>
-    </section>
+      <section class="section">
+        <p class="eyebrow">Services built around the deliverable</p>
+        <h2>Drone Services for Fort Worth Projects</h2>
+        <div class="grid">
+          <article class="card"><h3>Property Photography</h3><p>Wide, medium and detail views that explain the building, lot, parking, access and neighborhood context.</p><p><a href="../real-estate-drone-photography-dallas/">Real-estate packages →</a></p></article>
+          <article class="card"><h3>Commercial Video</h3><p>Horizontal 4K footage and mobile-first vertical edits for websites, presentations, listings and social campaigns.</p><p><a href="../dfw-commercial-drone-video/">Commercial video service →</a></p></article>
+          <article class="card"><h3>Progress Documentation</h3><p>Repeatable wide and detail viewpoints organized by date for weekly, biweekly or monthly project records.</p><p><a href="../construction-progress-drone-dfw/">Progress plans →</a></p></article>
+          <article class="card"><h3>Roof Documentation</h3><p>Overview and detail-oriented aerial images supplied for your roofer, adjuster or qualified professional to interpret.</p><p><a href="../dfw-drone-roof-inspection/">Roof documentation →</a></p></article>
+          <article class="card"><h3>Thermal Imaging</h3><p>Matched visual and thermal files that help a qualified reviewer correlate a visible location with a heat pattern.</p><p><a href="../dfw-thermal-drone-inspection/">Thermal imaging →</a></p></article>
+          <article class="card"><h3>FPV and Fly-Throughs</h3><p>Dynamic interior/exterior sequences planned around the property, route, safety constraints and intended audience.</p><p><a href="../dfw-fpv-drone-tours/">FPV tours →</a></p></article>
+        </div>
+      </section>
 
-    <section class="faq">
-      <details>
-        <summary>Do you serve residential listings in Fort Worth?</summary>
-        <p>Yes. We provide real estate photo and video packages for single-family, luxury, and multifamily listings in Fort Worth.</p>
-      </details>
-      <details>
-        <summary>Can you support recurring project documentation?</summary>
-        <p>Yes. Weekly, biweekly, and monthly recurring flight plans are available for Fort Worth construction and development projects.</p>
-      </details>
-      <details>
-        <summary>How do I book drone services in Fort Worth?</summary>
-        <p>Use the quote form on APSDrone.com with your location, service type, and timeline. We respond quickly with availability and next steps.</p>
-      </details>
-    </section>
+      <section class="section">
+        <div class="proof-grid">
+          <figure><img src="../assets/media/dfw-fort-worth-commercial.webp" alt="Commercial property aerial photography captured in Fort Worth by APS Drone" width="1200" height="900" loading="lazy"><figcaption>Location-verified Fort Worth commercial-property context capture.</figcaption></figure>
+          <div><p class="eyebrow">Real Fort Worth project evidence</p><h2>Property Context That Answers Practical Questions</h2><p>A useful aerial set does more than show a roof. It can place a building in relation to parking, access, nearby roads and surrounding development. We plan viewpoints around the business purpose, then deliver edited files in a clearly organized folder.</p><p><a href="../dfw-drone-project-case-studies/#fort-worth-property"><strong>Read the Fort Worth property case study →</strong></a></p></div>
+        </div>
+      </section>
 
-    <footer>
-      <p>APS Drone | Drone Services in Fort Worth, Texas | <a href="https://apsdrone.com" style="color:#2563eb;">apsdrone.com</a></p>
-    </footer>
+      <section class="section">
+        <div class="proof-grid">
+          <div><p class="eyebrow">Visual + thermal documentation</p><h2>Matched Views for Qualified Review</h2><p>When thermal capture is part of the scope, APS Drone can organize standard and thermal images from the same scene. This makes the location of a visible pattern easier to understand. Thermal imagery is documentation—not an engineering, roofing or damage diagnosis.</p><p><a href="../dfw-drone-project-case-studies/#fort-worth-thermal"><strong>See the matched Fort Worth example →</strong></a></p></div>
+          <figure><img src="../assets/media/dfw-fort-worth-visual-thermal.webp" alt="Matched standard and thermal drone images from a Fort Worth project" width="1600" height="640" loading="lazy"><figcaption>Matched standard and thermal views from verified Fort Worth source media.</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="eyebrow">What to send for an accurate quote</p>
+        <h2>Plan the Flight in One Message</h2>
+        <ul class="checklist"><li>Fort Worth project address</li><li>Photo, video, thermal or progress scope</li><li>How the files will be used</li><li>Requested date or deadline</li><li>Must-have angles or site features</li><li>Access or operating-hour constraints</li></ul>
+        <p class="note"><strong>Before the flight:</strong> we review the site and airspace, confirm feasible timing and clarify the deliverables. Operations remain subject to weather, airspace requirements, site access and safe flight conditions.</p>
+        <div class="cta"><a href="../#contact" class="btn">Send Project Details</a><a href="tel:+18329389570" class="btn alt">Call 832-938-9570</a></div>
+      </section>
+
+      <section class="section faq">
+        <p class="eyebrow">Fort Worth drone service FAQ</p>
+        <h2>Common Questions</h2>
+        <details><summary>What Fort Worth drone photography services are available?</summary><p>Edited aerial photographs, 4K video, vertical reels, visual roof documentation, thermal imaging and repeatable construction-progress captures are available.</p></details>
+        <details><summary>Do you photograph residential and commercial properties?</summary><p>Yes. APS Drone works with real estate professionals, builders, property managers, contractors and business owners, subject to site access, weather and airspace feasibility.</p></details>
+        <details><summary>How quickly are edited photos delivered?</summary><p>Typical edited-photo delivery is 24 to 48 hours after a completed flight. Video, thermal and larger documentation scopes are confirmed with the quote.</p></details>
+        <details><summary>Can the same site views be repeated over time?</summary><p>Yes. Weekly, biweekly and monthly progress plans can repeat agreed wide and detail viewpoints and organize the files by visit date.</p></details>
+      </section>
+    </main>
+
+    <footer><p>APS Drone · FAA Part 107 drone services across Dallas-Fort Worth · <a href="../dfw-drone-project-case-studies/">Verified project case studies</a> · <a href="../dfw-commercial-drone-project-checklist/">Commercial project checklist</a></p></footer>
   </div>
 </body>
 </html>
