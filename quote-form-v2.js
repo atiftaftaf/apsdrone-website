@@ -67,12 +67,18 @@
       if (value) currentCampaign[key] = value.slice(0, 300);
     });
     const hasCurrentCampaign = Object.keys(currentCampaign).length > 0;
+    const routeDefaults = {
+      landing_page: 'https://apsdrone.com/request-a-quote/',
+      utm_source: 'google_business_profile',
+      utm_medium: 'organic',
+      utm_campaign: 'booking'
+    };
     const values = {
-      'landing-page': hasCurrentCampaign ? window.location.href : (lastTouch.landing_page || window.location.href),
+      'landing-page': hasCurrentCampaign ? window.location.href : (lastTouch.landing_page || routeDefaults.landing_page),
       'lead-referrer': lastTouch.referrer || 'direct',
-      'utm-source': currentCampaign.utm_source || lastTouch.utm_source || '',
-      'utm-medium': currentCampaign.utm_medium || lastTouch.utm_medium || '',
-      'utm-campaign': currentCampaign.utm_campaign || lastTouch.utm_campaign || '',
+      'utm-source': currentCampaign.utm_source || lastTouch.utm_source || routeDefaults.utm_source,
+      'utm-medium': currentCampaign.utm_medium || lastTouch.utm_medium || routeDefaults.utm_medium,
+      'utm-campaign': currentCampaign.utm_campaign || lastTouch.utm_campaign || routeDefaults.utm_campaign,
       'utm-content': currentCampaign.utm_content || lastTouch.utm_content || '',
       'utm-term': currentCampaign.utm_term || lastTouch.utm_term || '',
       gclid: currentCampaign.gclid || lastTouch.gclid || '',
