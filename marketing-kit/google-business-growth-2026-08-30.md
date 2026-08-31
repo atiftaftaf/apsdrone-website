@@ -20,7 +20,7 @@ Updated: August 30, 2026
 - The manager surface reported **Profile Strength: Complete** and one customer interaction.
 - The live profile showed the correct primary category (`Aerial photographer`), website, phone `(832) 938-9570`, service-area presentation and DFW-focused description.
 - The media manager initially contained **16 numbered photos and six numbered videos**, plus cover and logo. One video remained `Pending`; the other visible media was not marked pending.
-- A later authenticated upload added one dedupe-checked Lewisville commercial-property aerial, bringing the live numbered inventory to **17 photos and six videos**. Google returned `Upload complete`; the gallery reloaded with 23 numbered media items and two `PENDING` labels, covering the new photo and the previously pending video.
+- A later authenticated upload added one dedupe-checked Lewisville commercial-property aerial, bringing the live numbered inventory to **17 photos and six videos**. Google returned `Upload complete`; a later live gallery recheck showed that the Lewisville photo had cleared processing and only one earlier video remained `Pending`.
 - Several older media items showed public-view counts between fewer than 100 and 223, proving that Google profile media is already receiving some discovery.
 - The public profile still has no Google reviews. The product catalog now contains seven service cards, and nine future weekly posts are submitted or scheduled through October 26, 2026. Genuine customer reviews remain the clearest owner-dependent profile gap.
 - The live review panel generated `https://g.page/r/CbNNLDqa9yVeECE/review`; the existing site/template short link ending in `...VeEBI/review` was also tested. Both redirect to the same APS Drone Place ID (`ChIJoWQtNyLFQIYRs00sOpr3JV4`), so the existing review request path is valid and does not need churn.
@@ -225,7 +225,7 @@ These are controlled lab results, not field Core Web Vitals. Search Console stil
 ## Live Google profile media and product recheck
 
 - The authenticated APSDroneTX profile shows Profile Strength `Complete` and one customer interaction.
-- The live media manager currently shows 17 numbered photos and six numbered videos in addition to the cover and logo. The new Lewisville commercial-property aerial and one video are Pending; older visible media examples show up to 223 views.
+- The live media manager currently shows 17 numbered photos and six numbered videos in addition to the cover and logo. The Lewisville commercial-property aerial is now visible without a Pending label; one earlier video remains Pending. Older visible media examples show up to 223 views.
 - The new upload used the resized, EXIF/GPS-stripped derivative `C:\Users\atift\codex_tmp\gbp_uploads\gbp-lewisville-commercial-2026-08-30.jpg` (SHA-256 `7F4A82B311ED432F5A58D904767FA36D9232A05CF3FED0E24F7F09BC81764864`) derived from the unchanged archive source `DJI_0663.JPG`. Google returned `Upload complete` and the refreshed gallery count increased from 22 to 23 numbered media items.
 - The live product catalog now contains the original `$249` real-estate product plus six newly submitted, factual, non-overlapping cards for vertical-reel, commercial, construction-progress, roof, FPV and thermal services. Google confirmed each save; several new cards remain Pending review.
 - Every new product uses a product-specific GA4 UTM URL and a real APS Drone project-media source. Original archive files were not modified.
