@@ -1,1 +1,2 @@
-project_reference,delivery_confirmed_date,request_date,request_channel,follow_up_date,review_received_date,owner_notes
+project_reference,delivery_confirmed_date,request_date,request_channel,follow_up_date,review_received_date,eligibility_status,evidence_checked_date,owner_notes
+ARLINGTON-INDUSTRIAL-2026-001,,,,,,HOLD_DELIVERY_UNVERIFIED,2026-08-30,"APSDroneTX Gmail searches found no delivery email, Drive link or matching project correspondence. Do not send a review request until the client confirms successful delivery access."
