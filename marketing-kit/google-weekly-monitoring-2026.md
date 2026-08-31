@@ -9,6 +9,7 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 | Main sitemap | Success; 13 pages reported by Google | Search Console Sitemaps |
 | Current live sitemap | 21 indexable URLs | Live `sitemap.xml` and local crawl |
 | Video discovery | Dedicated video sitemap submitted successfully; 4 pages and 4 videos discovered; Aug. 26 indexing report still contains only the older homepage hero-video warning; Aug. 28 Videos enhancement report says no data; both reports predate the Aug. 30 watch-page deployment | Search Console Sitemaps, Video indexing and Videos enhancement reports |
+| Web search performance | 2 clicks; 453 impressions; 0.4% CTR; average position 44.3 | Search Console Performance, July 27–August 28 |
 | External links | 0 | Search Console Links |
 | Dallas services page | 257 impressions; 0 clicks; 0% CTR; average position 50.3 | Search Console page filter, July 27–August 28 |
 | `dallas drone services` | 46 impressions; average position 20.7 | Search Console query filter |
@@ -58,6 +59,7 @@ Use this log once per week, preferably Monday morning, with the same Search Cons
 - Routed every Dallas-services-page quote action into the dedicated tracked quote page with a `dallas_drone_services` campaign tag. This gives the 257-impression/zero-click page a focused conversion destination without adding a thin city page or changing its already aligned search-result title.
 - Completed the same measured quote-route standard across all 19 non-home sitemap pages. Every service, pricing, planning-resource, case-study and video-watch page now carries a distinct campaign; no legacy homepage-fragment quote links remain outside the homepage itself. The automated verifier is sitemap-aware and fails closed if coverage regresses.
 - Page distribution for the same July 27–Aug. 28 window: homepage 2 clicks/166 impressions; Dallas services 0/257; Fort Worth services 0/51. The remaining reported impressions belong to homepage fragment URLs and are too small to guide changes.
+- Rechecked the complete Search Console Performance report with CTR and position enabled. The highest-impression query remains `dallas drone services` at 46 impressions and average position 20.7, while the Dallas services URL has 257 impressions, 0 clicks, 0% CTR and average position 50.3. Based on those real signals, the Dallas page title/H1 now states `Dallas Drone Services: Photography & Video`, its description includes the core Dallas service mix and 4K video, and a truthful Dallas videography FAQ links to the dedicated videography page. This is a focused relevance/CTR test, not a ranking claim.
 
 ## Decision thresholds
 
