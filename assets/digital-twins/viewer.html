@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta name="referrer" content="same-origin">
+  <title>Digital Twin Demo | APS Drone</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="viewer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+  <main id="scene" aria-label="Interactive 3D site model"></main>
+  <header class="tools">
+    <strong id="demoName">Digital Twin</strong>
+    <button id="home" title="Reset view" aria-label="Reset view"><i class="fa-solid fa-house" aria-hidden="true"></i></button>
+    <button id="zoomIn" title="Zoom in" aria-label="Zoom in"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+    <button id="zoomOut" title="Zoom out" aria-label="Zoom out"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
+    <label><input type="checkbox" id="showPhotos" checked> Photos</label>
+    <button id="fullscreen" title="Full screen" aria-label="Full screen"><i class="fa-solid fa-expand" aria-hidden="true"></i></button>
+  </header>
+  <div class="compass" aria-label="North compass"><span>N</span><div id="needle"></div></div>
+  <aside class="photo" id="photoPanel" hidden>
+    <header><strong id="photoName"></strong><button id="closePhoto" title="Close photo" aria-label="Close photo"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></header>
+    <button id="previewButton" class="preview" title="Open photo" aria-label="Open photo"><img id="photoPreview" alt="Selected site view"></button>
+    <footer><button id="focus">Focus Dot</button><button id="look">Look Direction</button><button id="openPhoto">Open Photo</button></footer>
+  </aside>
+  <nav class="photo-strip" id="photoStrip" aria-label="Site photos"></nav>
+  <div id="status" role="status">Loading model...</div>
+  <dialog id="photoDialog" aria-labelledby="fullPhotoName"><header><strong id="fullPhotoName"></strong><button id="closeFull" aria-label="Close full photo"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></header><img id="fullPhoto" alt=""></dialog>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>

@@ -116,6 +116,7 @@ function runBookingLandingChecks() {
 
 function runAttributedLandingPageChecks() {
   const campaigns = {
+    'construction-digital-twin-dfw': 'digital_twin',
     'about-aps-drone': 'about_aps_drone',
     'dallas-drone-services': 'dallas_drone_services',
     'fort-worth-drone-services': 'fort_worth_drone_photography',

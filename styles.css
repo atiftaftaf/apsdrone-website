@@ -1,3 +1,4 @@
+.twin-showcase{padding:72px 0;background:#edf4f1}.twin-previews{display:grid;grid-template-columns:1fr 1fr;gap:24px}.twin-previews a{display:block;min-width:0}.twin-previews img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#e9edf0}.twin-previews span{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid #bdcdc5;font-size:15px;font-weight:600}.twin-scope{font-size:13px;color:#53636b;margin-top:20px;max-width:800px}@media(max-width:640px){.twin-showcase{padding:40px 0}.twin-previews{grid-template-columns:1fr;gap:24px}}
 /* ===== RESET & BASE ===== */
 *, *::before, *::after {
     margin: 0;

@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  window.APS_QUOTE_FORM_BUILD = '20260830-3';
+  window.APS_QUOTE_FORM_BUILD = '20260917-1';
 
   function track(eventName, payload) {
     const details = payload || {};
@@ -101,6 +101,11 @@
   if (!form) return;
 
   populateAttributionFields();
+  const requestedService = new URLSearchParams(window.location.search).get('service');
+  const serviceField = document.getElementById('service');
+  if (serviceField && requestedService && Array.from(serviceField.options).some(function (option) { return option.value === requestedService; })) {
+    serviceField.value = requestedService;
+  }
   if (/\/request-a-quote\/?$/.test(window.location.pathname)) {
     const valueOf = function (id) {
       const field = document.getElementById(id);
