@@ -2,14 +2,16 @@ import * as THREE from 'three';
 import { OrbitControls } from './vendor/OrbitControls.js';
 
 const $=id=>document.getElementById(id);
-const demo=new URLSearchParams(location.search).get('demo')==='02'?'02':'01';
+const requestedDemo=new URLSearchParams(location.search).get('demo');
+const demo=['01','02','03'].includes(requestedDemo)?requestedDemo:'01';
+const assetVersion='20260917-2';
 let renderer,controls,camera,data,selected,tween;
 const photos=[],objects=[];
 const v=a=>new THREE.Vector3(...a);
 const status=text=>{$('status').textContent=text;};
 
 async function init(){
-  const response=await fetch(`demo-${demo}.json`);
+  const response=await fetch(`demo-${demo}.json?v=${assetVersion}`);
   if(!response.ok)throw new Error('Model details are unavailable.');
   data=await response.json();$('demoName').textContent=data.label;
   const scene=new THREE.Scene();scene.background=new THREE.Color(0xe9edf0);
@@ -18,7 +20,7 @@ async function init(){
   renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);$('scene').append(renderer.domElement);
   controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.07;controls.rotateSpeed=.65;controls.minPolarAngle=.025;controls.maxPolarAngle=Math.PI-.025;controls.screenSpacePanning=false;controls.minDistance=8;controls.maxDistance=1500;
   home(true);
-  const file=await fetch(data.model);if(!file.ok)throw new Error('Model download failed. Please reload.');
+  const file=await fetch(`${data.model}?v=${assetVersion}`);if(!file.ok)throw new Error('Model download failed. Please reload.');
   const buffer=await new Response(file.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
   const header=new DataView(buffer);if(header.getUint32(0,true)!==0x31505444)throw new Error('Invalid model.');
   const count=header.getUint32(4,true);
@@ -34,6 +36,7 @@ async function init(){
   const baseMaterial=new THREE.MeshBasicMaterial({color:0xe28a12});
   const selectedMaterial=new THREE.MeshBasicMaterial({color:0xf43f5e});
   for(const [index,photo] of data.photos.entries()){
+    photo.image+=`?v=${assetVersion}`;
     const dot=new THREE.Mesh(dotGeometry,baseMaterial);dot.position.copy(v(photo.center));dot.userData.photo=photo;
     const center=v(photo.center),dir=v(photo.forward).normalize(),right=v(photo.right).normalize(),up=new THREE.Vector3().crossVectors(right,dir).normalize();
     const end=center.clone().addScaledVector(dir,6),corners=[[-1,-1],[1,-1],[1,1],[-1,1]].map(([x,y])=>end.clone().addScaledVector(right,x*2.5).addScaledVector(up,y*1.6));
@@ -70,7 +73,7 @@ function home(instant=false){
   const dir=v(data.viewDirection).normalize(),right=new THREE.Vector3().crossVectors(camera.up,dir).normalize(),up=new THREE.Vector3().crossVectors(dir,right).normalize();
   const tan=Math.tan(THREE.MathUtils.degToRad(camera.fov/2));let distance=10;
   for(const x of [data.bounds.min[0],data.bounds.max[0]])for(const y of [data.bounds.min[1],data.bounds.max[1]])for(const z of [data.bounds.min[2],data.bounds.max[2]]){const p=v([x,y,z]);distance=Math.max(distance,p.dot(dir)+Math.max(Math.abs(p.dot(up))/tan,Math.abs(p.dot(right))/(tan*camera.aspect)));}
-  const position=dir.multiplyScalar(distance*(demo==='01'?1.1:.9)),target=v([0,0,0]);
+  const position=dir.multiplyScalar(distance*1.1),target=v([0,0,0]);
   if(instant){camera.position.copy(position);controls.target.copy(target);controls.update();}else move(position,target);
 }
 function zoom(factor){const target=controls.target.clone(),delta=camera.position.clone().sub(target);delta.setLength(THREE.MathUtils.clamp(delta.length()*factor,controls.minDistance,controls.maxDistance));move(target.clone().add(delta),target);}

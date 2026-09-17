@@ -5,7 +5,7 @@ const zlib = require('node:zlib');
 
 const root = path.resolve(__dirname, '..');
 const assets = path.join(root, 'assets/digital-twins');
-const expected = {'01':450000, '02':1000000};
+const expected = {'01':474409, '02':1250000, '03':1250000};
 const forbidden = /file:\/\/|\b[A-Z]:[\\/]|COLMAP|codex|latitude|longitude|fullUrl|modelToEnu|DJI_/i;
 for (const [id, count] of Object.entries(expected)) {
   const json = fs.readFileSync(path.join(assets, `demo-${id}.json`), 'utf8');
@@ -44,4 +44,4 @@ const page=fs.readFileSync(path.join(root,'construction-digital-twin-dfw/index.h
 assert.match(page,/\$1,999/);
 assert.doesNotMatch(page,/<iframe\b/i, 'Interactive downloads must require a user action');
 assert.ok(fs.existsSync(path.join(assets,'vendor/LICENSE.txt')));
-console.log('Digital twin validation passed: both point clouds, 24 photos, metadata removal, neutral labels, and deferred loading.');
+console.log('Digital twin validation passed: three point clouds, 36 photos, metadata removal, neutral labels, and deferred loading.');
