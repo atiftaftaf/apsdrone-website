@@ -79,6 +79,13 @@ if (navToggle && navMenu) {
     closeMenu();
   });
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+      closeMenu();
+      navToggle.focus();
+    }
+  });
+
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768) closeMenu();
   });
@@ -176,9 +183,14 @@ function applyFilter(category) {
 }
 
 filterButtons.forEach((btn) => {
+  btn.setAttribute('aria-pressed', String(btn.classList.contains('active')));
   btn.addEventListener('click', () => {
-    filterButtons.forEach((b) => b.classList.remove('active'));
+    filterButtons.forEach((b) => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     applyFilter(btn.dataset.filter || 'all');
   });
 });

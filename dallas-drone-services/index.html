@@ -4,6 +4,7 @@
   <script src="../analytics.js?v=20260830-2"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <title>Dallas Drone Services: Photography &amp; Video | APS Drone</title>
   <meta name="description" content="Dallas drone services for real estate, commercial property, construction, roofs, FPV and 4K video. FAA Part 107 certified; packages from $249.">
   <meta name="keywords" content="Dallas drone services, drone photography Dallas, drone videography Dallas, Dallas drone videographer, commercial drone services Dallas, real estate drone photography Dallas, drone roof inspection Dallas">
@@ -118,9 +119,9 @@
       .service-grid article { border:1px solid var(--border); border-radius:12px; padding:16px; background:#fbfdff; }
       .service-grid h3 { margin:0 0 7px; font-size:1rem; }
       .service-grid p { margin:0; font-size:.94rem; }
-      .media-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:14px; }
+      .media-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:start; gap:12px; margin-top:14px; }
       .media-grid figure { margin:0; border:1px solid var(--border); border-radius:12px; overflow:hidden; background:#fff; }
-      .media-grid img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+      .media-grid img { width:100%; height:auto; aspect-ratio:auto; object-fit:contain; display:block; }
       .media-grid figcaption { padding:10px 12px; color:var(--muted); font-size:.86rem; line-height:1.45; }
       .process { counter-reset:steps; display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:14px; }
       .process div { border-left:3px solid var(--primary); padding:4px 12px; }

@@ -4,6 +4,7 @@
   <script src="../analytics.js?v=20260830-2"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <title>Arlington Drone Photography &amp; Services | APS Drone</title>
   <meta name="description" content="FAA Part 107 Arlington drone photography for industrial property, commercial real estate, construction progress and aerial video across DFW. From $249.">
   <meta name="robots" content="index,follow,max-image-preview:large">
@@ -95,9 +96,9 @@
       .card h2 { margin:0 0 10px; font-size:1.1rem; }
       .section { margin-top:18px; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:26px; }
       .section h2 { margin:0 0 10px; font-size:1.5rem; }
-      .media-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px; }
+      .media-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:start; gap:12px; margin-top:14px; }
       .media-grid figure { margin:0; border:1px solid var(--border); border-radius:12px; overflow:hidden; background:#fff; }
-      .media-grid img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+      .media-grid img { width:100%; height:auto; aspect-ratio:auto; object-fit:contain; display:block; }
       .media-grid figcaption { padding:10px 12px; color:var(--muted); font-size:.88rem; line-height:1.5; }
       .service-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
       .service-links a { border:1px solid var(--border); border-radius:999px; padding:7px 11px; text-decoration:none; font-weight:700; font-size:.86rem; background:#fff; }
